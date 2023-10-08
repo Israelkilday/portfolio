@@ -1,17 +1,30 @@
-// import Particles from 'react-tsparticles'
+// REACT ROUTER DOM
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+// COMPONENTS
+import Navbar from "./components/Navbar";
+// CSS
 import './App.css'
-
-import ParticlesBackground from './components/ParticlesBackground'
+// PARTICLES
+// import ParticlesBackground from './components/ParticlesBackground'
 
 function App() {
 
   return (
     <>
-      {/* <Particles /> */}
-      <ParticlesBackground />
-      <h1>ParticlesJS</h1>
+      <BrowserRouter>
+        {/* <ParticlesBackground /> */}
+        <Navbar/>
+        <div className="container">
+          <Routes>
+            <Route />
+            <Route />
+            <Route />
+            <Route />
+          </Routes>
+        </div>
+      </BrowserRouter>
     </>
   )
 }
 
-export default App
+export default App;
