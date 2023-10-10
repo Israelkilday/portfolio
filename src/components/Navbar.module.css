@@ -103,15 +103,47 @@ label {
 .toggle_palette_theme {
     position: absolute;
     top: 100%;
-    background: red;
-    width: 3.9rem;
+    width: 2.4rem;
     text-align: center;
-    height: 0;
-    transition:  .5s ease;
 }
 
-.toggle_palette_theme.palette_open {
-    height: 12rem;
-}
+    .ball {
+        margin: .2rem 0 ;
+        display: inline-block;
+        border: none;
+        border-radius: 50%;
+        height: 2.3rem;
+        width: 2.3rem;
+        opacity: 0;
+        transition: .6s ease;
+        transform: translateY(-180px);
+        cursor: pointer;
+    }
+        
+    .input_palette_colors:checked ~ .toggle_palette_theme .ball {
+        transform: translateY(0);
+        transition-delay: calc(.15s * var(--p));
+        opacity: 1;
+    }
+
+    .ball_0 {
+        background-color: #ffb703;
+    }
+
+    .ball_1 {
+        background-color: #8ecae6;
+    }
+
+    .ball_2 {
+        background-color: #3a86ff;
+    }
+
+    .ball_3 {
+        background-color: #eb5e28;
+    }
+
+    .ball_4 {
+        background: linear-gradient(to right, #0ef 50%, #fff 50%);
+    }
 
 
