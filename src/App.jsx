@@ -2,6 +2,8 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 // COMPONENTS
 import Navbar from "./components/Navbar";
+// PAGES
+import Home from "./pages/Home/Home";
 // CSS
 import './App.css'
 // PARTICLES
@@ -13,11 +15,11 @@ function App() {
     <>
       <BrowserRouter>
         {/* <ParticlesBackground /> */}
-        <Navbar/>
+        <Navbar />
         <div className="container">
           <Routes>
-            {/* <Route />
-            <Route />
+            <Route path="/" element={<Home />} />
+            {/*<Route />
             <Route />
             <Route /> */}
           </Routes>

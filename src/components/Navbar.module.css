@@ -116,10 +116,10 @@ label {
         width: 2.3rem;
         opacity: 0;
         transition: .6s ease;
-        transform: translateY(-180px);
+        transform: translateY(-190px);
         cursor: pointer;
     }
-        
+
     .input_palette_colors:checked ~ .toggle_palette_theme .ball {
         transform: translateY(0);
         transition-delay: calc(.15s * var(--p));
