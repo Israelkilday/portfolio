@@ -1,10 +1,19 @@
+// HOOKS
+import { useState } from "react";
+// REACT ROUTER DOM
 import { NavLink } from "react-router-dom";
+// REACT ICONS
+import { FaMoon, FaSun, FaPalette } from "react-icons/fa6";
 // CSS 
 import styles from "./Navbar.module.css";
-import 'boxicons/css/boxicons.css';
-
 
 const Navbar = () => {
+    const [paletteOpen, setPaletteOpen] = useState(false);
+
+    const handlePaletteToggle = () => {
+        setPaletteOpen(!paletteOpen);
+    }
+
     return (
         <header className={styles.header}>
             <NavLink to={"/"} className={styles.logo}>
@@ -38,15 +47,25 @@ const Navbar = () => {
                 </NavLink>
             </nav>
 
-            <div class="icons_container">
+            <div className={styles.icons_container}>
                 <label>
-                    <input type="checkbox" className={`${styles.input_darc_light_mode} input_checkbox`} />
-                    <i className={`${styles.bx} ${styles['bxs-sun']} sun`} />
-                    <i className={`${styles.bx} ${styles['bxs-moon']} moon`} />
+                    <input type="checkbox" className={styles.input_darc_light_mode} />
+                    <FaMoon className={styles.moon_icon} />
+                    <FaSun className={styles.sun_icon} />
                 </label>
 
+                <label>
+                    <input onClick={handlePaletteToggle} 
+                           type="checkbox" 
+                           className={styles.input_palette_colors}
+                    />
 
-                
+                    <FaPalette className={styles.palette} />
+
+                    <div className={styles.toggle_palette_theme}></div>
+                    {paletteOpen && styles.toggle_palette_theme.palette_open}
+                </label>
+
             </div>
         </header>
     );

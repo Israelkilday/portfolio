@@ -47,3 +47,71 @@
     transition: .5s ease-in-out;
 }
 
+.icons_container {
+    display: flex;
+    gap: 1rem;
+}
+
+label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input_darc_light_mode {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.input_darc_light_mode:checked~.moon_icon {
+    transition-delay: 0s;
+    transform: rotate(360deg) scale(0);
+}
+
+.moon_icon {
+    font-size: 2.4rem;
+    color: var(--text_color);
+    transition: .6s ease;
+    transition-delay: .6s;
+}
+
+.input_darc_light_mode:checked~.sun_icon {
+    transition-delay: .6s;
+    transform: scale(1) rotate(360deg);
+}
+
+.sun_icon {
+    position: absolute;
+    font-size: 2.4rem;
+    color: var(--text_color);
+    transform: scale(0);
+    transition: .7s ease;
+}
+
+.input_palette_colors {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;    
+}
+
+.palette {
+    font-size: 2.4rem;
+    color: var(--text_color);            
+}
+
+.toggle_palette_theme {
+    position: absolute;
+    top: 100%;
+    background: red;
+    width: 3.9rem;
+    text-align: center;
+    height: 0;
+    transition:  .5s ease;
+}
+
+.toggle_palette_theme.palette_open {
+    height: 12rem;
+}
+
+

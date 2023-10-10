@@ -16,10 +16,10 @@ function App() {
         <Navbar/>
         <div className="container">
           <Routes>
+            {/* <Route />
             <Route />
             <Route />
-            <Route />
-            <Route />
+            <Route /> */}
           </Routes>
         </div>
       </BrowserRouter>
