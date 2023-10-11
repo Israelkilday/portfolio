@@ -103,8 +103,16 @@ label {
 .toggle_palette_theme {
     position: absolute;
     top: 100%;
-    width: 2.4rem;
     text-align: center;
+    width: 3.9rem;
+    height: 0;
+    transition:  .5s ease;
+    background-color: #000;
+    border: .2rem solid var(--main_color);
+}
+
+.palette_open {
+    height: 14.1rem;
 }
 
     .ball {

@@ -2,6 +2,8 @@
 import { NavLink } from "react-router-dom";
 // REACT ICONS
 import { FaGithub, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
+// IMGAGENS
+import Home_img from "./imgs/home_new_img2.png"
 // CSS
 import styles from "./Home.module.css"
 
@@ -15,7 +17,7 @@ const Home = () => {
                     <h3 className={styles.animation_text}>Front-End Developer</h3>
                 </div>
 
-                <div class={styles.social_media}>
+                <div className={styles.social_media}>
                     <NavLink to="#" className={styles.whatsapp_link}>
                         <FaWhatsapp />
                     </NavLink>
@@ -31,8 +33,11 @@ const Home = () => {
                 </div>
             </div>
 
+            <div className={styles.home_img}>
+                <img src={Home_img} alt="home_img" />
+            </div>
         </section>
     )
 };
 
-export default Home;
+export default Home; 

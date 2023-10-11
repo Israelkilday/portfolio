@@ -8,6 +8,12 @@ import { FaMoon, FaSun, FaPalette } from "react-icons/fa6";
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
+    const [paletteOpen, setPaletteOpen] = useState(false);
+
+    const handlePaletteToggle = () => {
+        setPaletteOpen(!paletteOpen)
+    }
+
     return (
         <header className={styles.header}>
             <NavLink to={"/"} className={styles.logo}>
@@ -49,14 +55,17 @@ const Navbar = () => {
                 </label>
 
                 <label>
-                    <input 
+                    <input
                         type="checkbox"
                         className={styles.input_palette_colors}
+                        onClick={handlePaletteToggle}
                     />
 
                     <FaPalette className={styles.palette} />
 
-                    <div className={styles.toggle_palette_theme}>
+                    <div className={`${styles.toggle_palette_theme}
+                         ${paletteOpen ? styles.palette_open : ""}`}
+                    >
                         <button className={`${styles.ball} ${styles.ball_0}`}
                             style={{ "--p": 1 }}
                         ></button>
