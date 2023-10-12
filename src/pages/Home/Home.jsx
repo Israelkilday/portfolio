@@ -6,9 +6,14 @@ import { FaGithub, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6
 import Home_img from "./imgs/home_new_img2.png"
 // CSS
 import styles from "./Home.module.css"
+// PARTICLES
+// import ParticlesBackground from '../../components/ParticlesBackground';
 
 const Home = () => {
     return (
+        <>
+        {/* <ParticlesBackground className={styles.particles_js} />  */}
+        
         <section className={styles.home}>
             <div className={styles.home_content}>
                 <h3>Olá eu sou</h3>
@@ -37,6 +42,7 @@ const Home = () => {
                 <img src={Home_img} alt="home_img" />
             </div>
         </section>
+        </>
     )
 };
 

@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: absolute;
 }
 
 .home_content h3 {
@@ -104,4 +105,9 @@
     background: var(--main_color);
     color: var(--second_bg_color);
     box-shadow: 0 0 1rem var(--main_color);
+}
+
+.home_img img {
+    width: 30vw;
+    animation: floatImage 4s ease-in-out infinite;
 }

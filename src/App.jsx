@@ -5,21 +5,19 @@ import Navbar from "./components/Navbar";
 // PAGES
 import Home from "./pages/Home/Home";
 // IMGAGENS
-import Home_img from "./imgs/home_new_img2.png"
+// import Home_img from "./imgs/home_new_img2.png"
 // CSS
 import './App.css'
 // PARTICLES
-// import ParticlesBackground from './components/ParticlesBackground'
-  
+import ParticlesBackground from './components/ParticlesBackground'
+
 function App() {
 
   return (
     <>
-      
+      <ParticlesBackground />
       <BrowserRouter>
-        {/* <ParticlesBackground /> */}
         <Navbar />
-        <img src={Home_img} alt="home_img" />
         <div className="container">
           <Routes>
             <Route path="/" element={<Home />} />
