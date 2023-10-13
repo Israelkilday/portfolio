@@ -9,13 +9,13 @@ import Home from "./pages/Home/Home";
 // CSS
 import './App.css'
 // PARTICLES
-import ParticlesBackground from './components/ParticlesBackground'
+// import ParticlesBackground from './components/ParticlesBackground'
 
 function App() {
 
   return (
     <>
-      <ParticlesBackground />
+      {/* <ParticlesBackground /> */}
       <BrowserRouter>
         <Navbar />
         <div className="container">
