@@ -21,7 +21,7 @@ const Home = () => {
                         <h3 className={styles.animation_text}>Front-End Developer</h3>
                     </div>
 
-                    <div className={styles.social_media}>
+                    {/* <div className={styles.social_media}>
                         <NavLink to="#" className={styles.whatsapp_link}>
                             <FaWhatsapp />
                         </NavLink>
@@ -34,7 +34,7 @@ const Home = () => {
                         <NavLink to="#" className={styles.github_link}>
                             <FaGithub />
                         </NavLink>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className={styles.home_img}>

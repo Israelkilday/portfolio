@@ -124,7 +124,7 @@ label {
         width: 2.3rem;
         opacity: 0;
         transition: .6s ease;
-        transform: translateY(-190px);
+        transform: translateY(-180px);
         cursor: pointer;
     }
 

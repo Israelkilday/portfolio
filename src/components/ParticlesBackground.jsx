@@ -2,15 +2,14 @@ import React, { useCallback } from 'react';
 import Particles from "react-tsparticles"
 import { loadFull } from "tsparticles";
 import particlesConfid from './config/particlesConfig';
-import './Particles.css';
 
 const ParticlesBackground = () => {
     const particlesInit = useCallback((engine) => {
         loadFull(engine)
-    }, [])
+    }, []);
 
     return (
-        <div className="custom-particles">
+        <div>
             <Particles
                 // id="tsparticles"
                 options={particlesConfid}
