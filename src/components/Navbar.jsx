@@ -1,5 +1,5 @@
 // HOOKS
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // REACT ROUTER DOM
 import { NavLink } from "react-router-dom";
 // REACT ICONS
@@ -8,6 +8,21 @@ import { FaMoon, FaSun, FaPalette } from "react-icons/fa6";
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
+    const [lightMode, setLightMode] = useState(false);
+
+    const toggleLightMode = () => {
+        setLightMode(!lightMode);
+    }
+
+    useEffect(() => {
+        if (lightMode) {
+            document.body.classList.add('light_mode');
+        } else {
+            document.body.classList.remove('light_mode');
+        }
+    }, [lightMode]);
+    
+
     const [paletteOpen, setPaletteOpen] = useState(false);
 
     const handlePaletteToggle = () => {
@@ -49,9 +64,15 @@ const Navbar = () => {
 
             <div className={styles.icons_container}>
                 <label>
-                    <input type="checkbox" className={styles.input_darc_light_mode} />
+                    <input
+                        type="checkbox"
+                        className={styles.input_darc_light_mode}
+                        onClick={toggleLightMode}
+                    />
+
                     <FaMoon className={styles.moon_icon} />
                     <FaSun className={styles.sun_icon} />
+                    {/* {lightMode ?  : } */}
                 </label>
 
                 <label>

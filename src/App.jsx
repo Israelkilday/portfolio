@@ -15,7 +15,7 @@ function App() {
     <>
       <BrowserRouter>
         <Navbar />
-        <div className={`container ${lightMode ? "light_mode" : ""}`}>
+        <div className="container" >
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>
