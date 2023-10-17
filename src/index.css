@@ -14,9 +14,16 @@
 
 :root {
   --bg_color: #1f242d;
-  --second_bg_color: #323946;
+  --second_bg_color:#323946;
   --text_color: #fff;
   --main_color: #0ef;
+}
+
+.light_mode {
+  --bg_color: linear-gradient(blue, #F5F5F5); 
+  --second_bg_color: #F5F5F5; 
+  --text_color: #fff;
+  --main_color: #ffea00; 
 }
 
 html {
