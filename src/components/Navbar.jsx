@@ -12,12 +12,26 @@ const Navbar = () => {
     const [paletteOpen, setPaletteOpen] = useState(false);
     const [selectedColor, setSelectedColor] = useState(null);
     const [paletteInputInvisible, setPaletteInputInvisible] = useState(false);
+    const [transition, setTransition] = useState(false);
+
 
 
     const handleToggleLightMode = () => {
         setLightMode(!lightMode);
         setPaletteInputInvisible(!lightMode);
+        // handleColorTransition();
     }
+
+    // const handleColorTransition = () => {
+    //     setTransition(true); // Ative o estado de transição
+    //     setTimeout(() => {
+    //       // Desative o estado de transição após 1 segundo
+    //       setLightMode(!lightMode);
+    //       setPaletteInputInvisible(!lightMode);
+    //       setTransition(false);
+    //     }, 1000);
+    //   };
+      
 
     const handlePaletteToggle = () => {
         setPaletteOpen(!paletteOpen)

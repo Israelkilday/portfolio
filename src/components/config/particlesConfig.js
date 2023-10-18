@@ -111,8 +111,5 @@ const particlesConfid = {
 
 export default particlesConfid;
 
-// onHover: {
-//   enable: true,
-  
-// }
+
 
