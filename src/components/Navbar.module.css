@@ -89,6 +89,10 @@ label {
     transition: .7s ease;
 }
 
+.palette_hidden {
+    display: none;
+}
+
 .input_palette_colors {
     position: absolute;
     opacity: 0;
