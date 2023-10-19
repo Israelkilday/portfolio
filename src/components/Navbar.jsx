@@ -6,32 +6,22 @@ import { NavLink } from "react-router-dom";
 import { FaMoon, FaSun, FaPalette } from "react-icons/fa6";
 // CSS 
 import styles from "./Navbar.module.css";
+// CONTEXT
+import { useTheme } from '../context/ThemeContext';
 
 const Navbar = () => {
     const [lightMode, setLightMode] = useState(false);
     const [paletteOpen, setPaletteOpen] = useState(false);
     const [selectedColor, setSelectedColor] = useState(null);
     const [paletteInputInvisible, setPaletteInputInvisible] = useState(false);
-    const [transition, setTransition] = useState(false);
 
-
+    const { setMainColor } = useTheme();
 
     const handleToggleLightMode = () => {
         setLightMode(!lightMode);
         setPaletteInputInvisible(!lightMode);
-        // handleColorTransition();
+        setMainColor("#ffea00");
     }
-
-    // const handleColorTransition = () => {
-    //     setTransition(true); // Ative o estado de transição
-    //     setTimeout(() => {
-    //       // Desative o estado de transição após 1 segundo
-    //       setLightMode(!lightMode);
-    //       setPaletteInputInvisible(!lightMode);
-    //       setTransition(false);
-    //     }, 1000);
-    //   };
-      
 
     const handlePaletteToggle = () => {
         setPaletteOpen(!paletteOpen)
@@ -116,7 +106,7 @@ const Navbar = () => {
                     <FaSun className={styles.sun_icon} />
                 </label>
 
-                <label style={{display: paletteInputInvisible ? "none" : ""}}>
+                <label style={{ display: paletteInputInvisible ? "none" : "" }}>
                     <input
                         type="checkbox"
                         className={styles.input_palette_colors}

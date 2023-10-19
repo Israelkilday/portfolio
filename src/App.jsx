@@ -6,21 +6,23 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 // PAGES
 import Home from "./pages/Home/Home";
+// CONTEXT
+import { ThemeProvider, useTheme } from './context/ThemeContext';
 
 function App() {
-  // <img className={darkMode ? 'light-mode-image' : 'dark-mode-image'} src={darkMode ? lightImageSrc : darkImageSrc} alt="Imagem" />
-
-
   return (
     <>
-      <BrowserRouter>
-        <Navbar />
-        <div className="container" >
-          <Routes>
-            <Route path="/" element={<Home />} />
-          </Routes>
-        </div>
-      </BrowserRouter>
+      <ThemeProvider >
+        <BrowserRouter>
+          <Navbar />
+          <div className="container" >
+            <Routes>
+              <Route path="/" element={<Home />} />
+            </Routes>
+          </div>
+        </BrowserRouter>
+      </ThemeProvider>
+
     </>
   )
 }
