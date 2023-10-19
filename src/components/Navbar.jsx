@@ -20,7 +20,7 @@ const Navbar = () => {
     const handleToggleLightMode = () => {
         setLightMode(!lightMode);
         setPaletteInputInvisible(!lightMode);
-        setMainColor("#ffea00");
+
     }
 
     const handlePaletteToggle = () => {
@@ -34,8 +34,10 @@ const Navbar = () => {
     useEffect(() => {
         if (lightMode) {
             document.body.classList.add('light_mode');
+            setMainColor("#ffea00");
         } else {
             document.body.classList.remove('light_mode');
+            setMainColor("#0ef");
         }
 
         if (selectedColor === "ball_0") {

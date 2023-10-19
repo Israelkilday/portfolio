@@ -1,7 +1,6 @@
 import React, { useCallback } from 'react';
 import Particles from "react-tsparticles"
 import { loadFull } from "tsparticles";
-// import particlesConfig from './config/particlesConfig';
 import { useTheme } from '../context/ThemeContext';
 
 const ParticlesBackground = () => {
@@ -14,7 +13,7 @@ const ParticlesBackground = () => {
     const particlesConfig = {
         "particles": {
           "number": {
-            "value": 65,
+            "value": 60,
             "density": {
               "enable": true,
               "value_area": 800
