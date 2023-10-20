@@ -1,0 +1,8 @@
+.transition_effect {
+    position: absolute;
+    z-index: 1000000000000000;
+    background-color: var(--second_bg_color);
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
