@@ -11,24 +11,37 @@ import Home_img from "./imgs/home_new_img2.png"
 // PARTICLES
 import ParticlesBackground from '../../components/ParticlesBackground';
 // GSAP
-import gsap from 'gsap';
-
-import { useEffect, useRef } from "react";
+import { gsap } from 'gsap';
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+// HOOKS
+import { useLayoutEffect, useEffect, useRef } from "react";
 
 const Home = () => {
     const transitionPages = gsap.timeline();
 
-    const home = gsap.timeline();
-    const homeh1 = useRef(null);
-    const homeImg = useRef(null);
-
-    useEffect(() => {
-        home.from(homeh1.current, {
-            
+    useLayoutEffect(() => {
+        gsap.to(".first_h3", {
+            x: 0,
+            opacity: 1
         })
-    })
+    }, []);
 
-    
+    // const home = gsap.timeline();
+    // const homeh3 = useRef(null);
+    // const homeImg = useRef(null);
+
+    // useEffect(() => {
+    //     home.from(homeh3.current, {
+    //         duration: .7,
+    //         // skewX: 10,
+    //         x: -100,
+    //         // opacity: 0
+    //     })
+    // },"-=3.5")
+
+    // const tl = gsap.timeline();
+
+    // tl.to(".test", {duration: 2, x: 300})
 
     return (
         <>
@@ -37,7 +50,7 @@ const Home = () => {
             <section className={styles.home}>
                 <div className={styles.home_content}>
                     <ParticlesBackground />
-                    <h3>Olá eu sou</h3>
+                    <h3 className={styles.first_h3}>Olá eu sou</h3>
                     <h1>Israel Kilday</h1>
 
                     <div className={styles.transparent_text}>
