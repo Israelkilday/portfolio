@@ -1,17 +1,18 @@
 // CSS
+// import "./Home.css"
 import styles from "./Home.module.css"
 // REACT ROUTER DOM
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 // COMPONENTS
 import Transition from '../../components/Transition';
 // REACT ICONS
-import { FaGithub, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
+// import { FaGithub, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
 // IMGAGENS
 import Home_img from "./imgs/home_new_img2.png"
 // PARTICLES
 import ParticlesBackground from '../../components/ParticlesBackground';
 // GSAP
-import { gsap } from 'gsap';
+import gsap from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 // HOOKS
 import { useLayoutEffect, useEffect, useRef } from "react";
@@ -19,29 +20,45 @@ import { useLayoutEffect, useEffect, useRef } from "react";
 const Home = () => {
     const transitionPages = gsap.timeline();
 
-    useLayoutEffect(() => {
-        gsap.to(".first_h3", {
-            x: 0,
-            opacity: 1
-        })
-    }, []);
+    // useLayoutEffect(() => { 
+    //     gsap.to("h3", {
+    //         x: 0,
+    //         opacity: 1,
+    //         delay: 0.4
 
-    // const home = gsap.timeline();
-    // const homeh3 = useRef(null);
+    //     })
+
+    //     gsap.to("h1", {
+    //         x: 0,
+    //         opacity: 1,
+    //         delay: 0.8
+    //     })
+
+    //     gsap.to(".animation_text", {
+    //         x: 0,
+    //         opacity: 1,
+    //         delay: 1
+    //     });
+ 
+    //     return () => {
+    //         gsap.killTweensOf("h3,h1");
+    //     }
+    // }, []);
+
+
+    const home = gsap.timeline();
+    const homeh3 = useRef(null);
     // const homeImg = useRef(null);
 
-    // useEffect(() => {
-    //     home.from(homeh3.current, {
-    //         duration: .7,
-    //         // skewX: 10,
-    //         x: -100,
-    //         // opacity: 0
-    //     })
-    // },"-=3.5")
-
-    // const tl = gsap.timeline();
-
-    // tl.to(".test", {duration: 2, x: 300})
+    useEffect(() => {
+        home.from(homeh3.current, {
+            duration: .7,
+            skewX: 10,
+            x: -100,
+            opacity: 0,
+            ease: "power2.out",
+        })
+    },"-=3.5")
 
     return (
         <>
@@ -50,7 +67,7 @@ const Home = () => {
             <section className={styles.home}>
                 <div className={styles.home_content}>
                     <ParticlesBackground />
-                    <h3 className={styles.first_h3}>Olá eu sou</h3>
+                    <h3 ref={homeh3}>Olá eu sou</h3>
                     <h1>Israel Kilday</h1>
 
                     <div className={styles.transparent_text}>
