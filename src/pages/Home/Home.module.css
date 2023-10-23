@@ -15,8 +15,8 @@
     font-size: 3.2rem;
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
-    transform: translateX(0);
-    /* opacity: 1; */
+    /* transform: scale(0); */
+    /* opacity: 0; */
      /* transform: translateX(-27rem); */
     
 }
