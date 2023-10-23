@@ -10,7 +10,7 @@ const Transition = ({ timeline }) => {
 
     useEffect(() => {
         timeline.to(trans.current, {
-            duration: 8,
+            duration: 7,
             x: 2600,
             ease: Power4.easeOut,
         });
