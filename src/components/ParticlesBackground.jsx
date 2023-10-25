@@ -10,6 +10,8 @@ const ParticlesBackground = () => {
 
     const {mainColor} = useTheme();
 
+    
+
     const particlesConfig = {
         "particles": {
           "number": {
@@ -60,7 +62,7 @@ const ParticlesBackground = () => {
           "line_linked": {
             "enable": true,
             "distance": 150,
-            "color": "#0ef",
+            "color": mainColor,
             "opacity": 0.4,
             "width": 1
           },

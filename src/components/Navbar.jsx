@@ -15,7 +15,7 @@ const Navbar = () => {
     const [selectedColor, setSelectedColor] = useState(null);
     const [paletteInputInvisible, setPaletteInputInvisible] = useState(false);
 
-    const { setMainColor } = useTheme();
+    const { mainColor, setMainColor } = useTheme();
 
     const handleToggleLightMode = () => {
         setLightMode(!lightMode);
@@ -32,36 +32,42 @@ const Navbar = () => {
     }
 
     useEffect(() => {
+        if (selectedColor === "ball_0") {
+            document.documentElement.style.setProperty("--main_color", "#ffb703");
+            setMainColor("#ffb703");
+
+        } else if (selectedColor === "ball_2") {
+            document.documentElement.style.setProperty("--main_color", "#3a86ff");
+            setMainColor("#3a86ff");
+
+        } else if (selectedColor === "ball_4") {
+            document.documentElement.style.setProperty("--main_color", "#0ef");
+            document.documentElement.style.setProperty("--text_color", "#fff");
+            setMainColor("#0ef");
+        }
+
+
+        if (selectedColor === "ball_1") {
+            document.documentElement.style.setProperty("--text_color", "#8ecae6");
+            setMainColor(mainColor)
+            
+        } else if (selectedColor === "ball_3") {
+            document.documentElement.style.setProperty("--text_color", "#eb5e28");
+            setMainColor(mainColor)
+        }
+
+    }, [selectedColor]);
+
+    useEffect(() => {
         if (lightMode) {
             document.body.classList.add('light_mode');
             setMainColor("#ffea00");
         } else {
             document.body.classList.remove('light_mode');
-            setMainColor("#0ef");
+            setMainColor(mainColor);
         }
 
-        if (selectedColor === "ball_0") {
-            document.documentElement.style.setProperty("--main_color", "#ffb703");
-        }
-
-        if (selectedColor === "ball_1") {
-            document.documentElement.style.setProperty("--text_color", "#8ecae6");
-        }
-
-        if (selectedColor === "ball_2") {
-            document.documentElement.style.setProperty("--main_color", "#3a86ff");
-        }
-
-        if (selectedColor === "ball_3") {
-            document.documentElement.style.setProperty("--text_color", "#eb5e28");
-        }
-
-        if (selectedColor === "ball_4") {
-            document.documentElement.style.setProperty("--main_color", "#0ef");
-            document.documentElement.style.setProperty("--text_color", "#fff");
-        }
-
-    }, [lightMode, selectedColor]);
+    }, [lightMode])
 
     return (
         <header className={styles.header}>

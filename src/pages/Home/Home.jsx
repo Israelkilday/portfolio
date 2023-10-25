@@ -1,5 +1,4 @@
 // CSS
-// import "./Home.css"
 import styles from "./Home.module.css"
 // REACT ROUTER DOM
 import { NavLink } from "react-router-dom";
@@ -8,21 +7,16 @@ import Transition from '../../components/Transition';
 // REACT ICONS
 import { FaGithub, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
 // IMGAGENS
-import Home_img from "./imgs/home_new_img2.png"
+import Home_img from "./imgs/home_img.png"
 // PARTICLES
 import ParticlesBackground from '../../components/ParticlesBackground';
 // GSAP
 import gsap from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+// FRAMER MOTION
 import { motion } from "framer-motion";
-
-// HOOKS
-import { useLayoutEffect, useEffect, useRef } from "react";
 
 const Home = () => {
     const transitionPages = gsap.timeline();
-
 
     return (
         <>
