@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 9%;
+    padding: 2rem 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;    
@@ -39,12 +39,13 @@
 .navbar a::after {
     content: " ";
     width: 0%;
-    height: 0.4rem;
+    height: 0.3rem;
     background: var(--main_color);
     position: absolute;
     bottom: 0;
     left: 0;
     transition: .5s ease-in-out;
+    margin-top: 0.2rem;
 }
 
 .icons_container {

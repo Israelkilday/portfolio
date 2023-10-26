@@ -64,7 +64,7 @@ const Navbar = () => {
             setMainColor("#ffea00");
         } else {
             document.body.classList.remove('light_mode');
-            setMainColor(mainColor);
+            setMainColor("#0ef");
         }
 
     }, [lightMode])
@@ -86,10 +86,10 @@ const Navbar = () => {
                 >Sobre
                 </NavLink>
 
-                <NavLink to="/skills"
+                {/* <NavLink to="/skills"
                     className={({ isActive }) => (isActive ? styles.active : "")}
                 >Skills
-                </NavLink>
+                </NavLink> */}
 
                 <NavLink to="/portfolio"
                     className={({ isActive }) => (isActive ? styles.active : "")}

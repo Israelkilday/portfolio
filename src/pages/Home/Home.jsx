@@ -31,7 +31,7 @@ const Home = () => {
                         animate={{ opacity: 1, scale: 1, }}
                         transition={{
                             duration: 0.3,
-                            delay: 0.2,
+                            delay: 0.3,
                             ease: [0, 0.71, 0.2, 1.01],
                             scale: {
                                 type: "spring",
@@ -67,7 +67,7 @@ const Home = () => {
                         animate={{ opacity: 1, scale: 1, }}
                         transition={{
                             duration: 0.3,
-                            delay: 0.6,
+                            delay: 0.5,
                             ease: [0, 0.71, 0.2, 1.01],
                             scale: {
                                 type: "spring",
@@ -86,7 +86,7 @@ const Home = () => {
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{
                                 duration: 0.3,
-                                delay: 0.8,
+                                delay: 0.9,
                                 ease: [0, 0.71, 0.2, 1.01],
                                 scale: {
                                     type: "spring",
@@ -96,7 +96,7 @@ const Home = () => {
                                 }
                             }}
                         >
-                            <NavLink to="#" className={styles.whatsapp_link}>
+                            <NavLink to="https://w.app/yPJZi8" className={styles.whatsapp_link}>
                                 <FaWhatsapp />
                             </NavLink>
                         </motion.div>
@@ -116,7 +116,8 @@ const Home = () => {
                                 }
                             }}
                         >
-                            <NavLink to="#" className={styles.instagram_link}>
+                            <NavLink to="https://www.instagram.com/israelkilday/"
+                             className={styles.instagram_link}>
                                 <FaInstagram />
                             </NavLink>
                         </motion.div>
@@ -126,7 +127,7 @@ const Home = () => {
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{
                                 duration: 0.3,
-                                delay: 1.2,
+                                delay: 1.1,
                                 ease: [0, 0.71, 0.2, 1.01],
                                 scale: {
                                     type: "spring",
@@ -136,7 +137,8 @@ const Home = () => {
                                 }
                             }}
                         >
-                            <NavLink to="#" className={styles.linkedin_link}>
+                            <NavLink to="https://www.linkedin.com/in/israeldevfrontend"
+                             className={styles.linkedin_link}>
                                 <FaLinkedinIn />
                             </NavLink>
                         </motion.div>
@@ -146,7 +148,7 @@ const Home = () => {
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{
                               duration: 0.3,
-                              delay: 1.4,
+                              delay: 1.2,
                               ease: [0, 0.71, 0.2, 1.01],
                               scale: {
                                 type: "spring",
@@ -156,7 +158,8 @@ const Home = () => {
                               }
                             }}                        
                         >
-                            <NavLink to="#" className={styles.github_link}>
+                            <NavLink to="https://github.com/Israelkilday"
+                             className={styles.github_link}>
                                 <FaGithub />
                             </NavLink>
                         </motion.div>

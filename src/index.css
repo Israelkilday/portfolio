@@ -20,7 +20,8 @@
 }
 
 .light_mode {
-  --bg_color: linear-gradient(blue, #F5F5F5); 
+  /* --bg_color: linear-gradient(blue, #F5F5F5);  */
+  --bg_color: #3a86ff; 
   --second_bg_color: #F5F5F5; 
   --text_color: #fff;
   --main_color: #ffea00;
@@ -38,7 +39,7 @@ body {
 
 section {
   min-height: 100vh;
-  padding: 10rem 9% 2rem;
+  padding: 10rem 6% 2rem;
 }
 
 span {
