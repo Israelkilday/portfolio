@@ -1,3 +1,5 @@
+
+
 .home {
     display: flex;
     justify-content: space-between;
@@ -145,3 +147,15 @@
     z-index: 2;   
     object-fit: cover;
 }
+
+/* <========== breakpoints ==========> */
+
+@media (max-width: 1200px) {
+    .home {
+        overflow: hidden;
+        width: 500px;
+    }
+}
+
+
+

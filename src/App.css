@@ -2,10 +2,15 @@
   min-height: 100vh;
 }
 
-/* .particles_js {
-  z-index: -1;
-} */
+/* <========== breakpoints ==========> */
 
+/* @media (max-width: 1200px) {
+  .container {
+    max-width:100vw;
+    overflow-x: hidden;
+  }
+  
+} */
 
 
 

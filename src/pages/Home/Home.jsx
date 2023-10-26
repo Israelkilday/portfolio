@@ -9,22 +9,22 @@ import { FaGithub, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6
 // IMGAGENS
 import Home_img from "./imgs/home_img.png"
 // PARTICLES
-import ParticlesBackground from '../../components/ParticlesBackground';
+// import ParticlesBackground from '../../components/ParticlesBackground';
 // GSAP
-import gsap from "gsap";
+// import gsap from "gsap";
 // FRAMER MOTION
 import { motion } from "framer-motion";
 
 const Home = () => {
-    const transitionPages = gsap.timeline();
+    // const transitionPages = gsap.timeline();
 
     return (
         <>
-            <Transition timeline={transitionPages} />
+            {/* <Transition timeline={transitionPages} /> */}
 
             <section className={styles.home}>
                 <div className={styles.home_content}>
-                    <ParticlesBackground />
+                    {/* <ParticlesBackground /> */}
 
                     <motion.h3
                         initial={{ opacity: 0, scale: 0.5, }}

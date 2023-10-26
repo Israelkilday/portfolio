@@ -155,4 +155,10 @@ label {
         background: linear-gradient(to right, #0ef 50%, #fff 50%);
     }
 
+    /* <========== breakpoints ==========> */
 
+    @media (max-width: 991px) {
+        .header {
+            padding: 2rem 3%;
+        }
+    }
