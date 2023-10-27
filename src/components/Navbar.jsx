@@ -50,7 +50,7 @@ const Navbar = () => {
         if (selectedColor === "ball_1") {
             document.documentElement.style.setProperty("--text_color", "#8ecae6");
             setMainColor(mainColor)
-            
+
         } else if (selectedColor === "ball_3") {
             document.documentElement.style.setProperty("--text_color", "#eb5e28");
             setMainColor(mainColor)
@@ -70,7 +70,10 @@ const Navbar = () => {
     }, [lightMode])
 
     return (
+
+
         <header className={styles.header}>
+
             <NavLink to={"/"} className={styles.logo}>
                 &lt; <span className={styles.logo_span}>I.K DEV</span>/&gt;
             </NavLink>
@@ -156,5 +159,6 @@ const Navbar = () => {
         </header>
     );
 };
+
 
 export default Navbar;

@@ -3,7 +3,7 @@ import styles from "./Home.module.css"
 // REACT ROUTER DOM
 import { NavLink } from "react-router-dom";
 // COMPONENTS
-import Transition from '../../components/Transition';
+// import Transition from '../../components/Transition';
 // REACT ICONS
 import { FaGithub, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
 // IMGAGENS
