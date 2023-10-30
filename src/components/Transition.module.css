@@ -1,14 +1,14 @@
-.transition_effect {
-    position: absolute;
+/* .transition_effect { */
+    /* position: absolute; */
     /* z-index: 1000000000000000; */
     /* position: relative; */
-    z-index: 2;
-    background-color: var(--second_bg_color);
-    top: 0;
-    width: 100%;
-    height: 100vh;
+    /* z-index: 2; */
+    /* background-color: var(--second_bg_color); */
+    /* top: 0; */
+    /* width: 100%; */
+    /* height: 100vh; */
     /* opacity: 0; */
-}
+/* } */
 
 /* <========== breakpoints ==========> */
 
@@ -18,3 +18,34 @@
         width: 100vw;
     }   
 } */
+
+.slide_in {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--second_bg_color);
+    transform-origin: bottom;
+}
+
+.slide_out {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--second_bg_color);
+    transform-origin: top;
+}
+
+
+
+
+
+
+
+
+
+
+
