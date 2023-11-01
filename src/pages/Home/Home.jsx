@@ -13,7 +13,7 @@ import Home_img from "./imgs/home_img.png"
 // FRAMER MOTION
 import { motion } from "framer-motion";
 
-// import Transition from "../../components/Transition";
+import Transition from "../../components/Transition";
 
 const Home = () => {
 
@@ -115,7 +115,7 @@ const Home = () => {
                             }}
                         >
                             <NavLink to="https://www.instagram.com/israelkilday/"
-                             className={styles.instagram_link}>
+                                className={styles.instagram_link}>
                                 <FaInstagram />
                             </NavLink>
                         </motion.div>
@@ -136,7 +136,7 @@ const Home = () => {
                             }}
                         >
                             <NavLink to="https://www.linkedin.com/in/israeldevfrontend"
-                             className={styles.linkedin_link}>
+                                className={styles.linkedin_link}>
                                 <FaLinkedinIn />
                             </NavLink>
                         </motion.div>
@@ -145,19 +145,19 @@ const Home = () => {
                             initial={{ opacity: 0, scale: 0.5 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{
-                              duration: 0.3,
-                              delay: 1.2,
-                              ease: [0, 0.71, 0.2, 1.01],
-                              scale: {
-                                type: "spring",
-                                damping: 5,
-                                stiffness: 100,
-                                restDelta: 0.001
-                              }
-                            }}                        
+                                duration: 0.3,
+                                delay: 1.2,
+                                ease: [0, 0.71, 0.2, 1.01],
+                                scale: {
+                                    type: "spring",
+                                    damping: 5,
+                                    stiffness: 100,
+                                    restDelta: 0.001
+                                }
+                            }}
                         >
                             <NavLink to="https://github.com/Israelkilday"
-                             className={styles.github_link}>
+                                className={styles.github_link}>
                                 <FaGithub />
                             </NavLink>
                         </motion.div>
@@ -180,4 +180,4 @@ const Home = () => {
     )
 };
 
-export default Home; 
+export default Transition(Home); 

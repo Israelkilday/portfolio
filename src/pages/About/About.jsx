@@ -1,10 +1,13 @@
 // CSS
 import styles from "./About.module.css"
+import Transition from "../../components/Transition";
 
 const About = () => {
   return (
-    <div>About</div>
+    <div>
+      <h1>About</h1>
+    </div>
   )
 }
 
-export default About
+export default Transition(About)

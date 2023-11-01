@@ -2,15 +2,25 @@
   min-height: 100vh;
 }
 
-/* <========== breakpoints ==========> */
+.slide_in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--second_bg_color);
+  transform-origin: bottom;
+}
 
-/* @media (max-width: 1200px) {
-  .container {
-    max-width:100vw;
-    overflow-x: hidden;
-  }
-  
-} */
+.slide_out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--second_bg_color);
+  transform-origin: top;
+}
 
 
 
