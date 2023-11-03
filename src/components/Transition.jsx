@@ -1,30 +1,30 @@
 // // CSS
-// import styles from "./Transition.module.css"
-
+import styles from "./Transition.module.css"
+// FRAMER MOTION
 import { motion } from "framer-motion"
 
-const Transition = (OgComponent) => {
-    return () => {
+const Transition = ({ children }) => {
+    return (
         <>
-            <OgComponent />
-
             <motion.div
-                className=".slide_in"
+                className={styles.slide_in}
                 initial={{ scaleY: 0 }}
                 animate={{ scaleY: 0 }}
                 exit={{ scaleY: 1 }}
-                transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             />
 
+            {children}
+
             <motion.div
-                className="slide_out"
+                className={styles.slide_out}
                 initial={{ scaleY: 1 }}
                 animate={{ scaleY: 0 }}
                 exit={{ scaleY: 0 }}
-                transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             />
         </>
-    };
+    );
 };
 
 export default Transition;

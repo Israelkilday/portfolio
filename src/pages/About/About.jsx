@@ -4,10 +4,12 @@ import Transition from "../../components/Transition";
 
 const About = () => {
   return (
-    <div>
-      <h1>About</h1>
-    </div>
+    <Transition>
+      <div>
+        <h1>About</h1>
+      </div>
+    </Transition>
   )
 }
 
-export default Transition(About)
+export default About;
