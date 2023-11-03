@@ -1,10 +1,16 @@
 // CSS
 import styles from "./Contact.module.css"
+// COMPONENT
+import Transition from "../../components/Transition";
 
 const Contact = () => {
   return (
-    <div>Contact</div>
-  )
-}
+    <Transition>
+      <div>
+        <h1>Contact</h1>
+      </div>
+    </Transition>
+  );
+};
 
-export default Contact
+export default Contact;

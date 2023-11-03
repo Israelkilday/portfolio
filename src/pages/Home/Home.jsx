@@ -22,7 +22,7 @@ const Home = () => {
                 <section className={styles.home}>
                     <div className={styles.home_content}>
                         <ParticlesBackground />
-
+                        {/* 
                         <motion.h3
                             initial={{ opacity: 0, scale: 0.5, }}
                             animate={{ opacity: 1, scale: 1, }}
@@ -39,8 +39,21 @@ const Home = () => {
                             }}
                         >
                             Olá eu sou
+                        </motion.h3> */}
+
+                        <motion.h3
+                            initial={{ opacity: 0, x: -100 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{
+                                duration: 2.3,
+                                delay: 0.4,
+                                ease: [0, 0.71, 0.2, 1.01],
+                            }}
+                        >
+                            Olá eu sou
                         </motion.h3>
 
+                        {/* 
                         <motion.h1
                             initial={{ opacity: 0, scale: 0.5, }}
                             animate={{ opacity: 1, scale: 1, }}
@@ -57,9 +70,21 @@ const Home = () => {
                             }}
                         >
                             Israel Kilday
+                        </motion.h1> */}
+
+                        <motion.h1
+                            initial={{ opacity: 0, x: -100 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{
+                                duration: 2.3,
+                                delay: 0.6,
+                                ease: [0, 0.71, 0.2, 1.01],
+                            }}
+                        >
+                            Israel Kilday
                         </motion.h1>
 
-                        <motion.div className={styles.transparent_text}
+                        {/* <motion.div className={styles.transparent_text}
                             initial={{ opacity: 0, scale: 0.5, }}
                             animate={{ opacity: 1, scale: 1, }}
                             transition={{
@@ -75,6 +100,18 @@ const Home = () => {
                             }}
                         >
                             <h3 className={styles.animation_text}>Front-End Developer</h3>
+                        </motion.div> */}
+
+                        <motion.div className={styles.transparent_text}
+                            initial={{ opacity: 0, x: -100 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{
+                                duration: 2.3,
+                                delay: 0.8,
+                                ease: [0, 0.71, 0.2, 1.01],
+                            }}
+                        >
+                            <h3 className={styles.animation_text}>Front-End Developer</h3>
                         </motion.div>
 
                         <div className={styles.social_media}>
@@ -83,7 +120,7 @@ const Home = () => {
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{
                                     duration: 0.3,
-                                    delay: 0.9,
+                                    delay: 1.1,
                                     ease: [0, 0.71, 0.2, 1.01],
                                     scale: {
                                         type: "spring",
@@ -103,7 +140,7 @@ const Home = () => {
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{
                                     duration: 0.3,
-                                    delay: 1,
+                                    delay: 1.3,
                                     ease: [0, 0.71, 0.2, 1.01],
                                     scale: {
                                         type: "spring",
@@ -124,7 +161,7 @@ const Home = () => {
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{
                                     duration: 0.3,
-                                    delay: 1.1,
+                                    delay: 1.5,
                                     ease: [0, 0.71, 0.2, 1.01],
                                     scale: {
                                         type: "spring",
@@ -145,7 +182,7 @@ const Home = () => {
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{
                                     duration: 0.3,
-                                    delay: 1.2,
+                                    delay: 1.7,
                                     ease: [0, 0.71, 0.2, 1.01],
                                     scale: {
                                         type: "spring",
@@ -167,7 +204,7 @@ const Home = () => {
                         initial={{ opacity: 0, y: "100%" }}
                         animate={{ opacity: 1, y: "0%" }}
                         transition={{
-                            duration: 1.5,
+                            duration: 1.7,
                             delay: 0.8,
                             ease: [0, 0.71, 0.2, 1.01]
                         }}

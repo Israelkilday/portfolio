@@ -1,5 +1,6 @@
 // CSS
 import styles from "./About.module.css"
+// COMPONENT
 import Transition from "../../components/Transition";
 
 const About = () => {

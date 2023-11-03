@@ -22,7 +22,7 @@ function App() {
   return (
     <>
       <ThemeProvider >
-        {/* <BrowserRouter> */}
+
         <Navbar />
         <div className="container" >
           <AnimatePresence mode='wait'>
@@ -34,7 +34,7 @@ function App() {
             </Routes>
           </AnimatePresence>
         </div>
-        {/* </BrowserRouter> */}
+
       </ThemeProvider>
     </>
   );
