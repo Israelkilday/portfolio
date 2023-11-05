@@ -45,7 +45,7 @@ const Home = () => {
                             initial={{ opacity: 0, x: -100 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{
-                                duration: 2.3,
+                                duration: 2.5,
                                 delay: 0.4,
                                 ease: [0, 0.71, 0.2, 1.01],
                             }}
@@ -76,7 +76,7 @@ const Home = () => {
                             initial={{ opacity: 0, x: -100 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{
-                                duration: 2.3,
+                                duration: 2.5,
                                 delay: 0.6,
                                 ease: [0, 0.71, 0.2, 1.01],
                             }}
@@ -106,7 +106,7 @@ const Home = () => {
                             initial={{ opacity: 0, x: -100 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{
-                                duration: 2.3,
+                                duration: 2.5,
                                 delay: 0.8,
                                 ease: [0, 0.71, 0.2, 1.01],
                             }}

@@ -18,13 +18,14 @@
   --text_color: #fff;
   --main_color: #0ef;
 }
+/* --main_color: #37a1f2; */
+/* --main_color: #ffea00; */
 
 .light_mode {
-  /* --bg_color: linear-gradient(blue, #F5F5F5);  */
-  --bg_color: #3a86ff; 
+  --bg_color: #f0f3fd; 
+  --text_color: #333;
   --second_bg_color: #F5F5F5; 
-  --text_color: #fff;
-  --main_color: #ffea00;
+  --main_color: #333;
 }
 
 html {
@@ -46,7 +47,9 @@ span {
   color: var(--main_color);   
 }
 
-
+.container {
+  /* position: relative; */
+}
 
 
 
