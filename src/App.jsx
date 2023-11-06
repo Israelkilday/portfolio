@@ -1,7 +1,6 @@
 // CSS
 import './App.css'
 // REACT ROUTER DOM
-// import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Routes, Route, useLocation } from "react-router-dom";
 // COMPONENTS
 import Navbar from "./components/Navbar";
@@ -12,10 +11,19 @@ import Portfolio from './pages/Portfolio/Portfolio';
 import Contact from './pages/Contact/Contact';
 // CONTEXT
 import { ThemeProvider } from './context/ThemeContext';
-// HOOKS
-// import { useTransitionsPages } from '../hooks/useTransitionsPages';
 // FRAMER MOTION
 import { AnimatePresence } from 'framer-motion';
+
+const useAnimationTheme = () => {
+  const container = document.querySelector(".container");
+
+  const cloneContainer = container.cloneNode(true);
+
+  cloneContainer.id = "light_container";
+
+  document.body.appendChild(cloneContainer);
+
+}
 
 function App() {
   const location = useLocation();
@@ -24,7 +32,7 @@ function App() {
       <ThemeProvider >
 
         <Navbar />
-        <div className="container" >
+        <div className="container" id="container" >
           <AnimatePresence mode='wait'>
             <Routes location={location} key={location.pathname}>
               <Route index element={<Home />} />

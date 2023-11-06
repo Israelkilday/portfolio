@@ -1,5 +1,3 @@
-// HOOKS
-import {useState, useEffect} from "react";
 
 export const useAnimationTheme = () => {
     const container = document.querySelector(".container");

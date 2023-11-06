@@ -26,7 +26,57 @@
   --text_color: #333;
   --second_bg_color: #F5F5F5; 
   --main_color: #333;
+  clip-path: circle(10% at 0 0);
+  transition: var(--bg_color) 1.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition-delay: 1.5s;
+  position: relative;
+  overflow: hidden;
 }
+
+@keyframes expandCircle {
+  0% {
+    clip-path: circle(10% at 0 0);
+  }
+  100% {
+    clip-path: circle(150% at 0 0);
+  }
+}
+
+.light_mode_active {
+  --bg_color: #f0f3fd;
+  clip-path: circle(150% at 0 0);
+  animation: expandCircle 2s forwards;
+  z-index: 1;
+  transition-delay: 0s;
+}
+
+/* .transitioning {
+  --bg_color: #f0f3fd;
+  --text_color: #333;
+  --second_bg_color: #F5F5F5;
+  --main_color: #333;
+  background: var(--bg_color);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.transitioning::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--second_bg_color);
+  z-index: -1;
+  transition: z-index 2s ease-in-out; /* Adiciona uma transição para o z-index */
+  z-index: -2; /* Começa com um z-index menor */
+}
+
+.light_mode_active .transitioning::before {
+  z-index: 1; /* Aumenta o z-index para revelar o novo plano de fundo */
+} */
 
 html {
   font-size: 62.5%;
@@ -47,9 +97,7 @@ span {
   color: var(--main_color);   
 }
 
-.container {
-  /* position: relative; */
-}
+
 
 
 

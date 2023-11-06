@@ -21,7 +21,23 @@ const Navbar = () => {
         setLightMode(!lightMode);
         setPaletteInputInvisible(!lightMode);
 
+        if (!lightMode) {
+            document.body.classList.add('light_mode_active');
+        } else {
+            document.body.classList.remove('light_mode_active');
+        }
     }
+
+    useEffect(() => {
+        if (lightMode) {
+            document.body.classList.add('light_mode');
+            setMainColor("#333");
+        } else {
+            document.body.classList.remove('light_mode');
+            setMainColor("#0ef");
+        }
+
+    }, [lightMode])
 
     const handlePaletteToggle = () => {
         setPaletteOpen(!paletteOpen)
@@ -58,104 +74,93 @@ const Navbar = () => {
 
     }, [selectedColor]);
 
-    useEffect(() => {
-        if (lightMode) {
-            document.body.classList.add('light_mode');
-            setMainColor("#333");
-        } else {
-            document.body.classList.remove('light_mode');
-            setMainColor("#0ef");
-        }
 
-    }, [lightMode])
 
     return (
-        // <div className="container">
-            <header className={styles.header}>
+        <header className={styles.header}>
+            <NavLink to={"/"} className={styles.logo}>
+                &lt; <span className={styles.logo_span}>I.K DEV</span>/&gt;
+            </NavLink>
 
-                <NavLink to={"/"} className={styles.logo}>
-                    &lt; <span className={styles.logo_span}>I.K DEV</span>/&gt;
+            <nav className={styles.navbar}>
+                <NavLink to="/"
+                    className={({ isActive }) => (isActive ? styles.active : "")}
+                >Home
                 </NavLink>
 
-                <nav className={styles.navbar}>
-                    <NavLink to="/"
-                        className={({ isActive }) => (isActive ? styles.active : "")}
-                    >Home
-                    </NavLink>
+                <NavLink to="/about"
+                    className={({ isActive }) => (isActive ? styles.active : "")}
+                >Sobre
+                </NavLink>
 
-                    <NavLink to="/about"
-                        className={({ isActive }) => (isActive ? styles.active : "")}
-                    >Sobre
-                    </NavLink>
-
-                    {/* <NavLink to="/skills"
+                {/* <NavLink to="/skills"
         className={({ isActive }) => (isActive ? styles.active : "")}
     >Skills
     </NavLink> */}
 
-                    <NavLink to="/portfolio"
-                        className={({ isActive }) => (isActive ? styles.active : "")}
-                    >Portfolio
-                    </NavLink>
+                <NavLink to="/portfolio"
+                    className={({ isActive }) => (isActive ? styles.active : "")}
+                >Portfolio
+                </NavLink>
 
-                    <NavLink to="/contact"
-                        className={({ isActive }) => (isActive ? styles.active : "")}
-                    >Contato
-                    </NavLink>
-                </nav>
+                <NavLink to="/contact"
+                    className={({ isActive }) => (isActive ? styles.active : "")}
+                >Contato
+                </NavLink>
+            </nav>
 
-                <div className={styles.icons_container} id="container">
-                    <label>
-                        <input
-                            type="checkbox"
-                            className={styles.input_darc_light_mode}
-                            onClick={handleToggleLightMode}
-                        />
+            <div className={styles.icons_container} id="container">
+                <label>
+                    <input
+                        type="checkbox"
+                        className={styles.input_darc_light_mode}
+                        onClick={handleToggleLightMode}
+                    />
 
-                        <FaMoon className={styles.moon_icon} />
-                        <FaSun className={styles.sun_icon} />
-                    </label>
+                    <FaMoon className={styles.moon_icon} />
+                    <FaSun className={styles.sun_icon} />
+                </label>
 
-                    <label style={{ display: paletteInputInvisible ? "none" : "" }}>
-                        <input
-                            type="checkbox"
-                            className={styles.input_palette_colors}
-                            onClick={handlePaletteToggle}
-                        />
+                <label style={{ display: paletteInputInvisible ? "none" : "" }}>
+                    <input
+                        type="checkbox"
+                        className={styles.input_palette_colors}
+                        onClick={handlePaletteToggle}
+                    />
 
-                        <FaPalette className={styles.palette} />
+                    <FaPalette className={styles.palette} />
 
-                        <div className={`${styles.toggle_palette_theme}
+                    <div className={`${styles.toggle_palette_theme}
              ${paletteOpen ? styles.palette_open : ""}`}
-                        >
-                            <button className={`${styles.ball} ${styles.ball_0}`}
-                                style={{ "--p": 1 }}
-                                onClick={() => handleColorSelection("ball_0")}
-                            ></button>
+                    >
+                        <button className={`${styles.ball} ${styles.ball_0}`}
+                            style={{ "--p": 1 }}
+                            onClick={() => handleColorSelection("ball_0")}
+                        ></button>
 
-                            <button className={`${styles.ball} ${styles.ball_1}`}
-                                style={{ "--p": 2 }}
-                                onClick={() => handleColorSelection("ball_1")}
-                            ></button>
+                        <button className={`${styles.ball} ${styles.ball_1}`}
+                            style={{ "--p": 2 }}
+                            onClick={() => handleColorSelection("ball_1")}
+                        ></button>
 
-                            <button className={`${styles.ball} ${styles.ball_2}`}
-                                style={{ "--p": 3 }}
-                                onClick={() => handleColorSelection("ball_2")}
-                            ></button>
+                        <button className={`${styles.ball} ${styles.ball_2}`}
+                            style={{ "--p": 3 }}
+                            onClick={() => handleColorSelection("ball_2")}
+                        ></button>
 
-                            <button className={`${styles.ball} ${styles.ball_3}`}
-                                style={{ "--p": 4 }}
-                                onClick={() => handleColorSelection("ball_3")}
-                            ></button>
+                        <button className={`${styles.ball} ${styles.ball_3}`}
+                            style={{ "--p": 4 }}
+                            onClick={() => handleColorSelection("ball_3")}
+                        ></button>
 
-                            <button className={`${styles.ball} ${styles.ball_4}`}
-                                style={{ "--p": 5 }}
-                                onClick={() => handleColorSelection("ball_4")}
-                            ></button>
-                        </div>
-                    </label>
-                </div>
-            </header>
+                        <button className={`${styles.ball} ${styles.ball_4}`}
+                            style={{ "--p": 5 }}
+                            onClick={() => handleColorSelection("ball_4")}
+                        ></button>
+                    </div>
+                </label>
+            </div>
+        </header>
     );
 };
 

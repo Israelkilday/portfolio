@@ -1,6 +1,18 @@
 .container {
   min-height: 100vh;
+  position: relative;
 }
+
+/* #light_container {
+  --bg_color: #f0f3fd; 
+  --text_color: #333;
+  --second_bg_color: #F5F5F5; 
+  --main_color: #333;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+} */
 
 
 
