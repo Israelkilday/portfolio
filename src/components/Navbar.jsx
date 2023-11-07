@@ -38,7 +38,7 @@ const Navbar = () => {
         }
 
     }, [lightMode])
-
+    
     const handlePaletteToggle = () => {
         setPaletteOpen(!paletteOpen)
     }
