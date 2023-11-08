@@ -28,6 +28,7 @@
     transition: .3s;
     position: relative;
     font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
 .navbar a:hover::after,

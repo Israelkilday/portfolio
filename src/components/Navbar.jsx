@@ -20,25 +20,22 @@ const Navbar = () => {
     const handleToggleLightMode = () => {
         setLightMode(!lightMode);
         setPaletteInputInvisible(!lightMode);
-
-        if (!lightMode) {
-            document.body.classList.add('light_mode_active');
-        } else {
-            document.body.classList.remove('light_mode_active');
-        }
     }
 
     useEffect(() => {
         if (lightMode) {
             document.body.classList.add('light_mode');
-            setMainColor("#333");
+            setMainColor("#37a1f2");
         } else {
             document.body.classList.remove('light_mode');
             setMainColor("#0ef");
+            setTimeout(() => {
+                document.body.style.transition = "background-color 1.5s, color 1.5s"; 
+            }, 1500);
         }
 
     }, [lightMode])
-    
+
     const handlePaletteToggle = () => {
         setPaletteOpen(!paletteOpen)
     }
@@ -51,7 +48,7 @@ const Navbar = () => {
         if (selectedColor === "ball_0") {
             document.documentElement.style.setProperty("--main_color", "#ffb703");
             setMainColor("#ffb703");
-
+            
         } else if (selectedColor === "ball_2") {
             document.documentElement.style.setProperty("--main_color", "#3a86ff");
             setMainColor("#3a86ff");

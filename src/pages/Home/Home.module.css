@@ -107,29 +107,36 @@
     font-size: 1.6rem;
     color: var(--main_color);
     margin: 1rem 1.5rem 3rem 0;
-    transition: .5s ease;
-}
-
-.social_media a:hover {
-    background: var(--main_color);
-    color: var(--second_bg_color);
-    box-shadow: 0 0 1rem var(--main_color);
-}
-
-.whatsapp_link {
+    transition: .3s ease;
     position: relative;
+}    
+
+.whatsapp_link:hover {
+    box-shadow: 0 0 1rem #25D366 ; 
+    color: #fff; 
+    background: #25D366; 
+    border: none;
 }
 
-.instagram_link {
-    position: relative;
+.instagram_link:hover {
+    box-shadow: 0 0 1rem #c13584 ;
+    color: #fff; 
+    background: #C13584;
+    border: none;
 }
 
-.linkedin_link {
-    position: relative;
+.linkedin_link:hover {
+    box-shadow: 0 0 1rem  #2867B2 ;
+    color: #fff; 
+    background:  #2867B2;
+    border: none;
 }
 
-.github_link {
-    position: relative;
+.github_link:hover {
+    box-shadow: 0 0 1rem  #181717; ;
+    color: #fff; 
+    background:  #181717;;
+    border: none;
 }
 
 .home_img {

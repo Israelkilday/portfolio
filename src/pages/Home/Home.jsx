@@ -22,24 +22,6 @@ const Home = () => {
                 <section className={styles.home}>
                     <div className={styles.home_content}>
                         <ParticlesBackground />
-                        {/* 
-                        <motion.h3
-                            initial={{ opacity: 0, scale: 0.5, }}
-                            animate={{ opacity: 1, scale: 1, }}
-                            transition={{
-                                duration: 0.3,
-                                delay: 0.3,
-                                ease: [0, 0.71, 0.2, 1.01],
-                                scale: {
-                                    type: "spring",
-                                    damping: 7,
-                                    stiffness: 100,
-                                    restDelta: 0.001
-                                }
-                            }}
-                        >
-                            Olá eu sou
-                        </motion.h3> */}
 
                         <motion.h3
                             initial={{ opacity: 0, x: -100 }}
@@ -50,28 +32,10 @@ const Home = () => {
                                 ease: [0, 0.71, 0.2, 1.01],
                             }}
                         >
-                            Olá eu sou
+                            {/* Olá eu sou */}
+                            Bem vindo ao meu Portfolio!
                         </motion.h3>
-
-                        {/* 
-                        <motion.h1
-                            initial={{ opacity: 0, scale: 0.5, }}
-                            animate={{ opacity: 1, scale: 1, }}
-                            transition={{
-                                duration: 0.3,
-                                delay: 0.4,
-                                ease: [0, 0.71, 0.2, 1.01],
-                                scale: {
-                                    type: "spring",
-                                    damping: 7,
-                                    stiffness: 100,
-                                    restDelta: 0.001
-                                }
-                            }}
-                        >
-                            Israel Kilday
-                        </motion.h1> */}
-
+                        
                         <motion.h1
                             initial={{ opacity: 0, x: -100 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -81,26 +45,8 @@ const Home = () => {
                                 ease: [0, 0.71, 0.2, 1.01],
                             }}
                         >
-                            Israel Kilday
+                            Sou Israel Kilday  
                         </motion.h1>
-
-                        {/* <motion.div className={styles.transparent_text}
-                            initial={{ opacity: 0, scale: 0.5, }}
-                            animate={{ opacity: 1, scale: 1, }}
-                            transition={{
-                                duration: 0.3,
-                                delay: 0.5,
-                                ease: [0, 0.71, 0.2, 1.01],
-                                scale: {
-                                    type: "spring",
-                                    damping: 7,
-                                    stiffness: 100,
-                                    restDelta: 0.001
-                                }
-                            }}
-                        >
-                            <h3 className={styles.animation_text}>Front-End Developer</h3>
-                        </motion.div> */}
 
                         <motion.div className={styles.transparent_text}
                             initial={{ opacity: 0, x: -100 }}
