@@ -10,8 +10,6 @@ const ParticlesBackground = () => {
 
     const {mainColor} = useTheme();
 
-    
-
     const particlesConfig = {
         "particles": {
           "number": {

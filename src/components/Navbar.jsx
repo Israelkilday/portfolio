@@ -25,7 +25,7 @@ const Navbar = () => {
     useEffect(() => {
         if (lightMode) {
             document.body.classList.add('light_mode');
-            setMainColor("#37a1f2");
+            setMainColor("#dc2626");
         } else {
             document.body.classList.remove('light_mode');
             setMainColor("#0ef");
@@ -48,7 +48,7 @@ const Navbar = () => {
         if (selectedColor === "ball_0") {
             document.documentElement.style.setProperty("--main_color", "#ffb703");
             setMainColor("#ffb703");
-            
+
         } else if (selectedColor === "ball_2") {
             document.documentElement.style.setProperty("--main_color", "#3a86ff");
             setMainColor("#3a86ff");

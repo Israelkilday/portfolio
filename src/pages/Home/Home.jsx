@@ -8,6 +8,8 @@ import Transition from '../../components/Transition';
 import { FaGithub, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
 // IMGAGENS
 import Home_img from "./imgs/home_img.png"
+import Home_img_lightMode from "./imgs/Home_test.png"
+// import Home_img_lightMode from "./imgs/Home_test01.png"
 // PARTICLES
 import ParticlesBackground from '../../components/ParticlesBackground';
 // FRAMER MOTION
@@ -27,32 +29,32 @@ const Home = () => {
                             initial={{ opacity: 0, x: -100 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{
-                                duration: 2.5,
+                                duration: 3,
                                 delay: 0.4,
                                 ease: [0, 0.71, 0.2, 1.01],
                             }}
                         >
                             {/* Olá eu sou */}
-                            Bem vindo ao meu Portfolio!
+                            Bem vindo ao meu Portfolio!<br/>Eu sou,
                         </motion.h3>
                         
                         <motion.h1
                             initial={{ opacity: 0, x: -100 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{
-                                duration: 2.5,
+                                duration: 3,
                                 delay: 0.6,
                                 ease: [0, 0.71, 0.2, 1.01],
                             }}
                         >
-                            Sou Israel Kilday  
+                            Israel Kilday  
                         </motion.h1>
 
                         <motion.div className={styles.transparent_text}
                             initial={{ opacity: 0, x: -100 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{
-                                duration: 2.5,
+                                duration: 3,
                                 delay: 0.8,
                                 ease: [0, 0.71, 0.2, 1.01],
                             }}
@@ -155,7 +157,8 @@ const Home = () => {
                             ease: [0, 0.71, 0.2, 1.01]
                         }}
                     >
-                        <img src={Home_img} alt="home_img" />
+                        {/* <img src={Home_img} alt="home_img" /> */}
+                        <img src={Home_img_lightMode} alt="home_img3" />
                     </motion.div>
                 </section>
             </Transition>

@@ -18,15 +18,12 @@
   --text_color: #fff;
   --main_color: #0ef;
 }
-/* --main_color: #37a1f2; */
-/* --main_color: #ffea00; */
-/* 15202b */
 
  .light_mode {
-    --bg_color: #f0f3fd;  
-   --text_color: #333; 
-   --second_bg_color: #F5F5F5;  
-   --main_color: #37a1f2; 
+   --bg_color: #f0f3fd;  
+   --text_color: #020617; 
+   --second_bg_color: #cbd5e1 ;
+   --main_color: #dc2626; 
    transition: 1.5s;
 }
      
