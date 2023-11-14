@@ -7,9 +7,7 @@ import Transition from '../../components/Transition';
 // REACT ICONS
 import { FaGithub, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
 // IMGAGENS
-import Home_img from "./imgs/home_img.png"
-import Home_img_lightMode from "./imgs/Home_test.png"
-// import Home_img_lightMode from "./imgs/Home_test01.png"
+import Home_img from "./imgs/home_test_img_2.0.png"
 // PARTICLES
 import ParticlesBackground from '../../components/ParticlesBackground';
 // FRAMER MOTION
@@ -157,8 +155,7 @@ const Home = () => {
                             ease: [0, 0.71, 0.2, 1.01]
                         }}
                     >
-                        {/* <img src={Home_img} alt="home_img" /> */}
-                        <img src={Home_img_lightMode} alt="home_img3" />
+                        <img src={Home_img} alt="home_img" />
                     </motion.div>
                 </section>
             </Transition>
