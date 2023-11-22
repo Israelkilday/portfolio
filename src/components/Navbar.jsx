@@ -1,5 +1,6 @@
 // HOOKS
 import { useState, useEffect, useRef } from "react";
+import { useResponsiveNavbar } from "../hooks/useResponsiveNavbar";
 // REACT ROUTER DOM
 import { NavLink } from "react-router-dom";
 // REACT ICONS
@@ -17,6 +18,8 @@ const Navbar = () => {
 
     const { mainColor, setMainColor } = useTheme();
 
+    const { handleClickButton, handleLinkClick, showMenu } = useResponsiveNavbar();
+
     const handleToggleLightMode = () => {
         setLightMode(!lightMode);
         setPaletteInputInvisible(!lightMode);
@@ -30,7 +33,7 @@ const Navbar = () => {
             document.body.classList.remove('light_mode');
             setMainColor("#0ef");
             setTimeout(() => {
-                document.body.style.transition = "background-color 1.5s, color 1.5s"; 
+                document.body.style.transition = "background-color 1.5s, color 1.5s";
             }, 1500);
         }
 
@@ -71,39 +74,73 @@ const Navbar = () => {
 
     }, [selectedColor]);
 
-
-
     return (
         <header className={styles.header}>
-            <NavLink to={"/"} className={styles.logo}>
+            <NavLink
+                to={"/"}
+                className={styles.logo}
+            >
                 &lt; <span className={styles.logo_span}>I.K DEV</span>/&gt;
             </NavLink>
 
             <nav className={styles.navbar}>
-                <NavLink to="/"
-                    className={({ isActive }) => (isActive ? styles.active : "")}
-                >Home
-                </NavLink>
+                <ul className={`${styles.links_list} ${showMenu ? styles.active : ""}`}>
+                    <li
+                        onClick={handleLinkClick}
+                        className={`${styles.active_menu}
+                                    ${showMenu ? styles.animation_menu : ""}`}
+                        style={{ "--i": 0 }}
+                    >
+                        <NavLink
+                            to="/"
+                            className={({ isActive }) => (isActive ? styles.active : "")}
+                        >
+                            Home
+                        </NavLink>
+                    </li>
 
-                <NavLink to="/about"
-                    className={({ isActive }) => (isActive ? styles.active : "")}
-                >Sobre
-                </NavLink>
+                    <li
+                        onClick={handleLinkClick}
+                        className={`${styles.active_menu}
+                                    ${showMenu ? styles.animation_menu : ""}`}
+                        style={{ "--i": 1 }}
+                    >
+                        <NavLink
+                            to="/about"
+                            className={({ isActive }) => (isActive ? styles.active : "")}
+                        >
+                            Sobre
+                        </NavLink>
+                    </li>
 
-                {/* <NavLink to="/skills"
-        className={({ isActive }) => (isActive ? styles.active : "")}
-    >Skills
-    </NavLink> */}
+                    <li
+                        onClick={handleLinkClick}
+                        className={`${styles.active_menu}
+                                    ${showMenu ? styles.animation_menu : ""}`}
+                        style={{ "--i": 2 }}
+                    >
+                        <NavLink
+                            to="/portfolio"
+                            className={({ isActive }) => (isActive ? styles.active : "")}
+                        >
+                            Portfolio
+                        </NavLink>
+                    </li>
 
-                <NavLink to="/portfolio"
-                    className={({ isActive }) => (isActive ? styles.active : "")}
-                >Portfolio
-                </NavLink>
-
-                <NavLink to="/contact"
-                    className={({ isActive }) => (isActive ? styles.active : "")}
-                >Contato
-                </NavLink>
+                    <li
+                        onClick={handleLinkClick}
+                        className={`${styles.active_menu}
+                                    ${showMenu ? styles.animation_menu : ""}`}
+                        style={{ "--i": 3 }}
+                    >
+                        <NavLink
+                            to="/contact"
+                            className={({ isActive }) => (isActive ? styles.active : "")}
+                        >
+                            Contato
+                        </NavLink>
+                    </li>
+                </ul>
             </nav>
 
             <div className={styles.icons_container} id="container">
@@ -128,34 +165,49 @@ const Navbar = () => {
                     <FaPalette className={styles.palette} />
 
                     <div className={`${styles.toggle_palette_theme}
-             ${paletteOpen ? styles.palette_open : ""}`}
+                                     ${paletteOpen ? styles.palette_open : ""}`}
                     >
-                        <button className={`${styles.ball} ${styles.ball_0}`}
+                        <button
+                            className={`${styles.ball} ${styles.ball_0}`}
                             style={{ "--p": 1 }}
                             onClick={() => handleColorSelection("ball_0")}
                         ></button>
 
-                        <button className={`${styles.ball} ${styles.ball_1}`}
+                        <button
+                            className={`${styles.ball} ${styles.ball_1}`}
                             style={{ "--p": 2 }}
                             onClick={() => handleColorSelection("ball_1")}
                         ></button>
 
-                        <button className={`${styles.ball} ${styles.ball_2}`}
+                        <button
+                            className={`${styles.ball} ${styles.ball_2}`}
                             style={{ "--p": 3 }}
                             onClick={() => handleColorSelection("ball_2")}
                         ></button>
 
-                        <button className={`${styles.ball} ${styles.ball_3}`}
+                        <button
+                            className={`${styles.ball} ${styles.ball_3}`}
                             style={{ "--p": 4 }}
                             onClick={() => handleColorSelection("ball_3")}
                         ></button>
 
-                        <button className={`${styles.ball} ${styles.ball_4}`}
+                        <button
+                            className={`${styles.ball} ${styles.ball_4}`}
                             style={{ "--p": 5 }}
                             onClick={() => handleColorSelection("ball_4")}
                         ></button>
                     </div>
                 </label>
+
+                <button
+                    onClick={handleClickButton}
+                    className={`${styles.btn_menu}
+                ${showMenu ? styles.active : ""}`}
+                >
+                    <span className={styles.bar}></span>
+                    <span className={styles.bar}></span>
+                    <span className={styles.bar}></span>
+                </button>
             </div>
         </header>
     );
