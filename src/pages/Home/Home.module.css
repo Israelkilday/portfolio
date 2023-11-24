@@ -148,10 +148,56 @@
 
 .home_img img {
     width: 40vw;
-    animation: floatImage 4s ease-in-out infinite;
     z-index: 2;   
     object-fit: cover;
 }
+
+/* <========== breakpoints ==========> */
+
+@media (max-width: 991px) {
+    .home_img {
+        bottom: -14rem;
+        right: 4rem;
+    }
+    
+    .home_img img {
+        width: 65vh;
+    }
+
+    .home_content {
+        height: 50rem;
+    }
+  }
+
+  @media (max-width: 691px) {
+    .home_content {
+        height: 65rem;
+    }
+  }
+
+  @media (max-width: 460px) {
+    .home_img img {
+        width: 55vh;
+    }
+
+    .home_img {
+        bottom: -14rem;
+        right: 4rem;
+    }
+  }
+
+  @media(max-width: 400px) {
+    .home_img {
+        bottom: -14rem;
+        right: 2rem;
+    }
+
+    .home_img img {
+        width: 52vh;
+    }
+  }
+
+  
 
 
 

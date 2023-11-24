@@ -21,6 +21,11 @@
     text-shadow: 0 0 1rem var(--main_color);
 }
 
+.links_list {
+    display: flex;
+    list-style: none;
+}
+
 /* .navbar a { */
 .links_list a {
     font-size: 1.7rem;
@@ -228,16 +233,15 @@ label {
             left: 0;
             width: 100%;
             background: rgba(0, 0, 0, .1);
-            backdrop-filter: blur(50px);
+            backdrop-filter: blur(20px);
             border-top: .1rem solid rgba(0, 0, 0, .2);
-            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
             overflow: hidden;
             height: 0;
             transition:  .6s ease;
         }
 
         .links_list.active {
-            height: 18rem;
+            height: 20rem;
         }
 
         .links_list li {
