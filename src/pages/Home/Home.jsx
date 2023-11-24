@@ -13,9 +13,7 @@ import ParticlesBackground from '../../components/ParticlesBackground';
 // FRAMER MOTION
 import { motion } from "framer-motion";
 
-
 const Home = () => {
-
     return (
         <>
             <Transition >
