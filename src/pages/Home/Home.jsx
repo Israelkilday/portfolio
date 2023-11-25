@@ -31,9 +31,9 @@ const Home = () => {
                             }}
                         >
                             {/* Olá eu sou */}
-                            Bem vindo ao meu Portfolio!<br/>Eu sou,
+                            Bem vindo ao meu Portfolio!<br />Eu sou,
                         </motion.h3>
-                        
+
                         <motion.h1
                             initial={{ opacity: 0, x: -100 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -43,7 +43,7 @@ const Home = () => {
                                 ease: [0, 0.71, 0.2, 1.01],
                             }}
                         >
-                            Israel Kilday  
+                            Israel Kilday
                         </motion.h1>
 
                         <motion.div className={styles.transparent_text}
@@ -137,7 +137,8 @@ const Home = () => {
                                 }}
                             >
                                 <NavLink to="https://github.com/Israelkilday"
-                                    className={styles.github_link}>
+                                    className={styles.github_link}
+                                >
                                     <FaGithub />
                                 </NavLink>
                             </motion.div>

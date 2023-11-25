@@ -2,10 +2,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20rem;
+    gap: 18rem;
     min-height: 100vh;
-    padding: 10rem 0 2rem;
-    
+    padding: 10rem 3% 2rem;
+
 }
 
 .about_img_CV {
@@ -13,24 +13,39 @@
 }
 
 .about_img_CV img {
-    width: 55vh;
+    width: 52vh;
     margin-bottom: 3rem;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(-2.4rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .btn_box {
     position: relative;
-    left: 7rem;
+    left: 8rem;
 }
 
 .btn_box .btn {
     position: relative;
     display: inline-block;
-    padding: 1rem 2.8rem;
+    padding: 1rem 2rem;
     background: var(--main_color);
     border-radius: 4rem;
     border: .2rem solid var(--main_color);
     box-shadow: 0 0 1rem var(--main_color);
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: var(--bg_color);
     letter-spacing: .1rem;
     font-weight: 600;
@@ -60,21 +75,42 @@
     color: var(--main_color);
 }
 
+.about_overview {
+}
+
 .about_content {
-    width: 40%;
-    border: 1px solid var(--main_color);
+    width: 85%;
     border-radius: 10px;
     padding: 1rem 2rem;
     background: rgba(0, 0, 0, .1);
     backdrop-filter: blur(20px);
     box-shadow: var(--main_color) 0 0 1rem;
-
+    margin-bottom: 13rem;
 }
 
 .about_content h2 {
     text-align: left;
     line-height: 1.2;    
 }
+
+.skills {
+    display: flex;
+    gap: 2rem;
+}
+
+.skills h3 {
+    font-size: 2rem;
+}
+
+.react_container {
+    font-size: 4rem;
+}
+
+.react {
+    color: var(--main_color);
+}
+
+
 
 
 

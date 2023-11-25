@@ -178,13 +178,13 @@
     }
 
     .home_img img {
-        width: 70vw;
+        width: 74vw;
     }
   }
 
   @media (max-width: 470px) {
     .home_img img {
-        width: 85vw;
+        width: 88vw;
     }
 
     .home_img {
