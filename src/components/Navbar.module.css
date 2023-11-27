@@ -190,6 +190,9 @@ label {
             z-index: -1;
         }
 
+        .input_darc_light_mode {
+        }
+
         .btn_menu {
             border: none;
             background: none;

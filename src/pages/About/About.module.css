@@ -99,37 +99,51 @@
 
 .skills h3 {
     font-size: 2rem;
+    margin-right: 2rem;
 }
 
-.react_container,
-.javascript_container,
-.git_container,
-.css_container {
-    /* font-size: 4rem;
-    color: var(--main_color); */
+.icons_container {
+    position: relative;
+    bottom: 2.5rem;
 }
 
-.react,
+.icons_container .react,
+.redux,
 .javascript,
 .git,
 .css,
-.html5 {
+.html,
+.github,
+.typescript,
+.firebase {
     display: inline-flex;
     /* justify-content: center; */
     /* align-items: center; */
     width: 4.5rem;
     height: 4.5rem;
-    /* background: transparent; */
     border: .1rem solid var(--main_color);
     border-radius: 25%;
     font-size: 1.6rem;
     color: var(--main_color);
     margin: 1rem 1rem 3rem 0;
     padding: 0.4rem;
-    /* transition: .3s ease; */
-    /* position: relative; */
-
+    transition: .3s ease;
 }
+
+.icons_container .react:hover,
+.redux:hover,
+.typescript:hover,
+.javascript:hover,
+.git:hover,
+.css:hover,
+.html:hover,
+.firebase:hover {   
+    box-shadow: 0 0 0.5rem var(--main_color);
+    background-color: var(--main_color);
+    color: var(--bg_color);
+    border: none;
+ }
+ 
 
 
 

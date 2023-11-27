@@ -8,12 +8,15 @@ import About_img from "../Home/imgs/home_test_img_2.0.png"
 import { NavLink } from "react-router-dom";
 // REACT ICONS
 import {
-  FaReact,
-  FaSquareJs,
-  FaGitAlt,
-  FaCss3Alt,
-  FaHtml5
-} from "react-icons/fa6";
+  BiLogoTypescript,
+  BiLogoReact,
+  BiLogoJavascript,
+  BiLogoCss3,
+  BiLogoHtml5,
+  BiLogoFirebase,
+  BiLogoRedux 
+} from "react-icons/bi";
+import { FaGitAlt } from "react-icons/fa6";
 
 const About = () => {
   return (
@@ -25,7 +28,6 @@ const About = () => {
           <div className={styles.btn_box}>
             <NavLink className={styles.btn}>Download CV</NavLink>
           </div>
-
         </div>
 
         <div className={styles.about_overview}>
@@ -42,23 +44,16 @@ const About = () => {
               <span>//</span> Skills <span>&</span> Tolls <span>=&gt;</span>
             </h3>
 
-            <div className={styles.react_container}>
-              <FaReact className={styles.react} />
-            </div>
-
-            <div className={styles.javascript_container}>
-              <FaSquareJs className={styles.javascript} />
-            </div>
-
-            <div className={styles.git_container}>
+            <div className={styles.icons_container}>
+              <BiLogoReact className={styles.react} />
+              <BiLogoRedux className={styles.redux} />
+              <BiLogoTypescript className={styles.typescript} />
+              <BiLogoJavascript className={styles.javascript} />
               <FaGitAlt className={styles.git} />
+              <BiLogoCss3 className={styles.css} />
+              <BiLogoHtml5 className={styles.html} />
+              <BiLogoFirebase className={styles.firebase} />
             </div>
-
-            <div className={styles.css_container}>
-              <FaCss3Alt className={styles.css} />
-            </div>
-            
-            <FaHtml5 className={styles.html5} />
           </div>
         </div>
       </section>

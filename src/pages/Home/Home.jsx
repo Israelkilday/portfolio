@@ -31,7 +31,7 @@ const Home = () => {
                             }}
                         >
                             {/* Olá eu sou */}
-                            Bem vindo ao meu Portfolio!<br />Eu sou,
+                            Inovação a cada <span>Byte</span>
                         </motion.h3>
 
                         <motion.h1
