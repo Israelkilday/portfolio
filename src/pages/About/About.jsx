@@ -7,7 +7,13 @@ import About_img from "../Home/imgs/home_test_img_2.0.png"
 // REACT ROUTER DOM
 import { NavLink } from "react-router-dom";
 // REACT ICONS
-import { FaReact } from "react-icons/fa6";
+import {
+  FaReact,
+  FaSquareJs,
+  FaGitAlt,
+  FaCss3Alt,
+  FaHtml5
+} from "react-icons/fa6";
 
 const About = () => {
   return (
@@ -33,14 +39,28 @@ const About = () => {
 
           <div className={styles.skills}>
             <h3>
-              <span>//</span> Skills <span>&</span> Tolls <span>=&gt;</span> 
+              <span>//</span> Skills <span>&</span> Tolls <span>=&gt;</span>
             </h3>
+
             <div className={styles.react_container}>
               <FaReact className={styles.react} />
             </div>
+
+            <div className={styles.javascript_container}>
+              <FaSquareJs className={styles.javascript} />
+            </div>
+
+            <div className={styles.git_container}>
+              <FaGitAlt className={styles.git} />
+            </div>
+
+            <div className={styles.css_container}>
+              <FaCss3Alt className={styles.css} />
+            </div>
+            
+            <FaHtml5 className={styles.html5} />
           </div>
         </div>
-
       </section>
     </Transition>
   )

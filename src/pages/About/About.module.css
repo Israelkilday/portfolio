@@ -85,7 +85,7 @@
     background: rgba(0, 0, 0, .1);
     backdrop-filter: blur(20px);
     box-shadow: var(--main_color) 0 0 1rem;
-    margin-bottom: 13rem;
+    margin-bottom: 8rem;
 }
 
 .about_content h2 {
@@ -95,20 +95,47 @@
 
 .skills {
     display: flex;
-    gap: 2rem;
 }
 
 .skills h3 {
     font-size: 2rem;
 }
 
-.react_container {
-    font-size: 4rem;
+.react_container,
+.javascript_container,
+.git_container,
+.css_container {
+    /* font-size: 4rem;
+    color: var(--main_color); */
 }
 
-.react {
+.react,
+.javascript,
+.git,
+.css,
+.html5 {
+    display: inline-flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    width: 4.5rem;
+    height: 4.5rem;
+    /* background: transparent; */
+    border: .1rem solid var(--main_color);
+    border-radius: 25%;
+    font-size: 1.6rem;
     color: var(--main_color);
+    margin: 1rem 1rem 3rem 0;
+    padding: 0.4rem;
+    /* transition: .3s ease; */
+    /* position: relative; */
+
 }
+
+
+
+
+
+
 
 
 

@@ -174,11 +174,16 @@
 
   @media (max-width: 691px) {
     .home_content {
-            height: 70rem;
+            height: 75rem;
     }
 
     .home_img img {
-        width: 74vw;
+        width: 84vw;
+    }
+
+    .home_img {
+        bottom: -14rem;
+        right: 5rem;
     }
   }
 
