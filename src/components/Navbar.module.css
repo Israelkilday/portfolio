@@ -26,7 +26,6 @@
     list-style: none;
 }
 
-/* .navbar a { */
 .links_list a {
     font-size: 1.7rem;
     color: var(--text_color);
@@ -37,15 +36,12 @@
     font-weight: bold;
 }
 
-/* .navbar a:hover::after,
-.navbar a.active { */
 .links_list a:hover::after,
 .links_list a.active {
     color: var(--main_color);
     width: 100%;
 }
 
-/* .navbar a::after { */
 .links_list a::after {
     content: " ";
     width: 0%;
@@ -60,7 +56,7 @@
 
 .icons_container {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 label {
@@ -190,9 +186,6 @@ label {
             z-index: -1;
         }
 
-        .input_darc_light_mode {
-        }
-
         .btn_menu {
             border: none;
             background: none;
@@ -244,7 +237,7 @@ label {
         }
 
         .links_list.active {
-            height: 20rem;
+            height: 21rem;
         }
 
         .links_list li {

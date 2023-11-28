@@ -143,6 +143,18 @@ const Home = () => {
                                 </NavLink>
                             </motion.div>
                         </div>
+
+                        <motion.div className={styles.btn_box}
+                            initial={{ opacity: 0, x: -100 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{
+                                duration: 3,
+                                delay: 1.7,
+                                ease: [0, 0.71, 0.2, 1.01],
+                            }}
+                        >
+                            <NavLink className={styles.btn}>Download CV</NavLink>
+                        </motion.div>
                     </div>
 
                     <motion.div className={styles.home_img}

@@ -83,7 +83,7 @@ const Navbar = () => {
                 &lt; <span className={styles.logo_span}>I.K DEV</span>/&gt;
             </NavLink>
 
-            <nav className={styles.navbar}>
+            <nav>
                 <ul className={`${styles.links_list} ${showMenu ? styles.active : ""}`}>
                     <li
                         onClick={handleLinkClick}

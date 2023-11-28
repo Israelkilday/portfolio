@@ -2,18 +2,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 18rem;
+    gap: 15rem;
     min-height: 100vh;
-    padding: 10rem 3% 2rem;
+    padding: 10rem 5% 2rem;
 
 }
 
-.about_img_CV {
-    height: 50rem;
+.about_img {
+    height: 45rem;
 }
 
-.about_img_CV img {
-    width: 52vh;
+.about_img img {
+    width: 27vw;
     margin-bottom: 3rem;
     animation: floatImage 4s ease-in-out infinite;
 }
@@ -30,49 +30,6 @@
     100% {
         transform: translateY(0);
     }
-}
-
-.btn_box {
-    position: relative;
-    left: 8rem;
-}
-
-.btn_box .btn {
-    position: relative;
-    display: inline-block;
-    padding: 1rem 2rem;
-    background: var(--main_color);
-    border-radius: 4rem;
-    border: .2rem solid var(--main_color);
-    box-shadow: 0 0 1rem var(--main_color);
-    font-size: 1.4rem;
-    color: var(--bg_color);
-    letter-spacing: .1rem;
-    font-weight: 600;
-    overflow: hidden;
-    transition: .5s ease;
-    z-index: 1;
-}
-
-.btn_box .btn::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: var(--bg_color);
-    z-index: -1;
-    transition: .5s;
-}
-
-.btn_box .btn:hover::before {
-    width: 100%;
-}
-
-.btn_box .btn:hover {
-    box-shadow: none;
-    color: var(--main_color);
 }
 
 .about_overview {
@@ -95,14 +52,23 @@
 
 .skills {
     display: flex;
+    position: absolute;
+    width: 100vw;
+    top: 90%;
+    /* left: 20%; */
+    justify-content: center;
 }
 
 .skills h3 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-right: 2rem;
+    margin-bottom: 0;
 }
 
 .icons_container {
+    /* display: grid; */
+    /* grid-template-columns: repeat(5, 1fr); */
+    display: flex;
     position: relative;
     bottom: 2.5rem;
 }
@@ -115,17 +81,18 @@
 .html,
 .github,
 .typescript,
-.firebase {
+.firebase,
+.mysql,
+.canva,
+.vscode {
     display: inline-flex;
-    /* justify-content: center; */
-    /* align-items: center; */
     width: 4.5rem;
     height: 4.5rem;
     border: .1rem solid var(--main_color);
     border-radius: 25%;
     font-size: 1.6rem;
     color: var(--main_color);
-    margin: 1rem 1rem 3rem 0;
+    margin: 1rem 1rem 0.8rem 0;
     padding: 0.4rem;
     transition: .3s ease;
 }
@@ -134,11 +101,14 @@
 .redux:hover,
 .typescript:hover,
 .javascript:hover,
+.mysql:hover,
 .git:hover,
 .css:hover,
 .html:hover,
-.firebase:hover {   
-    box-shadow: 0 0 0.5rem var(--main_color);
+.firebase:hover,
+.canva:hover,
+.vscode:hover {   
+    box-shadow: 0 0 1rem var(--main_color);
     background-color: var(--main_color);
     color: var(--bg_color);
     border: none;
