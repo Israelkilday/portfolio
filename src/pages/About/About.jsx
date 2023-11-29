@@ -20,7 +20,8 @@ import {
   BiLogoHtml5,
   BiLogoFirebase,
   BiLogoRedux,
-  BiLogoVisualStudio
+  BiLogoVisualStudio,
+  BiLogoBootstrap
 } from "react-icons/bi";
 
 const container = {
@@ -29,7 +30,7 @@ const container = {
     opacity: 1,
     scale: 1,
     transition: {
-      delayChildren: 0.3,
+      delayChildren: 0.5,
       staggerChildren: 0.2
     }
   }
@@ -48,7 +49,7 @@ const About = () => {
     <Transition>
       <section className={styles.about}>
         <div className={styles.container_img_skills}>
-          <motion.div className={styles.box_img}
+          <motion.div
             initial={{ opacity: 0, y: "80%" }}
             animate={{ opacity: 1, y: "0%" }}
             transition={{
@@ -62,7 +63,7 @@ const About = () => {
 
           <div className={styles.skills}>
             <h3>
-              <span>//</span> Skills <span>&</span> Tolls <span>=&gt;</span>
+              <span>//</span> Skills <span>&</span> Tolls 
             </h3>
 
             <motion.div
@@ -74,21 +75,53 @@ const About = () => {
               <motion.div variants={item}>
                 <BiLogoReact className={styles.react} />
               </motion.div>
-              <BiLogoRedux className={styles.redux} />
-              <BiLogoTypescript className={styles.typescript} />
-              <BiLogoJavascript className={styles.javascript} />
-              <GrMysql className={styles.mysql} />
-              <FaGitAlt className={styles.git} />
-              <BiLogoCss3 className={styles.css} />
-              <BiLogoHtml5 className={styles.html} />
-              <BiLogoFirebase className={styles.firebase} />
-              <SiCanva className={styles.canva} />
-              <BiLogoVisualStudio className={styles.vscode} />
+
+              <motion.div variants={item}>
+                <BiLogoRedux className={styles.redux} />
+              </motion.div>
+
+              <motion.div variants={item}>
+                <BiLogoTypescript className={styles.typescript} />
+              </motion.div>
+
+              <motion.div variants={item}>
+                <BiLogoJavascript className={styles.javascript} />
+              </motion.div>
+
+              <motion.div variants={item}>
+                <GrMysql className={styles.mysql} />
+              </motion.div>
+
+              <motion.div variants={item}>
+                <BiLogoBootstrap className={styles.bootstrap} />
+              </motion.div>
+
+              <motion.div variants={item}>
+                <FaGitAlt className={styles.git} />
+              </motion.div>
+
+              <motion.div variants={item}>
+                <BiLogoCss3 className={styles.css} />
+              </motion.div>
+
+              <motion.div variants={item}>
+                <BiLogoHtml5 className={styles.html} />
+              </motion.div>
+
+              <motion.div variants={item}>
+                <BiLogoFirebase className={styles.firebase} />
+              </motion.div>
+
+              <motion.div variants={item}>
+                <SiCanva className={styles.canva} />
+              </motion.div>
+
+              <motion.div variants={item}>
+                <BiLogoVisualStudio className={styles.vscode} />
+              </motion.div>
             </motion.div>
           </div>
         </div>
-
-
 
         <div className={styles.about_overview}>
           <motion.div className={styles.about_content}

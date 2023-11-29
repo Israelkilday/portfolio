@@ -25,22 +25,24 @@ const Home = () => {
                             initial={{ opacity: 0, x: -100 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{
-                                duration: 3,
+                                duration: 2,
                                 delay: 0.4,
-                                ease: [0, 0.71, 0.2, 1.01],
+                                // ease: [0, 0.71, 0.2, 1.01],
+                                ease: [0.3, 0, 0.2, 1]
                             }}
                         >
                             {/* Olá eu sou */}
-                            Inovação a cada <span>Byte</span>
+                            Inovando a cada <span>Byte</span>
                         </motion.h3>
 
                         <motion.h1
                             initial={{ opacity: 0, x: -100 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{
-                                duration: 3,
+                                duration: 2,
                                 delay: 0.6,
-                                ease: [0, 0.71, 0.2, 1.01],
+                                // ease: [0, 0.71, 0.2, 1.01],
+                                ease: [0.3, 0, 0.2, 1]
                             }}
                         >
                             Israel Kilday
@@ -50,9 +52,10 @@ const Home = () => {
                             initial={{ opacity: 0, x: -100 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{
-                                duration: 3,
+                                duration: 2,
                                 delay: 0.8,
-                                ease: [0, 0.71, 0.2, 1.01],
+                                // ease: [0, 0.71, 0.2, 1.01],
+                                ease: [0.3, 0, 0.2, 1]
                             }}
                         >
                             <h3 className={styles.animation_text}>Front-End Developer</h3>
@@ -63,8 +66,8 @@ const Home = () => {
                                 initial={{ opacity: 0, scale: 0.5 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{
-                                    duration: 0.3,
-                                    delay: 1.1,
+                                    duration: 3,
+                                    delay: 1.2,
                                     ease: [0, 0.71, 0.2, 1.01],
                                     scale: {
                                         type: "spring",
@@ -74,7 +77,9 @@ const Home = () => {
                                     }
                                 }}
                             >
-                                <NavLink to="https://w.app/yPJZi8" className={styles.whatsapp_link}>
+                                <NavLink to="https://w.app/yPJZi8"
+                                    className={styles.whatsapp_link}
+                                >
                                     <FaWhatsapp />
                                 </NavLink>
                             </motion.div>
@@ -83,28 +88,7 @@ const Home = () => {
                                 initial={{ opacity: 0, scale: 0.5 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{
-                                    duration: 0.3,
-                                    delay: 1.3,
-                                    ease: [0, 0.71, 0.2, 1.01],
-                                    scale: {
-                                        type: "spring",
-                                        damping: 5,
-                                        stiffness: 100,
-                                        restDelta: 0.001
-                                    }
-                                }}
-                            >
-                                <NavLink to="https://www.instagram.com/israelkilday/"
-                                    className={styles.instagram_link}>
-                                    <FaInstagram />
-                                </NavLink>
-                            </motion.div>
-
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.5 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                transition={{
-                                    duration: 0.3,
+                                    duration: 3,
                                     delay: 1.5,
                                     ease: [0, 0.71, 0.2, 1.01],
                                     scale: {
@@ -115,9 +99,10 @@ const Home = () => {
                                     }
                                 }}
                             >
-                                <NavLink to="https://www.linkedin.com/in/israeldevfrontend"
-                                    className={styles.linkedin_link}>
-                                    <FaLinkedinIn />
+                                <NavLink to="https://www.instagram.com/israelkilday/"
+                                    className={styles.instagram_link}
+                                >
+                                    <FaInstagram />
                                 </NavLink>
                             </motion.div>
 
@@ -127,6 +112,28 @@ const Home = () => {
                                 transition={{
                                     duration: 0.3,
                                     delay: 1.7,
+                                    ease: [0, 0.71, 0.2, 1.01],
+                                    scale: {
+                                        type: "spring",
+                                        damping: 5,
+                                        stiffness: 100,
+                                        restDelta: 0.001
+                                    }
+                                }}
+                            >
+                                <NavLink to="https://www.linkedin.com/in/israeldevfrontend"
+                                    className={styles.linkedin_link}
+                                >
+                                    <FaLinkedinIn />
+                                </NavLink>
+                            </motion.div>
+
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.5 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{
+                                    duration: 3,
+                                    delay: 1.9,
                                     ease: [0, 0.71, 0.2, 1.01],
                                     scale: {
                                         type: "spring",
@@ -148,9 +155,10 @@ const Home = () => {
                             initial={{ opacity: 0, x: -100 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{
-                                duration: 3,
+                                duration: 2,
                                 delay: 1.7,
-                                ease: [0, 0.71, 0.2, 1.01],
+                                // ease: [0, 0.71, 0.2, 1.01],
+                                ease: [0.2, 0, 0.2, 1]
                             }}
                         >
                             <NavLink className={styles.btn}>Download CV</NavLink>
@@ -161,9 +169,9 @@ const Home = () => {
                         initial={{ opacity: 0, y: "100%" }}
                         animate={{ opacity: 1, y: "0%" }}
                         transition={{
-                            duration: 1.7,
-                            delay: 0.8,
-                            ease: [0, 0.71, 0.2, 1.01]
+                            duration: 2,
+                            delay: 0.7,
+                            ease: [0.2, 0, 0.2, 1]
                         }}
                     >
                         <img src={Home_img} alt="home_img" />
