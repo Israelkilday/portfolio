@@ -138,7 +138,7 @@
     }
 
     .about_content {
-        width: 50vw
+        width: auto;
     }
 
     .icons_container {
