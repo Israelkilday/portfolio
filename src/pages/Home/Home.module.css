@@ -213,14 +213,13 @@
     }
   }
 
-
   @media (max-width: 691px) {
     .home_content {
             height: 70rem;
     }
 
     .home_img img {
-        width: 88vw;
+        width: 90vw;
     }
 
     .home_img {

@@ -8,11 +8,11 @@
 
 }
 
-.about_img {
+.container_img_skills {
     height: 45rem;
 }
 
-.about_img img {
+.container_img_skills img {
     width: 27vw;
     margin-bottom: 3rem;
     animation: floatImage 4s ease-in-out infinite;
