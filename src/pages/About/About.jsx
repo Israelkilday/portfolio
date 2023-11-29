@@ -125,10 +125,10 @@ const About = () => {
 
         <div className={styles.about_overview}>
           <motion.div className={styles.about_content}
-            initial={{ opacity: 0, x: 120 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{
-              duration: 3,
+              duration: 1,
               delay: 0.6,
               ease: [0.2, 0, 0.2, 1]
             }}

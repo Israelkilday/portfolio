@@ -219,7 +219,7 @@
     }
 
     .home_img img {
-        width: 90vw;
+        width: 70vw;
     }
 
     .home_img {
@@ -242,11 +242,10 @@
   @media(max-width: 400px) {
     .home_img {
         bottom: -14rem;
-        right: 2.5rem;
+        right: 1.5rem;
     }
 
     .home_img img {
-        /* width: 90vw; */
         width: 95vw;
     }
   }

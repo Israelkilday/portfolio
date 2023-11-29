@@ -32,7 +32,8 @@
     margin-left: 4rem;
     transition: .3s;
     position: relative;
-    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Orbitron', sans-serif;
     font-weight: bold;
 }
 
@@ -119,11 +120,13 @@ label {
 }
 
 .palette_open {
-    height: 14.1rem;
+    height: 14.9rem;
+    /* height: 14.3rem; */
 }
 
-    .ball {
-        margin: .2rem 0 ;
+.ball {
+        /* margin: .2rem 0 ; */
+        margin: .3rem;
         display: inline-block;
         border: none;
         border-radius: 50%;
@@ -133,7 +136,7 @@ label {
         transition: .6s ease;
         transform: translateY(-180px);
         cursor: pointer;
-    }
+}
 
     .input_palette_colors:checked ~ .toggle_palette_theme .ball {
         transform: translateY(0);
@@ -194,6 +197,7 @@ label {
             height: 3.2rem;
             position: relative;
             width: 2.4rem;
+            margin-right: 1rem;
         }
 
         .btn_menu .bar {
