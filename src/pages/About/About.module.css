@@ -92,7 +92,7 @@
     height: 4.5rem;
     border: .1rem solid var(--main_color);
     border-radius: 25%;
-    font-size: 1.6rem;
+    /* font-size: 1.6rem; */
     color: var(--main_color);
     margin: 1rem 1rem 0.8rem 0;
     padding: 0.4rem;
@@ -184,12 +184,24 @@
         border-radius: 1rem;
         width: auto;
         padding-left: 1rem;
-        /* background: rgba(0, 0, 0, .1);
-        backdrop-filter: blur(20px); */
-        /* box-shadow: var(--main_color) 0 0 1rem; */
     }
 
-    
+    .icons_container .react,
+    .redux,
+    .javascript,
+    .git,
+    .bootstrap,
+    .css,
+    .html,
+    .github,
+    .typescript,
+    .firebase,
+    .mysql,
+    .canva,
+    .vscode {
+        height: 5rem;
+        width: 5rem;
+    }
 }
  
 
