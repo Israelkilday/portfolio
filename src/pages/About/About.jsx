@@ -63,7 +63,7 @@ const About = () => {
 
           <div className={styles.skills}>
             <h3>
-              <span>//</span> Skills <span>&</span> Tolls 
+              <span>//</span> Skills <span>&</span> Tolls
             </h3>
 
             <motion.div
@@ -123,7 +123,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className={styles.about_overview}>
+        <div>
           <motion.div className={styles.about_content}
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -135,10 +135,12 @@ const About = () => {
           >
             <h2><span>//</span> Sobre <span>Mim</span></h2>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla nihil cumque fugiat voluptas totam, rem magni? Ipsa, quas deleniti alias animi consequuntur provident minima accusantium fugit neque vero. Voluptas, beatae.
-              Repellat, dignissimos! Ut consequuntur similique, natus soluta distinctio laborum assumenda minus quia cumque deleniti expedita explicabo eius esse impedit asperiores pariatur vitae, iste aspernatur. Assumenda cupiditate qui illum nesciunt deserunt?
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore aspernatur fugit id perspiciatis enim, ut eveniet. Quia tempora dolor quos? Magnam, cupiditate earum nulla consequuntur expedita incidunt dolor reprehenderit at!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, molestiae enim facere minus maxime velit animi ea voluptate fugit similique odio consequuntur vitae assumenda autem dolores obcaecati id officiis nobis!</p>
+            <p>
+              - Olá, prazer em conhecer! Me chamo Israel Kilday.
+              Desenvolvedor web apaixonado e dedicado, com uma sólida experiência de 15 anos na área de vendas trago de bagagem softs skills que julgo serem importantes para area de desenvolvimento, estou atualmente em transição de carreira para seguir minha paixão pela programação. Possuo um amplo conhecimento em tecnologias web, incluindo JavaScript, React e TypeScript. Entusiasmado em aprender e evoluir constantemente, estou comprometido em aplicar minha experiência para criar soluções web inovadoras e impactantes. Determinado a contribuir ativamente para projetos desafiadores e colaborar em equipes dinâmicas.
+              Comunicativo por natureza, estou sempre pronto para desempenhar um papel em soluções inovadoras.
+              Vamos construir algo incrível juntos!
+            </p>
           </motion.div>
         </div>
 

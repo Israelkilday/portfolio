@@ -4,7 +4,7 @@
     justify-content: center;
     gap: 15rem;
     min-height: 100vh;
-    padding: 10rem 6% 2rem;
+        padding: 10rem 6% 2rem;
 }
 
 .container_img_skills {
@@ -31,8 +31,7 @@
     }
 }
 
-.about_overview {
-}
+
 
 .about_content {
     width: 85%;
