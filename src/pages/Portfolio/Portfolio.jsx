@@ -1,80 +1,225 @@
 // CSS
 import styles from "./Portfolio.module.css"
+// HOOKS 
+import { useState } from "react";
 // COMPONENT
 import Transition from "../../components/Transition";
 // IMGAGENS
 import Portfolio_img from "../Home/imgs/home_test_img_2.0.png"
+// REACT ICONS
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
+
+
+
+
+
+
+
+ 
 const Portfolio = () => {
-  // document.getElementById("root").appendChild(container);
-  const slideRef = document.createElement("div");
-  const loadingProgress = 0;
-
-  const handleClickNext = () => {
-    let items = slideRef.querySelectorAll(".item");
-    slideRef.appendChild(items[0]);
-  }
-
-  const handleClickPrev = () => {
-    let items = slideRef.querySelectorAll(".item");
-    slideRef.prepend(items[items.length - 1]);
-  }
-
-  const data = [
+  const itemsData = [
     {
-      project_0: <Portfolio_img />,
-      name: "Secret Word",
-      description: ""
+      name: "Project_1",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?",
+      image: Portfolio_img
     },
-
     {
-      project_1: <Portfolio_img />,
-      name: "Music Blog",
-      description: ""
+      name: "Project_2",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?",
+      image: Portfolio_img
+    },
+    {
+      name: "Project_3",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?",
+      image: Portfolio_img
+    },
+    {
+      name: "Project_4",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?",
+      image: Portfolio_img
+    },
+    {
+      name: "Project_5",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?",
+      image: Portfolio_img
+    },
+    {
+      name: "Project_6",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?",
+      image: Portfolio_img
     }
-
   ];
 
-  const container = document.createElement("div");
-  container.classList.add("container");
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const loadbar = document.createElement("div");
-  loadbar.classList.add("loadbar");
-  loadbar.style.width = `${loadingProgress}%`
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % itemsData.length);
+  }
 
-  // container.appendChild("loadbar");
-  // container.appendChild("slideRef");
-
-  data.forEach((item) => {
-    const slideItem = document.createElement("div");
-    slideItem.style.backgroundImage = item.project_0 
-
-    const content = document.createElement("div");
-    content.classList.add("content");
-
-    const name = document.createElement("div");
-    name.classList.add("name");
-    name.textContent = item.name;
-
-    const description_project = document.createElement("div");
-    description_project.classList.add("description_project");
-    description_project.textContent = item.description;
-
-  });
-
-
-
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? itemsData.length - 1 : prevIndex - 1
+    );
+  };
 
   return (
-    <Transition>
-      <section className={styles.portfolio}></section>
-      <div className={styles.container}>
-        <div className={styles.item}></div>
-        
-        <div className={styles.item}></div>
+    <div className={styles.container}>
+      <div className={styles.slide}>
+        {itemsData.map((item, index) => (
+          <div
+            key={index}
+            className={`${styles.item} ${index === currentIndex ? styles.active : ""}`}
+            style={{ backgroundImage: `url(${item.image})` }}
+          >
+            <div className={styles.content}>
+              <div className={styles.name}>{item.name}</div>
+              <div className={styles.description}>
+                <p>{item.description}</p>
+              </div>
+              <button>Saiba Mais</button>
+            </div>
+          </div>
+        ))}
+        <div className={styles.navigate}>
+          <button onClick={handlePrev}>
+            <FaArrowLeft />
+          </button>
+          <button onClick={handleNext}>
+            <FaArrowRight />
+          </button>
+        </div>
       </div>
-    </Transition>
+    </div>
   );
 };
 
 export default Portfolio;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const next = document.querySelector(".next");
+// const prev = document.querySelector(".prev");
+
+// next.addEventListener("click", function() {
+//   const items = document.querySelectorAll(".item");
+//   document.querySelector(".slide").appendChild(items[0]);
+// })
+
+// next.addEventListener("click", function() {
+//   const items = document.querySelectorAll(".item");
+//   document.querySelector(".slide").prepend(items[items.length - 1]);
+// })
+
+
+//   return (
+//     <Transition>
+//       <div className={styles.container}>
+//         <div className={styles.slide}>
+//           {projects.map((item, index) => (
+//             <div
+//               key={index}
+//               className={`${styles.item} ${index === currentIndex ? styles.active : ""}`}
+//               style={{ backgroundImage: `url(${item.image})` }}
+//             >  
+//           )}
+//               <div className={styles.content}>
+//                 <div className={styles.item} style={{ backgroundImage: `url(${Portfolio_img})` }}>
+//                   <div className={styles.name}>Project_1</div>
+//                   <div className={styles.description}>
+//                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?
+//                   </div>
+//                   <button>Saiba Mais</button>
+//                 </div>
+//               </div>
+
+//               <div className={styles.item} style={{ backgroundImage: `url(${Portfolio_img})` }}>
+//                 <div className={styles.content}>
+//                   <div className={styles.name}>Project_2</div>
+//                   <div className={styles.description}>
+//                     <p>
+//                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?
+//                     </p>
+//                   </div>
+//                   <button>Saiba Mais</button>
+//                 </div>
+//               </div>
+
+//               <div className={styles.item} style={{ backgroundImage: `url(${Portfolio_img})` }}>
+//                 <div className={styles.content}>
+//                   <div className={styles.name}>Project_3</div>
+//                   <div className={styles.description}>
+//                     <p>
+//                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?
+//                     </p>
+//                   </div>
+//                   <button>Saiba Mais</button>
+//                 </div>
+//               </div>
+
+//               <div className={styles.item} style={{ backgroundImage: `url(${Portfolio_img})` }}>
+//                 <div className={styles.content}>
+//                   <div className={styles.name}>Project_4</div>
+//                   <div className={styles.description}>
+//                     <p>
+//                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?
+//                     </p>
+//                   </div>
+//                   <button>Saiba Mais</button>
+//                 </div>
+//               </div>
+
+//               <div className={styles.item} style={{ backgroundImage: `url(${Portfolio_img})` }}>
+//                 <div className={styles.content}>
+//                   <div className={styles.name}>Project_5</div>
+//                   <div className={styles.description}>
+//                     <p>
+//                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?
+//                     </p>
+//                   </div>
+//                   <button>Saiba Mais</button>
+//                 </div>
+//               </div>
+
+//               <div className={styles.item} style={{ backgroundImage: `url(${Portfolio_img})` }}>
+//                 <div className={styles.content}>
+//                   <div className={styles.name}>Project_6</div>
+//                   <div className={styles.description}>
+//                     <p>
+//                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?
+//                     </p>
+//                   </div>
+//                   <button>Saiba Mais</button>
+//                 </div>
+//               </div>
+
+//               <div className={styles.navigate}>
+//                 <button className={styles.next}><FaArrowLeft /></button>
+//                 <button className={styles.prev}><FaArrowRight /></button>
+//               </div>
+
+//             </div>
+//       </div>
+//     </Transition>
+//   );
+// };
+
+// export default Portfolio;

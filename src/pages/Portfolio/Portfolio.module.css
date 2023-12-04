@@ -1,40 +1,129 @@
-.portfolio {
-    padding: 10rem 6% 2rem;
-}
-
 .container {
     position: absolute;
-    left: 50%;
     top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    width: 1200px;
-    height: 700px;
-    background-color: #f5f5f5;
-    box-shadow: 0 30px 50px #a9a8a8;
+    width: 1000px;
+    height: 600px;
+    /* background: #f5f5f5; */
+    background: transparent;
+    box-shadow: 0 30px 50px #dbdbdb;
 }
 
-.item {
+.container .slide .item {
     width: 200px;
     height: 300px;
-    background-position: 50% 50%;
-    display: inline-block;
-    transition: .8s;
-    background-size: cover;
     position: absolute;
-    z-index: 1;
     top: 50%;
     transform: translate(0, -50%);
-    border-radius: 20px;
-    box-shadow: 0 30px 50px #000;
+    border-radius: 2rem;
+    box-shadow: 0 3rem 5rem;
+    background-size: cover;
+    display: inline-block;
+    transition: .5s;
 }
 
-.item:nth-child(1),
-.item:nth-child(2) {
-    left: 0;
+.slide .item:nth-child(1),
+.slide .item:nth-child(2) {
     top: 0;
+    left: 0;
     transform: translate(0, 0);
     border-radius: 0;
     width: 100%;
     height: 100%;
-    box-shadow: none;
 }
+
+.slide .item:nth-child(3) {
+    left: 50%;
+}
+
+.slide .item:nth-child(4) {
+    left: calc(50% + 220px);
+}
+
+.slide .item:nth-child(5) {
+    left: calc(50% + 440px);
+}
+
+/* aqui n = 0, 1, 2, 3,... */
+.slide .item:nth-child(n + 6) {
+    left: calc(50% + 660px);
+    opacity: 0;
+}
+
+.item .content {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    width: 300px;
+    text-align: left;
+    transform: translate(0, -50%);
+    display: none;
+}
+
+.slide .item:nth-child(2) .content {
+    display: block;
+}
+
+.content .name {
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    animation: animate 1s ease-in-out  1 forwards;
+}
+
+.content .description {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: animate 1s ease-in-out .3s 1 forwards;
+}
+
+.content button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: animate 1s ease-in-out .6s 1 forwards;
+}
+
+@keyframes animate {
+    from {
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+.navigate {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 2rem;
+}
+
+.navigate button {
+    width: 4rem;
+    height: 3.5rem;
+    border-radius: .8rem;
+    border: none;
+    cursor: pointer;
+    margin: 0 .5rem;
+    border: .1rem solid #000;
+    transition: .3s;
+}
+
+.navigate button:hover {
+    background: #ababab;
+    color: #fff;
+}
+
+
+
