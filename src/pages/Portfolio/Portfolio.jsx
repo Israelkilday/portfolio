@@ -9,59 +9,67 @@ import Portfolio_img from "../Home/imgs/home_test_img_2.0.png"
 // REACT ICONS
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
+const itemsData = [
+  {
+    name: "Project_1",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?",
+    image: Portfolio_img
+  },
+  {
+    name: "Project_2",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?",
+    image: Portfolio_img
+  },
+  {
+    name: "Project_3",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?",
+    image: Portfolio_img
+  },
+  {
+    name: "Project_4",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?",
+    image: Portfolio_img
+  },
+  {
+    name: "Project_5",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?",
+    image: Portfolio_img
+  },
+  {
+    name: "Project_6",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?",
+    image: Portfolio_img
+  }
+];
 
-
-
-
-
-
-
- 
 const Portfolio = () => {
-  const itemsData = [
-    {
-      name: "Project_1",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?",
-      image: Portfolio_img
-    },
-    {
-      name: "Project_2",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?",
-      image: Portfolio_img
-    },
-    {
-      name: "Project_3",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?",
-      image: Portfolio_img
-    },
-    {
-      name: "Project_4",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?",
-      image: Portfolio_img
-    },
-    {
-      name: "Project_5",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?",
-      image: Portfolio_img
-    },
-    {
-      name: "Project_6",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?",
-      image: Portfolio_img
-    }
-  ];
-
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % itemsData.length);
-  }
+  // const handleNext = () => {
+  //   setCurrentIndex((prevIndex) => (prevIndex + 1) % itemsData.length);
+  // }
 
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? itemsData.length - 1 : prevIndex - 1
-    );
-  };
+  const handleNext = () => {
+  setCurrentIndex((prevIndex) => {
+    const nextIndex = (prevIndex + 1) % itemsData.length;
+    console.log("Next Index:", nextIndex);
+    return nextIndex;
+  });
+};
+
+const handlePrev = () => {
+  setCurrentIndex((prevIndex) => {
+    const newIndex = prevIndex === 0 ? itemsData.length - 1 : prevIndex - 1;
+    console.log("Previous Index:", newIndex);
+    return newIndex;
+  });
+};
+
+  // const handlePrev = () => {
+  //   setCurrentIndex((prevIndex) =>
+  //     prevIndex === 0 ? itemsData.length - 1 : prevIndex - 1
+  //   );
+  // };
 
   return (
     <div className={styles.container}>
@@ -139,7 +147,7 @@ export default Portfolio;
 //               key={index}
 //               className={`${styles.item} ${index === currentIndex ? styles.active : ""}`}
 //               style={{ backgroundImage: `url(${item.image})` }}
-//             >  
+//             >
 //           )}
 //               <div className={styles.content}>
 //                 <div className={styles.item} style={{ backgroundImage: `url(${Portfolio_img})` }}>
