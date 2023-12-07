@@ -6,99 +6,67 @@ import { useState } from "react";
 import Transition from "../../components/Transition";
 // IMGAGENS
 import Portfolio_img from "../Home/imgs/home_test_img_2.0.png"
+import Portfolio_img1 from "../Home/imgs/teste00.png"
+import Portfolio_img2 from "../Home/imgs/teste01.png"
 // REACT ICONS
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-
-const itemsData = [
-  {
-    name: "Project_1",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?",
-    image: Portfolio_img
-  },
-  {
-    name: "Project_2",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?",
-    image: Portfolio_img
-  },
-  {
-    name: "Project_3",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?",
-    image: Portfolio_img
-  },
-  {
-    name: "Project_4",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?",
-    image: Portfolio_img
-  },
-  {
-    name: "Project_5",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?",
-    image: Portfolio_img
-  },
-  {
-    name: "Project_6",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?",
-    image: Portfolio_img
-  }
-];
+// SWIPER
+import { Swiper, SwiperSlide } from "swiper/react"
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { EffectCoverflow, Pagination, Navigation } from "swiper/modules"
 
 const Portfolio = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  // const handleNext = () => {
-  //   setCurrentIndex((prevIndex) => (prevIndex + 1) % itemsData.length);
-  // }
-
-  const handleNext = () => {
-  setCurrentIndex((prevIndex) => {
-    const nextIndex = (prevIndex + 1) % itemsData.length;
-    console.log("Next Index:", nextIndex);
-    return nextIndex;
-  });
-};
-
-const handlePrev = () => {
-  setCurrentIndex((prevIndex) => {
-    const newIndex = prevIndex === 0 ? itemsData.length - 1 : prevIndex - 1;
-    console.log("Previous Index:", newIndex);
-    return newIndex;
-  });
-};
-
-  // const handlePrev = () => {
-  //   setCurrentIndex((prevIndex) =>
-  //     prevIndex === 0 ? itemsData.length - 1 : prevIndex - 1
-  //   );
-  // };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.slide}>
-        {itemsData.map((item, index) => (
-          <div
-            key={index}
-            className={`${styles.item} ${index === currentIndex ? styles.active : ""}`}
-            style={{ backgroundImage: `url(${item.image})` }}
+    <Transition>
+      <section className={styles.portfolio}>
+        <div className={styles.container}>
+          <h1 className={styles.heading}>Principais projetos</h1>
+          <Swiper
+            effect={"coverflow"}
+            grabCursor={true}
+            centeredSlides={true}
+            loop={true}
+            slidesPerView={"auto"}
+            coverflowEffect={{
+              rotate: 0,
+              stretch: 0,
+              depth: 100,
+              modifier: 2.5
+            }}
+            className={styles.swiper_container}
           >
-            <div className={styles.content}>
-              <div className={styles.name}>{item.name}</div>
-              <div className={styles.description}>
-                <p>{item.description}</p>
+            <SwiperSlide>
+              <img src={Portfolio_img} alt="project_0" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={Portfolio_img1} alt="project_1" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={Portfolio_img2} alt="project_2" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={Portfolio_img2} alt="project_3" />
+            </SwiperSlide>
+
+            <div className={styles.slider_controler}>
+              <div className={`${styles.swiper_button_prev} ${styles.slider_arrow}`}>
+                <FaArrowLeft />
               </div>
-              <button>Saiba Mais</button>
+
+              <div className={`${styles.swiper_button_prev} ${styles.slider_arrow}`}>
+                <FaArrowRight />
+              </div>
+
+              <div className={styles.swiper_pagination}></div> 
             </div>
-          </div>
-        ))}
-        <div className={styles.navigate}>
-          <button onClick={handlePrev}>
-            <FaArrowLeft />
-          </button>
-          <button onClick={handleNext}>
-            <FaArrowRight />
-          </button>
+          </Swiper>
         </div>
-      </div>
-    </div>
+      </section>
+    </Transition>
   );
 };
 
@@ -121,113 +89,83 @@ export default Portfolio;
 
 
 
+// const itemsData = [
+//   {
+//     name: "Project_1",
+//     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?",
+//     image: Portfolio_img
+//   },
+//   {
+//     name: "Project_2",
+//     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?",
+//     image: Portfolio_img1
+//   },
+//   {
+//     name: "Project_3",
+//     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?",
+//     image: Portfolio_img2
+//   },
+//   {
+//     name: "Project_4",
+//     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?",
+//     image: Portfolio_img
+//   },
+//   {
+//     name: "Project_5",
+//     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?",
+//     image: Portfolio_img
+//   },
+//   {
+//     name: "Project_6",
+//     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?",
+//     image: Portfolio_img
+//   }
+// ];
 
+//   const [currentIndex, setCurrentIndex] = useState(0);
 
+//   const handleNext = () => {
+//     setCurrentIndex((prevIndex) => {
+//       const nextIndex = (prevIndex + 1) % itemsData.length;
+//       console.log("Next Index:", nextIndex);
+//       return nextIndex;
 
-// const next = document.querySelector(".next");
-// const prev = document.querySelector(".prev");
+//     });
+//   };
 
-// next.addEventListener("click", function() {
-//   const items = document.querySelectorAll(".item");
-//   document.querySelector(".slide").appendChild(items[0]);
-// })
+//   const handlePrev = () => {
+//     setCurrentIndex((prevIndex) => {
+//       const newIndex = prevIndex === 0 ? itemsData.length - 1 : prevIndex - 1;
+//       console.log("Previous Index:", newIndex);
 
-// next.addEventListener("click", function() {
-//   const items = document.querySelectorAll(".item");
-//   document.querySelector(".slide").prepend(items[items.length - 1]);
-// })
+//       return newIndex;
+//     });
+//   };
 
-
-//   return (
-//     <Transition>
-//       <div className={styles.container}>
-//         <div className={styles.slide}>
-//           {projects.map((item, index) => (
-//             <div
-//               key={index}
-//               className={`${styles.item} ${index === currentIndex ? styles.active : ""}`}
-//               style={{ backgroundImage: `url(${item.image})` }}
-//             >
-//           )}
-//               <div className={styles.content}>
-//                 <div className={styles.item} style={{ backgroundImage: `url(${Portfolio_img})` }}>
-//                   <div className={styles.name}>Project_1</div>
-//                   <div className={styles.description}>
-//                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?
-//                   </div>
-//                   <button>Saiba Mais</button>
-//                 </div>
+//     <div className={styles.container}>
+//       <div className={styles.slide}>
+//         {itemsData.map((item, index) => (
+//           <div
+//             key={index}
+//             className={`${styles.item} ${index === currentIndex ? styles.active : ""}`}
+//             style={{ backgroundImage: `url(${item.image})` }}
+//           >
+//             <div className={styles.content}>
+//               <div className={styles.name}>{item.name}</div>
+//               <div className={styles.description}>
+//                 <p>{item.description}</p>
 //               </div>
-
-//               <div className={styles.item} style={{ backgroundImage: `url(${Portfolio_img})` }}>
-//                 <div className={styles.content}>
-//                   <div className={styles.name}>Project_2</div>
-//                   <div className={styles.description}>
-//                     <p>
-//                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?
-//                     </p>
-//                   </div>
-//                   <button>Saiba Mais</button>
-//                 </div>
-//               </div>
-
-//               <div className={styles.item} style={{ backgroundImage: `url(${Portfolio_img})` }}>
-//                 <div className={styles.content}>
-//                   <div className={styles.name}>Project_3</div>
-//                   <div className={styles.description}>
-//                     <p>
-//                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?
-//                     </p>
-//                   </div>
-//                   <button>Saiba Mais</button>
-//                 </div>
-//               </div>
-
-//               <div className={styles.item} style={{ backgroundImage: `url(${Portfolio_img})` }}>
-//                 <div className={styles.content}>
-//                   <div className={styles.name}>Project_4</div>
-//                   <div className={styles.description}>
-//                     <p>
-//                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?
-//                     </p>
-//                   </div>
-//                   <button>Saiba Mais</button>
-//                 </div>
-//               </div>
-
-//               <div className={styles.item} style={{ backgroundImage: `url(${Portfolio_img})` }}>
-//                 <div className={styles.content}>
-//                   <div className={styles.name}>Project_5</div>
-//                   <div className={styles.description}>
-//                     <p>
-//                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?
-//                     </p>
-//                   </div>
-//                   <button>Saiba Mais</button>
-//                 </div>
-//               </div>
-
-//               <div className={styles.item} style={{ backgroundImage: `url(${Portfolio_img})` }}>
-//                 <div className={styles.content}>
-//                   <div className={styles.name}>Project_6</div>
-//                   <div className={styles.description}>
-//                     <p>
-//                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?
-//                     </p>
-//                   </div>
-//                   <button>Saiba Mais</button>
-//                 </div>
-//               </div>
-
-//               <div className={styles.navigate}>
-//                 <button className={styles.next}><FaArrowLeft /></button>
-//                 <button className={styles.prev}><FaArrowRight /></button>
-//               </div>
-
+//               <button>Saiba Mais</button>
 //             </div>
+//           </div>
+//         ))}
+//         <div className={styles.navigate}>
+//           <button className={styles.prev} onClick={handlePrev}>
+//             <FaArrowLeft />
+//           </button>
+//           <button className={styles.next} onClick={handleNext}>
+//             <FaArrowRight />
+//           </button>
+//         </div>
 //       </div>
-//     </Transition>
-//   );
-// };
-
-// export default Portfolio;
+//     </div>
