@@ -30,28 +30,40 @@ const Portfolio = () => {
             grabCursor={true}
             centeredSlides={true}
             loop={true}
-            slidesPerView={"auto"}
+            slidesPerView={"4"}
             coverflowEffect={{
               rotate: 0,
               stretch: 0,
               depth: 100,
-              modifier: 2.5
+              modifier: 2.5,
             }}
-            className={styles.swiper_container}
+            
+            
+            pagination={{ el: '.swiper_pagination', clickable: true }}
+            navigation={{
+              nextEl: '.swiper_button_next',
+              prevEl: '.swiper_button_prev',
+              clickable: true,
+            }}
+            modules={[Navigation, Pagination, EffectCoverflow]}
+            className={styles.swiper_container}   
           >
-            <SwiperSlide>
+            <SwiperSlide className={styles.swiper_slide}>
               <img src={Portfolio_img} alt="project_0" />
             </SwiperSlide>
-            <SwiperSlide>
+
+            <SwiperSlide className={styles.swiper_slide}>
               <img src={Portfolio_img1} alt="project_1" />
             </SwiperSlide>
-            <SwiperSlide>
+
+            <SwiperSlide className={styles.swiper_slide}>
               <img src={Portfolio_img2} alt="project_2" />
             </SwiperSlide>
-            <SwiperSlide>
+
+            <SwiperSlide className={styles.swiper_slide}>
               <img src={Portfolio_img2} alt="project_3" />
             </SwiperSlide>
-
+s
             <div className={styles.slider_controler}>
               <div className={`${styles.swiper_button_prev} ${styles.slider_arrow}`}>
                 <FaArrowLeft />
@@ -61,7 +73,7 @@ const Portfolio = () => {
                 <FaArrowRight />
               </div>
 
-              <div className={styles.swiper_pagination}></div> 
+              <div className={styles.swiper_pagination}></div>
             </div>
           </Swiper>
         </div>
