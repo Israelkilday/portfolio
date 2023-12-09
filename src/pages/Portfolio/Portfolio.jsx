@@ -1,7 +1,7 @@
 // CSS
 import styles from "./Portfolio.module.css"
 // HOOKS 
-import { useState } from "react";
+import { useState, useRef } from "react";
 // COMPONENT
 import Transition from "../../components/Transition";
 // IMGAGENS
@@ -25,57 +25,74 @@ const Portfolio = () => {
       <section className={styles.portfolio}>
         <div className={styles.container}>
           <h1 className={styles.heading}>Principais projetos</h1>
-          <Swiper
-            effect={"coverflow"}
-            grabCursor={true}
-            centeredSlides={true}
-            loop={true}
-            slidesPerView={"4"}
-            coverflowEffect={{
-              rotate: 0,
-              stretch: 0,
-              depth: 100,
-              modifier: 2.5,
-            }}
-            
-            
-            pagination={{ el: '.swiper_pagination', clickable: true }}
-            navigation={{
-              nextEl: '.swiper_button_next',
-              prevEl: '.swiper_button_prev',
-              clickable: true,
-            }}
-            modules={[Navigation, Pagination, EffectCoverflow]}
-            className={styles.swiper_container}   
-          >
-            <SwiperSlide className={styles.swiper_slide}>
-              <img src={Portfolio_img} alt="project_0" />
-            </SwiperSlide>
+          <div className={styles.swiper}>
+            <Swiper
+              effect={"coverflow"}
+              grabCursor={true}
+              centeredSlides={true}
+              loop={true}
+              slidesPerView={"5"}
+              coverflowEffect={{
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 2.5,
+              }}
 
-            <SwiperSlide className={styles.swiper_slide}>
-              <img src={Portfolio_img1} alt="project_1" />
-            </SwiperSlide>
 
-            <SwiperSlide className={styles.swiper_slide}>
-              <img src={Portfolio_img2} alt="project_2" />
-            </SwiperSlide>
+              pagination={{ el: '.swiper_pagination', clickable: true }}
+              navigation={true}
+              // navigation={{
+              //   nextEl: '.swiper_button_next',
+              //   prevEl: '.swiper_button_prev',
+              //   clickable: true,
+              // }}
+              modules={[Navigation, Pagination, EffectCoverflow]}
+              className={styles.swiper_container}
+            >
 
-            <SwiperSlide className={styles.swiper_slide}>
+              <div>
+                <SwiperSlide className={styles.swiper_slide}>
+                  <img src={Portfolio_img1} alt="project_0" />
+                </SwiperSlide>
+
+                <SwiperSlide className={styles.swiper_slide}>
+                  <img src={Portfolio_img1} alt="project_1" />
+                </SwiperSlide>
+
+                <SwiperSlide className={styles.swiper_slide}>
+                  <img src={Portfolio_img1} alt="project_2" />
+                </SwiperSlide>
+              </div>
+
+              {/* <SwiperSlide className={styles.swiper_slide}>
               <img src={Portfolio_img2} alt="project_3" />
             </SwiperSlide>
-s
-            <div className={styles.slider_controler}>
-              <div className={`${styles.swiper_button_prev} ${styles.slider_arrow}`}>
-                <FaArrowLeft />
-              </div>
 
-              <div className={`${styles.swiper_button_prev} ${styles.slider_arrow}`}>
-                <FaArrowRight />
-              </div>
+            <SwiperSlide className={styles.swiper_slide}>
+              <img src={Portfolio_img2} alt="project_4" />
+            </SwiperSlide>
 
-              <div className={styles.swiper_pagination}></div>
-            </div>
-          </Swiper>
+            <SwiperSlide className={styles.swiper_slide}>
+              <img src={Portfolio_img2} alt="project_5" />
+            </SwiperSlide> */}
+
+              {/* <div className={styles.slider_controler}>
+                <div className={styles.swiper_button_prev}>
+                  {/* <FaArrowLeft className={`${styles.swiper_button_prev} ${styles.slider_arrow}`} /> */}
+                  {/* <FaArrowLeft className={styles.slider_arrow} />
+                </div>
+
+                <div className={styles.swiper_button_next}>
+                  <FaArrowRight className={styles.slider_arrow} />
+                </div>  */}
+
+              {/* </div> */}
+                <div className={styles.swiper_pagination}></div>
+
+            </Swiper>
+
+          </div>
         </div>
       </section>
     </Transition>
@@ -90,18 +107,6 @@ export default Portfolio;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-// const itemsData = [
 //   {
 //     name: "Project_1",
 //     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam reprehenderit at aperiam expedita maxime ratione, et dolorum illum rerum quasi soluta corporis obcaecati fugiat laudantium consectetur perferendis provident quis?",
@@ -145,23 +150,7 @@ export default Portfolio;
 //     });
 //   };
 
-//   const handlePrev = () => {
-//     setCurrentIndex((prevIndex) => {
-//       const newIndex = prevIndex === 0 ? itemsData.length - 1 : prevIndex - 1;
-//       console.log("Previous Index:", newIndex);
-
-//       return newIndex;
-//     });
-//   };
-
-//     <div className={styles.container}>
-//       <div className={styles.slide}>
-//         {itemsData.map((item, index) => (
-//           <div
-//             key={index}
-//             className={`${styles.item} ${index === currentIndex ? styles.active : ""}`}
-//             style={{ backgroundImage: `url(${item.image})` }}
-//           >
+//   const handle
 //             <div className={styles.content}>
 //               <div className={styles.name}>{item.name}</div>
 //               <div className={styles.description}>
@@ -169,7 +158,7 @@ export default Portfolio;
 //               </div>
 //               <button>Saiba Mais</button>
 //             </div>
-//           </div>
+//
 //         ))}
 //         <div className={styles.navigate}>
 //           <button className={styles.prev} onClick={handlePrev}>
