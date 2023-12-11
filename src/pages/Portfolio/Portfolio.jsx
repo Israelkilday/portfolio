@@ -1,5 +1,6 @@
 // CSS
 import "./Portfolio.css"
+import  styles from "./Portfolio.module.css"
 // HOOKS 
 import { useState, useRef } from "react";
 // COMPONENT
@@ -19,8 +20,8 @@ import Portfolio_img1 from "../Home/imgs/teste00.png"
 const Portfolio = () => {
   return (
     <Transition>
-      <section className="portfolio">
-        <div className="container">
+      {/* <section className={styles.portfolio}> */}
+        <div className={styles.container}>
           <h1 className="heading">Principais projetos</h1>
           <Swiper
             effect={"coverflow"}
@@ -28,7 +29,6 @@ const Portfolio = () => {
             centeredSlides={true}
             loop={false}
             slidesPerView={3}
-            // slidesPerGroup={3}
             coverflowEffect={{
               rotate: 0,
               stretch: 0,
@@ -71,7 +71,7 @@ const Portfolio = () => {
             </div>
           </Swiper>
         </div>
-      </section>
+      {/* </section> */}
     </Transition>
   );
 };
