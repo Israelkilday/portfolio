@@ -1,0 +1,17 @@
+.container {
+    /* max-width: 124rem; */
+    max-width: 105rem;
+    /* padding: 4rem 1rem; */
+    margin: 0 auto;
+    min-height: 100vh;
+    padding: 5rem 3% 1rem;
+}
+
+@media (max-width: 600px) {
+    /* .container {
+        height: 100vh;
+    } */
+}
+
+
+
