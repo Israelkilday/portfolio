@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .container {
     /* max-width: 124rem; */
     max-width: 105rem;
@@ -7,10 +13,107 @@
     padding: 5rem 3% 1rem;
 }
 
-@media (max-width: 600px) {
-    /* .container {
-        height: 100vh;
-    } */
+.container .teste {
+
+    position: absolute;
+    border-radius: 2rem;
+    /* overflow: hidden; */
+    display: flex;
+    width: 30rem;
+    height: 33rem;
+    /* margin: 7rem auto;    */
+
+}
+
+.teste .portfolio_content {
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    top: 7rem;
+    width: 30rem;
+    height: 33rem;
+    border-radius: 2rem;
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(30px); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    display: none;
+    padding: 0 1rem;
+}
+
+.teste:hover .portfolio_content {
+    transition: all 1s ease;
+    display: block;
+    /* display: flex; */
+  }
+
+  .portfolio_content .name {
+    padding-top: 2.5rem;
+    color: var(--main_color);
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    animation: animate .8s ease-in-out  1 forwards;
+}
+
+.portfolio_content .description {
+    color: #ffffff; 
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: animate .8s ease-in-out .3s 1 forwards;
+}
+
+.portfolio_content .links .link {
+    padding: 10px 20px;
+    border: #ffffff solid .1rem;
+    border-radius: 10px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1.2rem;
+    line-height: 1.1;
+    transition: .3s;
+} 
+
+.portfolio_content .links .link:hover {
+    background:  #666666;
+    color: #fff;
+} 
+
+.portfolio_content .links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    opacity: 0;
+    animation: animate .8s ease-in-out .6s 1 forwards;
+}
+
+@keyframes animate {
+    from {
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .container{
+        /* padding: 5rem 0 1rem;         */
+        padding: 5rem 0;        
+        width: 50rem;
+        margin: 0 ;
+
+    }
 }
 
 
