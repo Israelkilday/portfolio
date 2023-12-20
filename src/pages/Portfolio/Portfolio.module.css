@@ -4,13 +4,29 @@
     box-sizing: border-box;
 }
 
-.container {
-    max-width: 105rem;
-    /* padding: 4rem 1rem; */
-    margin: 0 auto;
+/* .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto; */
+    
+    /* padding: 5rem 2% 1rem; */
+    /* max-width: 105rem;
     min-height: 100vh;
-    padding: 5rem 2% 1rem;
-}
+    margin: 0 auto;
+     */
+/* } */
+
+/* .heading {
+    margin: 10rem 0;
+    text-align: center;
+    font-size: 3.5rem; */
+
+
+    /* position: relative;
+    padding: 1rem 0 ;
+    text-align: center;
+    top: 4rem; */
+  /* } */
 
 .container .teste {
 
