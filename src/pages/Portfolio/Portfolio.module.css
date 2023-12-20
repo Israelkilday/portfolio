@@ -5,12 +5,11 @@
 }
 
 .container {
-    /* max-width: 124rem; */
     max-width: 105rem;
     /* padding: 4rem 1rem; */
     margin: 0 auto;
     min-height: 100vh;
-    padding: 5rem 3% 1rem;
+    padding: 5rem 2% 1rem;
 }
 
 .container .teste {
@@ -116,8 +115,8 @@
 
 @media (max-width: 480px) {
     .container{
-        padding: 5rem 1%;        
-        width: 100%;
+        /* padding: 5rem 1%;         */
+        /* width: 60rem; */
         /* margin: 0 auto; */
 
     }
