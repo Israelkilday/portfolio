@@ -2,8 +2,22 @@
 import styles from "./Transition.module.css"
 // FRAMER MOTION
 import { motion } from "framer-motion"
+// HOOKS 
+import { useEffect } from "react";
 
-const Transition = ({ children }) => {
+const Transition = ({ children, onAnimationComplete }) => {
+    useEffect(() => {
+        const removeOverflowHidden = () => {
+            document.body.style.overflow = "visible";
+        };
+
+        document.body.style.overflow = "hidden";
+
+        return () => {
+            removeOverflowHidden();
+        };
+    }, []);
+
     return (
         <>
             <motion.div
@@ -12,6 +26,7 @@ const Transition = ({ children }) => {
                 animate={{ scaleY: 0 }}
                 exit={{ scaleY: 1 }}
                 transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+                onAnimationComplete={onAnimationComplete}
             />
 
             {children}
