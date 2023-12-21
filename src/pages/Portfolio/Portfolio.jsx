@@ -22,37 +22,59 @@ import Portfolio_img1 from "../Home/imgs/project_1.png"
 import Portfolio_img2 from "../Home/imgs/project_2.png"
 
 const Portfolio = () => {
-  const [slidePerview, setSlidePerview] = useState(3);
+  const [slidePerview, setSlidePerview] = useState(6);
 
   const data = [
     {
       id: 0,
       image: Portfolio_img0,
       name: "Music Blog",
-      description: "Este é um projeto pessoal, uma aplicação web construída com React, integrada ao Firebase para criar, editar e visualizar Posts. O objetivo é criar Posts falando de música em geral, aproveitei para iniciar o Blog postando sobre algumas de minhas bandas favoritas, mais sinta-se a vontade para postar sobre qualquer estilo musical! ---- Tecnologias ultilizadas: { React - React Router Dom - Context API - Typescript - Javascript - CSS - HTML - Git - Firebase - Firestore - Vercel - Vite }"       
+      description: "Este é um projeto pessoal, uma aplicação web construída com React, integrada ao Firebase para criar, editar e visualizar Posts. O objetivo é criar Posts falando de música em geral, aproveitei para iniciar o Blog postando sobre algumas de minhas bandas favoritas, mais sinta-se a vontade para postar sobre qualquer estilo musical!",
+      technologies: [ 
+        "React",
+        "React Router Dom",
+        "Context API",
+        "Typescript",
+        "Javascript",
+        "CSS",
+        "HTML",
+        "Firebase",
+        "Firestore"
+      ],
+      linkDeploy:"https://musicblog-drab.vercel.app/",
+      linkRepository: "https://github.com/Israelkilday/musicblog",       
     },
 
     {
       id: 1,
       image: Portfolio_img1,
       name: "Project_1",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, laudantium illo. Omnis eos laborum saepe repellendus doloremque corporis laudantium voluptates temporibus eligendi, vitae rerum ea ab ad autem. Eius, maxime?"
+      description: "Este é um projeto de jogo de palavras secretas construído em React com Vite e TypeScript. Consiste em adivinhar palavras por meio de pistas com um número limitado de tentativas onde as letras corretas serão exibidas nos painéis e as erradas em uma lista ganhando e somando pontos a cada palavra adivinhada",
+      technologies: [ 
+        "React",
+        "Hooks",
+        "Typescript",
+        "Javascript",
+        "CSS",
+        "HTML",
+      ],
+      linkDeploy:"https://israelkilday.github.io/Secret-Word/",
+      linkRepository: "https://github.com/Israelkilday/Secret-Word",    
     },
-
+    
     {
       id: 2,
       image: Portfolio_img2,
       name: "Project_2",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, laudantium illo. Omnis eos laborum saepe repellendus doloremque corporis laudantium voluptates temporibus eligendi, vitae rerum ea ab ad autem. Eius, maxime?"
+      description: "Projeto em Produção, estou me desafiando em fazer uma Rede social utilizando ReactJs e outras tecnologias, Trabalhando para que logo esteja disponível por aqui!",
+      technologies: [ 
+        "XXX",
+        "XXX",
+        "XXX",
+      ], 
+      linkRepository: "https://github.com/Israelkilday",
     },
-
-    // {
-    //   id: 3,
-    //   image: Portfolio_img1,
-    //   name: "Project_3",
-    //   description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, laudantium illo. Omnis eos laborum saepe repellendus doloremque corporis laudantium voluptates temporibus eligendi, vitae rerum ea ab ad autem. Eius, maxime?"
-    // }
-  ]
+  ];
 
   useEffect(() => {
     function handleResize() {
@@ -105,17 +127,26 @@ const Portfolio = () => {
                 <div className="portfolio_content">
                   <h2 className="name">{item.name}</h2>
                   <p className="description">{item.description}</p>
+                  
+                  <div className="technologies">
+                    <h3>Tecnologias Ultilizadas:</h3>
+                    <ul>
+                        {item.technologies && item.technologies.map((tech, index) => (
+                          <li key={index}>{tech}</li>
+                        ))}
+                    </ul>                  
+                  </div>
 
                   <div className="links">
                     <NavLink 
-                      to="https://musicblog-drab.vercel.app/" 
+                      to={item.linkDeploy}
                       className="link"
                     >
                       Deploy
                     </NavLink>
 
                     <NavLink 
-                      to="https://github.com/Israelkilday/musicblog" 
+                      to={item.linkRepository} 
                       className="link"
                     >
                       Saiba Mais
