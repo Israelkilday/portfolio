@@ -17,18 +17,19 @@ import { EffectFade, EffectFlip, EffectCoverflow } from "swiper/modules";
 // import "swiper/css/effect-coverflow";
 import { Pagination, Navigation, Scrollbar } from "swiper/modules"
 // IMGAGENS
-import Portfolio_img1 from "../Home/imgs/teste00.png"
+import Portfolio_img0 from "../Home/imgs/project_0.png"
+import Portfolio_img1 from "../Home/imgs/project_1.png"
+import Portfolio_img2 from "../Home/imgs/project_2.png"
 
 const Portfolio = () => {
-  // const [slidePerview, setSlidePerview] = useState(2);
-  const [slidePerview, setSlidePerview] = useState(1);
+  const [slidePerview, setSlidePerview] = useState(3);
 
   const data = [
     {
       id: 0,
-      image: Portfolio_img1,
-      name: "Project_0",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, laudantium illo. Omnis eos laborum saepe repellendus doloremque corporis laudantium voluptates temporibus eligendi, vitae rerum ea ab ad autem. Eius, maxime?"
+      image: Portfolio_img0,
+      name: "Music Blog",
+      description: "Este é um projeto pessoal, uma aplicação web construída com React, integrada ao Firebase para criar, editar e visualizar Posts. O objetivo é criar Posts falando de música em geral, aproveitei para iniciar o Blog postando sobre algumas de minhas bandas favoritas, mais sinta-se a vontade para postar sobre qualquer estilo musical! ---- Tecnologias ultilizadas: { React - React Router Dom - Context API - Typescript - Javascript - CSS - HTML - Git - Firebase - Firestore - Vercel - Vite }"       
     },
 
     {
@@ -40,36 +41,36 @@ const Portfolio = () => {
 
     {
       id: 2,
-      image: Portfolio_img1,
+      image: Portfolio_img2,
       name: "Project_2",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, laudantium illo. Omnis eos laborum saepe repellendus doloremque corporis laudantium voluptates temporibus eligendi, vitae rerum ea ab ad autem. Eius, maxime?"
     },
 
-    {
-      id: 3,
-      image: Portfolio_img1,
-      name: "Project_3",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, laudantium illo. Omnis eos laborum saepe repellendus doloremque corporis laudantium voluptates temporibus eligendi, vitae rerum ea ab ad autem. Eius, maxime?"
-    }
+    // {
+    //   id: 3,
+    //   image: Portfolio_img1,
+    //   name: "Project_3",
+    //   description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, laudantium illo. Omnis eos laborum saepe repellendus doloremque corporis laudantium voluptates temporibus eligendi, vitae rerum ea ab ad autem. Eius, maxime?"
+    // }
   ]
 
-  // useEffect(() => {
-  //   function handleResize() {
-  //     if (window.innerWidth < 720) {
-  //       setSlidePerview(1);
-  //     } else {
-  //       setSlidePerview(2);
-  //     }
-  //   }
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth < 720) {
+        setSlidePerview(1);
+      } else {
+        setSlidePerview(2);
+      }
+    }
 
-  //   handleResize();
+    handleResize();
 
-  //   window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", handleResize);
 
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize)
-  //   }
-  // });
+    return () => {
+      window.removeEventListener("resize", handleResize)
+    }
+  });
 
   return (
     <Transition>
@@ -80,6 +81,16 @@ const Portfolio = () => {
         <Swiper
           modules={[EffectCoverflow]}
           effect="coverflow"
+          grabCursor={true}
+          centeredSlides={true}
+          loop={false}
+          coverflowEffect={{ 
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2.5,
+          }}
+          
           slidesPerView={slidePerview}
           pagination={{ clickable: true }}
           navigation
@@ -96,9 +107,20 @@ const Portfolio = () => {
                   <p className="description">{item.description}</p>
 
                   <div className="links">
-                  <NavLink className="link">Deploy</NavLink>
-                  <NavLink className="link">Saiba Mais</NavLink>
-                </div>
+                    <NavLink 
+                      to="https://musicblog-drab.vercel.app/" 
+                      className="link"
+                    >
+                      Deploy
+                    </NavLink>
+
+                    <NavLink 
+                      to="https://github.com/Israelkilday/musicblog" 
+                      className="link"
+                    >
+                      Saiba Mais
+                    </NavLink>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
@@ -134,67 +156,19 @@ export default Portfolio;
 // modules={[EffectCoverflow, EffectFade, Pagination, Navigation]}
 // className="swiper_container"
 
-{/* <div className={styles.teste}>
-              <div className={styles.portfolio_content}>
-                <h4 className={styles.name}>Project_0</h4>
-                <p className={styles.description}>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque in, iusto nisi magnam laudantium facere quas adipisci sequi cumque.
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque in, iusto nisi magnam laudantium facere quas adipisci sequi cumque.
-                </p>
-                <div className={styles.links}>
-                  <NavLink className={styles.link}>Deploy</NavLink>
-                  <NavLink className={styles.link}>Saiba Mais</NavLink>
-                </div>
-              </div>
-            </div>
 
-          <SwiperSlide>
-            <div className={styles.teste}>
-              <img src={Portfolio_img1} alt="project_1" />
 
-              <div className={styles.portfolio_content}>
-                <h4 className={styles.name}>Project_0</h4>
-                <p className={styles.description}>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque in, iusto nisi magnam laudantium facere quas adipisci sequi cumque.
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque in, iusto nisi magnam laudantium facere quas adipisci sequi cumque.
-                </p>
-                <div className={styles.links}>
-                  <NavLink className={styles.link}>Deploy</NavLink>
-                  <NavLink className={styles.link}>Saiba Mais</NavLink>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
+          // <div className="slider-controler">
+          //   <div className="swiper-button-prev slider-arrow">
+          //     <ion-icon name="arrow-back-outline"></ion-icon>
+          //   </div>
 
-          <SwiperSlide>
-            <div className={styles.teste}>
-              <img src={Portfolio_img1} alt="project_0" />
+          //   <div className="swiper-button-next slider-arrow">
+          //     <ion-icon name="arrow-forward-outline"></ion-icon>
+          //   </div>
 
-              <div className={styles.portfolio_content}>
-                <h4 className={styles.name}>Project_2</h4>
-                <p className={styles.description}>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque in, iusto nisi magnam laudantium facere quas adipisci sequi cumque.
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque in, iusto nisi magnam laudantium facere quas adipisci sequi cumque.
-                </p>
-                <div className={styles.links}>
-                  <NavLink className={styles.link}>Deploy</NavLink>
-                  <NavLink className={styles.link}>Saiba Mais</NavLink>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <div className="slider-controler">
-            <div className="swiper-button-prev slider-arrow">
-              <ion-icon name="arrow-back-outline"></ion-icon>
-            </div>
-
-            <div className="swiper-button-next slider-arrow">
-              <ion-icon name="arrow-forward-outline"></ion-icon>
-            </div>
-
-            <div className="swiper-pagination"></div>
-          </div> */}
+          //   <div className="swiper-pagination"></div>
+          // </div> 
 
 
 

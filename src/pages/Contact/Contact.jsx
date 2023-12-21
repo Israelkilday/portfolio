@@ -6,8 +6,11 @@ import Transition from "../../components/Transition";
 const Contact = () => {
   return (
     <Transition>
+      <div className={styles.container}>
       <div>
-        <h1>Contact</h1>
+        <h1>Rede Social feita com React</h1>
+      </div>
+
       </div>
     </Transition>
   );
