@@ -56,11 +56,6 @@ body {
   color: var(--text_color);
 }
 
-/* section {
-  min-height: 100vh;
-  padding: 10rem 6% 2rem;
-} */
-
 span {
   color: var(--main_color);   
 }

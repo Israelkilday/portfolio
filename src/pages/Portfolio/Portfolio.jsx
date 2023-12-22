@@ -10,8 +10,6 @@ import Transition from "../../components/Transition";
 // SWIPER
 import { Swiper, SwiperSlide } from "swiper/react"
 import { EffectCoverflow } from "swiper/modules";
-
-// import { Pagination, Navigation, Scrollbar } from "swiper/modules"
 // IMGAGENS
 import Portfolio_img0 from "../Home/imgs/project_0.png"
 import Portfolio_img1 from "../Home/imgs/project_1.png"
@@ -76,7 +74,7 @@ const Portfolio = () => {
 
   useEffect(() => {
     function handleResize() {
-      if (window.innerWidth < 720) {
+      if (window.innerWidth < 580) {
         setSlidePerview(1);
       } else {
         setSlidePerview(2);
@@ -95,8 +93,8 @@ const Portfolio = () => {
   return (
     <Transition onAnimationComplete={() => setTransitionCompleted(true)}>
     {transitionCompleted && (
-      <div className={styles.container}>
-        <h1 className="heading"><span>//</span> Principais projetos</h1>
+      <section className={styles.container}>
+        <h2 className={styles.heading}><span>//</span> Principais <span>Projetos</span></h2>
 
         <Swiper
           className="animation-cards"
@@ -119,16 +117,16 @@ const Portfolio = () => {
         >
           {data.map((item) => (
             <SwiperSlide key={item.id} >
-              <div className="portfolio_container">
+              <div className={styles.portfolio_container}>
                 <img src={item.image}
                   alt={item.name}
-                  className="item_slide"
+                  className={styles.item_slide}
                 />
-                <div className="portfolio_content">
-                  <h2 className="name">{item.name}</h2>
-                  <p className="description">{item.description}</p>
+                <div className={styles.portfolio_content}>
+                  <h2 className={styles.name}>{item.name}</h2>
+                  <p className={styles.description}>{item.description}</p>
                   
-                  <div className="technologies">
+                  <div className={styles.technologies}>
                     <h3>Tecnologias Ultilizadas:</h3>
                     <ul>
                         {item.technologies && item.technologies.map((tech, index) => (
@@ -137,17 +135,17 @@ const Portfolio = () => {
                     </ul>                  
                   </div>
 
-                  <div className="links">
+                  <div className={styles.links}>
                     <NavLink 
                       to={item.linkDeploy}
-                      className="link"
+                      className={styles.link}
                     >
                       Deploy
                     </NavLink>
 
                     <NavLink 
                       to={item.linkRepository} 
-                      className="link"
+                      className={styles.link}
                     >
                       Saiba Mais
                     </NavLink>
@@ -157,7 +155,7 @@ const Portfolio = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
+      </section>
     )};        
     </Transition>
   );
