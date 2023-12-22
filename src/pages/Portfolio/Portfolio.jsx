@@ -156,7 +156,7 @@ const Portfolio = () => {
           ))}
         </Swiper>
       </section>
-    )};        
+    )}        
     </Transition>
   );
 };

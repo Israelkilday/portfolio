@@ -77,7 +77,7 @@ const Home = () => {
                                     }
                                 }}
                             >
-                                <NavLink to="https://w.app/yPJZi8"
+                                <NavLink to="https://api.whatsapp.com/send?phone=5585989295516"
                                     className={styles.whatsapp_link}
                                 >
                                     <FaWhatsapp />
@@ -161,7 +161,13 @@ const Home = () => {
                                 ease: [0.2, 0, 0.2, 1]
                             }}
                         >
-                            <NavLink className={styles.btn}>Download CV</NavLink>
+                            <a
+                                href="./cv/IsraelKildayMachadodeSouza_FrontEndDeveloper_currículo_4.pdf"
+                                download
+                                className={styles.btn}
+                            >
+                                Download CV
+                            </a>
                         </motion.div>
                     </div>
 
