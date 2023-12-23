@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 import Transition from "../../components/Transition";
 // SWIPER
 import { Swiper, SwiperSlide } from "swiper/react"
-import { EffectCoverflow } from "swiper/modules";
+import { EffectCoverflow, EffectCards } from "swiper/modules";
 // IMGAGENS
 import Portfolio_img0 from "../Home/imgs/project_0.png"
 import Portfolio_img1 from "../Home/imgs/project_1.png"
@@ -52,7 +52,6 @@ const Portfolio = () => {
         "CSS",
         "HTML",
         "Firebase",
-        "Firestore"
       ],
       linkDeploy:"https://musicblog-drab.vercel.app/",
       linkRepository: "https://github.com/Israelkilday/musicblog",       
@@ -77,7 +76,7 @@ const Portfolio = () => {
       if (window.innerWidth < 580) {
         setSlidePerview(1);
       } else {
-        setSlidePerview(2);
+        setSlidePerview(3);
       }
     }
 
@@ -99,7 +98,9 @@ const Portfolio = () => {
         <Swiper
           className="animation-cards"
           modules={[EffectCoverflow]}
+          // modules={[EffectCards]}
           effect="coverflow"
+          // effect="cards"
           grabCursor={true}
           centeredSlides={true}
           loop={false}
@@ -116,7 +117,8 @@ const Portfolio = () => {
           initialSlide={initialSlide}
         >
           {data.map((item) => (
-            <SwiperSlide key={item.id} >
+            <SwiperSlide key={item.id} className="teste" >
+              
               <div className={styles.portfolio_container}>
                 <img src={item.image}
                   alt={item.name}

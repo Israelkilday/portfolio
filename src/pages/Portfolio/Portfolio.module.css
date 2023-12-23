@@ -7,9 +7,10 @@
 
  .container {
     width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width: 1400px;
     max-height: 100vh;
+    margin: 0 auto;
+    padding: 0 4rem;
     overflow: hidden;
 }
 
@@ -48,7 +49,7 @@
     flex-direction: column;
     text-align: center;
     display: none;
-    padding: 0 2rem;
+    padding: 0 1rem;
 }
 
 .portfolio_container:hover .portfolio_content {
@@ -57,7 +58,7 @@
 }
 
 .portfolio_content .name {
-    padding-top: 2.5rem;
+    padding-top: 1rem;
     color: #fff;
     font-size: 2rem;
     text-transform: uppercase;
@@ -83,8 +84,8 @@
 }
   
 .portfolio_content .technologies {
-    animation: animate .8s ease-in-out .6s 1 forwards;
     opacity: 0;
+    animation: animate .8s ease-in-out .6s 1 forwards;
     color: #020617;
 }
   
@@ -148,7 +149,7 @@
     }
 
     .portfolio_content .description {
-        font-size: 1.8rem;
+        font-size: 1.9rem;
     }
 
     .portfolio_content .technologies h3 {

@@ -32,3 +32,14 @@
   color: var(--main_color);
   font-weight: bold;
 }
+
+.teste {
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+  background: #666666;
+  height: 1000px;
+
+  border-radius: 2rem;
+  display: flex;
+}

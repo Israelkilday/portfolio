@@ -43,6 +43,10 @@ const Navbar = () => {
         setPaletteOpen(!paletteOpen)
     }
 
+    const handleColorSelection = (color) => {
+        setSelectedColor(color);
+    } 
+
     useEffect(() => {
         if (selectedColor === "ball_0") {
             document.documentElement.style.setProperty("--main_color", "#ffb703");

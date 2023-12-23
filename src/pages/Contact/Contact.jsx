@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <Transition>
       <section className={styles.contact}>
-        <h2 className={styles.heading}>Contate <span>Me!</span></h2>
+        <h2>Contate <span>Me!</span></h2>
 
         <form>
           <div className={styles.input_box}>

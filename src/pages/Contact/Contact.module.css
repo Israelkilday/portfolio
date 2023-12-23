@@ -1,10 +1,12 @@
 section {
-    min-height: 100vh;
-    padding: 10rem 6% 2rem;
+    max-height: 100vh;
+    padding: 8rem 6% 2rem;
+    /* overflow: hidden; */
 }
 
 .contact h2 {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+    font-size: 4rem;
 }
 
 .contact form {
@@ -30,6 +32,11 @@ section {
     border-radius: .8rem;
     margin: .7rem 0;    
 } 
+
+.contact form .input_box input:hover,
+.contact form textarea:hover {
+    border: solid 1px var(--main_color);
+}
 
 .contact form .input_box input {
     width: 49%;
