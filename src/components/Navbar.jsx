@@ -43,10 +43,6 @@ const Navbar = () => {
         setPaletteOpen(!paletteOpen)
     }
 
-    const handleColorSelection = (color) => {
-        setSelectedColor(color);
-    }
-
     useEffect(() => {
         if (selectedColor === "ball_0") {
             document.documentElement.style.setProperty("--main_color", "#ffb703");
@@ -56,22 +52,20 @@ const Navbar = () => {
             document.documentElement.style.setProperty("--main_color", "#3a86ff");
             setMainColor("#3a86ff");
 
-        } else if (selectedColor === "ball_4") {
-            document.documentElement.style.setProperty("--main_color", "#0ef");
-            document.documentElement.style.setProperty("--text_color", "#fff");
-            setMainColor("#0ef");
-        }
-
-
-        if (selectedColor === "ball_1") {
+        } else if (selectedColor === "ball_1") {
             document.documentElement.style.setProperty("--text_color", "#8ecae6");
             setMainColor(mainColor)
 
         } else if (selectedColor === "ball_3") {
             document.documentElement.style.setProperty("--text_color", "#eb5e28");
             setMainColor(mainColor)
-        }
 
+        } else if (selectedColor === "ball_4") {
+            document.documentElement.style.setProperty("--main_color", "#0ef");
+            document.documentElement.style.setProperty("--text_color", "#fff");
+            setMainColor("#0ef");
+        } 
+ 
     }, [selectedColor]);
 
     return (
@@ -196,6 +190,12 @@ const Navbar = () => {
                             style={{ "--p": 5 }}
                             onClick={() => handleColorSelection("ball_4")}
                         ></button>
+
+                        {/* <button
+                            className={`${styles.ball} ${styles.ball_5}`}
+                            style={{ "--p": 6 }}
+                            onClick={() => handleColorSelection("ball_5")}
+                        ></button> */}
                     </div>
                 </label>
 
@@ -212,6 +212,5 @@ const Navbar = () => {
         </header>
     );
 };
-
 
 export default Navbar;
