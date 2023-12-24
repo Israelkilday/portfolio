@@ -86,7 +86,7 @@
 .portfolio_content .technologies {
     opacity: 0;
     animation: animate .8s ease-in-out .6s 1 forwards;
-    color: #020617;
+    color: #fff;
 }
   
 .technologies ul li {
@@ -107,23 +107,52 @@
     gap: 1rem;
     opacity: 0;
     animation: animate .8s ease-in-out .9s 1 forwards;
+    
+  
+    position: relative;
+    
 }
   
 .portfolio_content .links .link {
-    padding: 10px 20px;
-    border: #ffffff solid .1rem;
-    border-radius: 10px;
-    color: #ffffff;
     cursor: pointer;
-    font-size: 1.2rem;
-    transition: .3s;
-    letter-spacing: .1rem;
-} 
-  
-.portfolio_content .links .link:hover {
-    background:  #666666;
+    padding: 8px 18px;
+    position: relative;
+    display: inline-block;
+    background: transparent;
+    border-radius: .5rem;
+    border: #fff solid .2rem;
+    font-size: 1.4rem;
     color: #fff;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    overflow: hidden;
+    transition: .5s ease;
+    z-index: 1;
 } 
+
+.links .link::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #666666;
+    z-index: -1;
+    transition: .5s;
+}
+
+.portfolio_content .links .link:hover::before {
+    width: 100%;
+}
+  
+
+.portfolio_content .links .link:hover {
+    box-shadow: none;
+    color: #fff;
+    border: none;
+    box-shadow: 0 0 1rem #666666;
+}
     
 @keyframes animate {
     from {
@@ -145,7 +174,7 @@
     }
 
    .container .heading {
-        margin: 15rem 0 8rem;        
+        margin: 17rem 0 8rem;        
     }
 
     .portfolio_content .description {
@@ -158,7 +187,7 @@
     }
 
     .technologies ul li{
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
 
     .portfolio_content .links .link {
