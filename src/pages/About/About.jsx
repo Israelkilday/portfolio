@@ -72,51 +72,63 @@ const About = () => {
               initial="hidden"
               animate="visible"
             >
-              <motion.div variants={item}>
+              <motion.div variants={item} className={styles.box_icon}>
+                <span className={styles.icon_descripition}>React</span>
                 <BiLogoReact className={styles.react} />
               </motion.div>
 
-              <motion.div variants={item}>
+              <motion.div variants={item} className={styles.box_icon}>
+                <span className={styles.icon_descripition}>Redux</span>
                 <BiLogoRedux className={styles.redux} />
               </motion.div>
 
-              <motion.div variants={item}>
+              <motion.div variants={item} className={styles.box_icon}>
+                <span className={styles.icon_descripition}>Typescript</span>
                 <BiLogoTypescript className={styles.typescript} />
               </motion.div>
 
-              <motion.div variants={item}>
+              <motion.div variants={item} className={styles.box_icon}>
+                <span className={styles.icon_descripition}>Javascript</span>
                 <BiLogoJavascript className={styles.javascript} />
               </motion.div>
 
-              <motion.div variants={item}>
+              <motion.div variants={item} className={styles.box_icon}>
+                <span className={styles.icon_descripition}>MySQL</span>
                 <GrMysql className={styles.mysql} />
               </motion.div>
 
-              <motion.div variants={item}>
+              <motion.div variants={item} className={styles.box_icon}>
+                <span className={styles.icon_descripition}>Bootstrap</span>
                 <BiLogoBootstrap className={styles.bootstrap} />
               </motion.div>
 
-              <motion.div variants={item}>
+              <motion.div variants={item} className={styles.box_icon}>
+                <span className={styles.icon_descripition}>Git</span>
                 <FaGitAlt className={styles.git} />
               </motion.div>
 
-              <motion.div variants={item}>
+              <motion.div variants={item} className={styles.box_icon}>
+                <span className={styles.icon_descripition}>CSS</span>
                 <BiLogoCss3 className={styles.css} />
               </motion.div>
 
-              <motion.div variants={item}>
+              <motion.div variants={item} className={styles.box_icon}>
+                <span className={styles.icon_descripition}>HTML</span>
                 <BiLogoHtml5 className={styles.html} />
               </motion.div>
 
-              <motion.div variants={item}>
+              <motion.div variants={item} className={styles.box_icon}>
+                <span className={styles.icon_descripition}>Firebase</span>
                 <BiLogoFirebase className={styles.firebase} />
               </motion.div>
 
-              <motion.div variants={item}>
+              <motion.div variants={item} className={styles.box_icon}>
+                <span className={styles.icon_descripition}>Canva</span>
                 <SiCanva className={styles.canva} />
               </motion.div>
 
-              <motion.div variants={item}>
+              <motion.div variants={item} className={styles.box_icon}>
+                <span className={styles.icon_descripition}>VScode</span>
                 <BiLogoVisualStudio className={styles.vscode} />
               </motion.div>
             </motion.div>
