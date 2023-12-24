@@ -1,106 +1,204 @@
-section {
-    max-height: 100vh;
-    padding: 8rem 6% 2rem;
-    /* overflow: hidden; */
-}
+    section {
+        max-height: 100vh;
+        padding: 8rem 6% 2rem;
+        /* overflow: hidden; */
+    }
 
-.contact h2 {
-    margin-bottom: 2rem;
-    font-size: 4rem;
-}
+    .contact h2 {
+        margin-bottom: 2rem;
+        font-size: 4rem;    
+        opacity: 0;
+        animation: animate .8s ease-in-out  1 forwards;
+    }
 
-.contact form {
-    max-width: 70rem;
-    margin: 1rem auto;
-    text-align: center;
-    margin-bottom: 3rem;
-}
+    @keyframes animate {
+        from {
+            opacity: 0;
+            transform: translate(0, -100px);
+            filter: blur(33px);
+        }
+    
+        to {
+            opacity: 1;
+            transform: translate(0);
+            filter: blur(0);
+        }
+    }
 
-.contact form .input_box {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
+    .contact form {
+        max-width: 70rem;
+        margin: 1rem auto;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
 
-.contact form .input_box input,
-.contact form textarea {
-    width: 100%;
-    padding: 1.5rem;
-    font-size: 1.6rem;
-    color: var(--text_color);
-    background: var(--second_bg_color);
-    border-radius: .8rem;
-    margin: .7rem 0;    
-} 
+    .contact form .input_box {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 
-.contact form .input_box input:hover,
-.contact form textarea:hover {
-    border: solid 1px var(--main_color);
-}
+    .contact form .input_box input,
+    .contact form textarea {
+        width: 100%;
+        padding: 1.5rem;
+        font-size: 1.6rem;
+        color: var(--text_color);
+        background: var(--second_bg_color);
+        border-radius: .8rem;
+        margin: .7rem 0;    
+    } 
 
-.contact form .input_box input {
-    width: 49%;
-}
+    .contact form .input_box input:hover,
+    .contact form textarea:hover {
+        border: solid 1px var(--main_color);
+    }
 
-.contact form textarea {
-    resize: none; 
-}
-
-.hidden {
-    display: none;
-}
-/* 
-.btn {
-    margin-top: 2rem;
-    cursor: pointer;
-} */
-
-.btn_box {
-    position: relative;
-}
-
-.btn_box .btn {
-    position: relative;
-    display: inline-block;
-    padding: 1rem 2rem;
-    background: var(--main_color);
-    border-radius: 4rem;
-    border: .2rem solid var(--main_color);
-    box-shadow: 0 0 1rem var(--main_color);
-    font-size: 1.4rem;
-    color: var(--bg_color);
-    letter-spacing: .1rem;
-    font-weight: 600;
-    overflow: hidden;
-    transition: .5s ease;
-    z-index: 1;
-    margin-top: 2rem;
-    cursor: pointer;
-}
-
-.btn_box .btn::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: var(--bg_color);
-    z-index: -1;
-    transition: .5s;
-}
-
-.btn_box .btn:hover::before {
-    width: 100%;
-}
-
-.btn_box .btn:hover {
-    box-shadow: none;
-    color: var(--main_color);
-}
-
-@media (max-width: 450px) {   
     .contact form .input_box input {
+        width: 49%;
+    }
+
+    .input_name {
+        opacity: 0;
+        animation: inputLeft .8s ease-in-out .2s 1 forwards;
+    }
+
+    .input_fone {
+        opacity: 0;
+        animation: inputLeft .8s ease-in-out .4s 1 forwards;
+    }
+
+    @keyframes inputLeft {
+        from {
+            opacity: 0;
+            transform: translate(-100px, 0);
+            filter: blur(33px);
+        }
+    
+        to {
+            opacity: 1;
+            transform: translate(0);
+            filter: blur(0);
+        }
+    }
+
+    .input_email {
+        opacity: 0;
+        animation: inputRight .8s ease-in-out .2s 1 forwards;
+    }
+
+    .input_subject {
+        opacity: 0;
+        animation: inputRight .8s ease-in-out .4s 1 forwards;
+    }
+
+    @keyframes inputRight {
+        from {
+            opacity: 0;
+            transform: translate(100px, 0);
+            filter: blur(33px);
+        }
+    
+        to {
+            opacity: 1;
+            transform: translate(0);
+            filter: blur(0);
+        }
+    }
+
+    .input_textarea {
+        opacity: 0;
+        animation: textarea .8s ease-in-out .6s 1 forwards;
+    }
+
+    @keyframes textarea {
+        from {
+            opacity: 0;
+            transform: translate(0, 100px);
+            filter: blur(33px);
+        }
+    
+        to {
+            opacity: 1;
+            transform: translate(0);
+            filter: blur(0);
+        }
+    }
+
+    
+    .contact form textarea {
+        resize: none; 
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .btn_box {
+        opacity: 0;
+        animation: button .8s ease-in-out .8s 1 forwards;
+    }
+
+    @keyframes button {
+        from {
+            opacity: 0;
+            transform: translate(0, 100px);
+            filter: blur(33px);
+        }
+    
+        to {
+            opacity: 1;
+            transform: translate(0);
+            filter: blur(0);
+        }
+    }
+    
+    .btn_box {
+        position: relative;
+    }
+
+    .btn_box .btn {
+        position: relative;
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: var(--main_color);
+        border-radius: 4rem;
+        border: .2rem solid var(--main_color);
+        box-shadow: 0 0 1rem var(--main_color);
+        font-size: 1.4rem;
+        color: var(--bg_color);
+        letter-spacing: .1rem;
+        font-weight: 600;
+        overflow: hidden;
+        transition: .5s ease;
+        z-index: 1;
+        margin-top: 2rem;
+        cursor: pointer;
+    }
+
+    .btn_box .btn::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: var(--bg_color);
+        z-index: -1;
+        transition: .5s;
+    }
+
+    .btn_box .btn:hover::before {
         width: 100%;
     }
-}
+
+    .btn_box .btn:hover {
+        box-shadow: none;
+        color: var(--main_color);
+    }
+
+    @media (max-width: 450px) {   
+        .contact form .input_box input {
+            width: 100%;
+        }
+    }

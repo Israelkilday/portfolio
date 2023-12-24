@@ -107,8 +107,6 @@
     gap: 1rem;
     opacity: 0;
     animation: animate .8s ease-in-out .9s 1 forwards;
-    
-  
     position: relative;
     
 }
@@ -146,11 +144,9 @@
     width: 100%;
 }
   
-
 .portfolio_content .links .link:hover {
-    box-shadow: none;
     color: #fff;
-    border: none;
+    border: 1px solid #fff;
     box-shadow: 0 0 1rem #666666;
 }
     
