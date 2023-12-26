@@ -197,6 +197,12 @@
         color: var(--main_color);
     }
 
+    @media (max-width: 768px) {
+        .contact h2 {
+            margin-top: 5rem;
+        }        
+    }
+
     @media (max-width: 450px) {   
         .contact form .input_box input {
             width: 100%;

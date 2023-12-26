@@ -21,7 +21,7 @@ const Home = () => {
                     <div className={styles.home_content}>
                         <ParticlesBackground />
 
-                        <motion.h3
+                        {/* <motion.h3
                             initial={{ opacity: 0, x: -100 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{
@@ -31,9 +31,10 @@ const Home = () => {
                                 ease: [0.3, 0, 0.2, 1]
                             }}
                         >
-                            {/* Olá eu sou */}
                             Inovando a cada <span>Byte</span>
-                        </motion.h3>
+                        </motion.h3> */}
+
+                        <h3 className={styles.first_h3}>Inovando a cada <span>Byte</span></h3>
 
                         <motion.h1
                             initial={{ opacity: 0, x: -100 }}

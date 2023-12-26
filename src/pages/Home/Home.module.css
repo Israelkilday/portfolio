@@ -10,7 +10,8 @@
     height: 30rem;
 }
 
-.home_content h3 {
+/* .home_content h3 { */
+ .first_h3 {
     font-size: 3rem;
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
