@@ -4,6 +4,8 @@ import styles from "./Contact.module.css"
 import { useEffect, useState } from "react";
 // COMPONENT
 import Transition from "../../components/Transition";
+// EMAILJS
+import emailjs from "@emailjs/browser"
 
 const Contact = () => {
   // useEffect(() => {
@@ -51,7 +53,15 @@ const Contact = () => {
       alert("Prencha todos os campos")
     }
 
-    alert("TESTE");
+    const templateParams = {
+      from_name: name,
+      email: email,
+      phone: phone,
+      subject: subject,
+      message: message,
+    };
+
+      emailjs.send("service_xtwnga3", "template_wpza33d", templateParams)
   }
 
   return (
