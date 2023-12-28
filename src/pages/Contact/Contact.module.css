@@ -1,17 +1,99 @@
-    section {
-        max-height: 100vh;
+    .contact {
+        min-height: 100vh;
         padding: 8rem 6% 2rem;
-        /* overflow: hidden; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 
     .contact h2 {
-        margin-bottom: 2rem;
-        font-size: 4rem;    
-        opacity: 0;
-        animation: animate .8s ease-in-out  1 forwards;
+        margin-bottom: .5rem;
+        font-size: 3.5rem;    
+        text-align: center;
+            /* opacity: 0; */
+        /* animation: animate .8s ease-in-out  1 forwards; */
     }
 
-    @keyframes animate {
+    .contact form {
+        width: 600px;
+        text-align: center;
+    }
+
+    form .input_box {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .input_box .input_field {
+        width: 48.5%
+    }
+
+    .field .item {
+        width: 100%;
+        padding: 1.4rem;
+        background: transparent;
+        border: .2rem solid var(--main_color);
+        outline:  none;
+        border-radius: .6rem;
+        font-size: 1.3rem;
+        color: var(--text_color);
+        margin: 1rem 0;
+    }
+
+    .field .item::placeholder {
+        color: rgba(255, 255, 255, .3);
+    }
+
+    .field .error_txt {
+        font-size: 1.3rem;
+        color: #d93025;
+        text-align: left;
+        margin: -.5rem 0 .8rem;
+        display: none;
+    }
+
+    form .textarea_field .item {
+        resize: none;
+    }
+
+    form .textarea_field .error_txt  {
+        margin-top: -.8rem;
+    }
+
+    form button {
+        padding: 1.2rem 3.2rem;
+        background: var(--main_color);
+        border: none;
+        outline: none;
+        border-radius: .6rem;
+        box-shadow: 0 0 1rem var(--main_color);
+        font-size: 1.6rem;
+        color: var(--second_bg_color);
+        letter-spacing: .1rem;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 1rem;
+        transition: .5s;
+    }
+
+    form button:hover {
+        box-shadow: none;
+    }
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    /* @keyframes animate {
         from {
             opacity: 0;
             transform: translate(0, -100px);
@@ -30,28 +112,38 @@
         margin: 1rem auto;
         text-align: center;
         margin-bottom: 3rem;
-    }
 
-    .contact form .input_box {
+    }
+    
+    form .input_box {
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
+        flex-wrap: wrap;   
     }
 
-    .contact form .input_box input,
-    .contact form textarea {
+    form .input_box input,
+    form textarea::placeholder {
+        font-family: 'Orbitron', sans-serif;   
+    }
+
+    form .input_box input,
+    form textarea {
         width: 100%;
         padding: 1.5rem;
         font-size: 1.6rem;
         color: var(--text_color);
-        background: var(--second_bg_color);
+        background: transparent;
         border-radius: .8rem;
         margin: .7rem 0;    
-    } 
-
-    .contact form .input_box input:hover,
-    .contact form textarea:hover {
+        font-family: 'Poppins', sans-serif;
         border: solid 1px var(--main_color);
+    }
+        
+    form .input_box input:hover,
+    form textarea:hover {
+        border: none;
+        background: var(--second_bg_color);
+        transition: .5s;
     }
 
     .contact form .input_box input {
@@ -60,12 +152,12 @@
 
     .input_name {
         opacity: 0;
-        animation: inputLeft .8s ease-in-out .2s 1 forwards;
+        animation: inputLeft .8s ease-in-out .3s 1 forwards;
     }
 
     .input_fone {
         opacity: 0;
-        animation: inputLeft .8s ease-in-out .4s 1 forwards;
+        animation: inputLeft .8s ease-in-out .6s 1 forwards;
     }
 
     @keyframes inputLeft {
@@ -84,12 +176,12 @@
 
     .input_email {
         opacity: 0;
-        animation: inputRight .8s ease-in-out .2s 1 forwards;
+        animation: inputRight .8s ease-in-out .3s 1 forwards;
     }
 
     .input_subject {
         opacity: 0;
-        animation: inputRight .8s ease-in-out .4s 1 forwards;
+        animation: inputRight .8s ease-in-out .6s 1 forwards;
     }
 
     @keyframes inputRight {
@@ -108,7 +200,7 @@
 
     .input_textarea {
         opacity: 0;
-        animation: textarea .8s ease-in-out .6s 1 forwards;
+        animation: textarea .8s ease-in-out .9s 1 forwards;
     }
 
     @keyframes textarea {
@@ -136,7 +228,7 @@
 
     .btn_box {
         opacity: 0;
-        animation: button .8s ease-in-out .8s 1 forwards;
+        animation: button .8s ease-in-out 1.2s 1 forwards;
     }
 
     @keyframes button {
@@ -207,4 +299,4 @@
         .contact form .input_box input {
             width: 100%;
         }
-    }
+    } */

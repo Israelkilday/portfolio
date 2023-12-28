@@ -21,46 +21,13 @@ const Home = () => {
                     <div className={styles.home_content}>
                         <ParticlesBackground />
 
-                        {/* <motion.h3
-                            initial={{ opacity: 0, x: -100 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{
-                                duration: 2,
-                                delay: 0.4,
-                                // ease: [0, 0.71, 0.2, 1.01],
-                                ease: [0.3, 0, 0.2, 1]
-                            }}
-                        >
-                            Inovando a cada <span>Byte</span>
-                        </motion.h3> */}
-
                         <h3 className={styles.first_h3}>Inovando a cada <span>Byte</span></h3>
 
-                        <motion.h1
-                            initial={{ opacity: 0, x: -100 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{
-                                duration: 2,
-                                delay: 0.6,
-                                // ease: [0, 0.71, 0.2, 1.01],
-                                ease: [0.3, 0, 0.2, 1]
-                            }}
-                        >
-                            Israel Kilday
-                        </motion.h1>
+                        <h1 className={styles.animate_h1}>Israel Kilday</h1>
 
-                        <motion.div className={styles.transparent_text}
-                            initial={{ opacity: 0, x: -100 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{
-                                duration: 2,
-                                delay: 0.8,
-                                // ease: [0, 0.71, 0.2, 1.01],
-                                ease: [0.3, 0, 0.2, 1]
-                            }}
-                        >
+                        <div className={styles.transparent_text}>
                             <h3 className={styles.animation_text}>Front-End Developer</h3>
-                        </motion.div>
+                        </div>
 
                         <div className={styles.social_media}>
                             <motion.div
@@ -152,15 +119,7 @@ const Home = () => {
                             </motion.div>
                         </div>
 
-                        <motion.div className={styles.btn_box}
-                            initial={{ opacity: 0, x: -100 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{
-                                duration: 2,
-                                delay: 1.7,
-                                // ease: [0, 0.71, 0.2, 1.01],
-                                ease: [0.2, 0, 0.2, 1]
-                            }}
+                        <div className={styles.btn_box}
                         >
                             <a
                                 href="./cv/IsraelKildayMachadodeSouza_FrontEndDeveloper_currículo_4.pdf"
@@ -169,7 +128,7 @@ const Home = () => {
                             >
                                 Download CV
                             </a>
-                        </motion.div>
+                        </div>
                     </div>
 
                     <motion.div className={styles.home_img}

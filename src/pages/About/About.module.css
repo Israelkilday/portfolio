@@ -45,6 +45,7 @@
 .about_content h2 {
     text-align: left;
     line-height: 1.2;    
+    font-size: 3.5rem;
 }
 
 .about_content p {
@@ -62,7 +63,7 @@
 }
 
 .skills h3 {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     margin-right: 2rem;
     margin-bottom: 0;
 }

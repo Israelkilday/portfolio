@@ -62,9 +62,20 @@ const About = () => {
           </motion.div>
 
           <div className={styles.skills}>
-            <h3>
-              <span>//</span> Skills <span>&</span> Tolls
-            </h3>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 1,
+                delay: 0.6,
+                ease: [0.2, 0, 0.2, 1]
+              }}
+            >
+              <h3>
+                <span>//</span> Skills <span>&</span> Tolls
+              </h3>
+            </motion.div>
 
             <motion.div
               className={styles.icons_container}
@@ -145,7 +156,7 @@ const About = () => {
               ease: [0.2, 0, 0.2, 1]
             }}
           >
-            <h2><span>//</span> Sobre <span>Mim</span></h2>
+            <h2><span>//</span> Quem é  <span>Israel Kilday</span></h2>
 
             <p>
               - Olá, prazer em conhecer! Me chamo Israel Kilday.
