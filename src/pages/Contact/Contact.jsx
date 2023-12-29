@@ -6,39 +6,12 @@ import { useEffect, useState } from "react";
 import Transition from "../../components/Transition";
 // EMAILJS
 import emailjs from "@emailjs/browser"
+// SWEETALERT
+// import Swal from 'sweetalert2';
+// import withReactContent from 'sweetalert2-react-content';
 
 const Contact = () => {
-  // useEffect(() => {
-  //   const script = document.createElement('script');
-  //   script.src = 'https://smtpjs.com/v3/smtp.js';
-  //   script.async = true;
-  //   document.body.appendChild(script);
-
-  //   return () => {
-  //     document.body.removeChild(script);
-  //   };
-  // }, []);
-
-  // const form = document.querySelector("form");
-
-  // function sendEmail() {
-  //   Email.send({
-  //     Host: "smtp.elasticemail.com",
-  //     Username: "israel.kilday@yahoo.com.br",
-  //     Password: "A7669DA9FADD95A336997B32007E62091E07A713173635C03487BE4AF8FBA7215C76D562545A2DCF10637A0931A79D99",
-  //     To: 'israel.kilday@yahoo.com.br',
-  //     From: "israel.kilday@yahoo.com.br",
-  //     Subject: "This is the subject",
-  //     Body: "And this is the body"
-  //   }).then(
-  //     message => alert(message)
-  //   );
-  // }
-
-  // form.addEventListener("submit", (e) => {
-  //   e.preventDefault();
-  //   sendEmail();
-  // });
+  
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -49,20 +22,42 @@ const Contact = () => {
   function sendEmail(e) {
     e.preventDefault();
 
-    if (name === "" || email === "" || phone === "") {
-      alert("Prencha todos os campos")
-    }
+    // if (name === "" || email === "" || phone === "") {
+    //   alert("Prencha todos os campos")
+    // }
 
     const templateParams = {
       from_name: name,
       email: email,
       phone: phone,
       subject: subject,
-      message: message,
+      message: message
     };
 
-      emailjs.send("service_xtwnga3", "template_wpza33d", templateParams)
-  }
+    emailjs.send(
+      "service_kseykmd",
+      "template_lwsac3m",
+      templateParams,
+      "mdijYFp_vy0CuY4_a",
+    ).then((response) => {
+      if (response === true) {
+        Swal.fire({
+          title: "Otimo!",
+          text: "Mensagem enviada com sucesso!",
+          icon: "success"
+        });
+      }
+      console.log("EMAIL ENVIADO", response.status, response.text)
+      setName("")
+      setEmail("")
+      setPhone("")
+      setSubject("")
+      setMessage("")
+
+    }, (error) => {
+      console.log("ERROR ", error)
+    });
+  };
 
   return (
     <Transition>
@@ -154,6 +149,45 @@ const Contact = () => {
 
 export default Contact;
 
+
+// useEffect(() => {
+  //   const script = document.createElement('script');
+  //   script.src = 'https://smtpjs.com/v3/smtp.js';
+  //   script.async = true;
+  //   document.body.appendChild(script);
+
+  //   return () => {
+  //     document.body.removeChild(script);
+  //   };
+  // }, []);
+
+  // const form = document.querySelector("form");
+
+  // function sendEmail(e) {
+  //     e.preventDefault();
+
+  //   if (name === "" || email === "" || phone === "") {
+  //     alert("Prencha todos os campos")
+  //   }
+
+  //   Email.send({
+  //     Host: "smtp.elasticemail.com",
+  //     Username: "israel.kilday@yahoo.com.br",
+  //     Password: "A7669DA9FADD95A336997B32007E62091E07A713173635C03487BE4AF8FBA7215C76D562545A2DCF10637A0931A79D99",
+  //     To: 'israel.kilday@yahoo.com.br',
+  //     From: "israel.kilday@yahoo.com.br",
+  //     Subject: "This is the subject",
+  //     Body: "And this is the body"
+  //   }).then(
+  //     message => alert(message)
+  //     );
+  //     console.log(message)
+  // }
+
+  // form.addEventListener("submit", (e) => {
+  //   e.preventDefault();
+  //   sendEmail();
+  // });
 
 // A7669DA9FADD95A336997B32007E62091E07A713173635C03487BE4AF8FBA7215C76D562545A2DCF10637A0931A79D99
 
