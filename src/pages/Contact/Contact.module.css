@@ -23,10 +23,11 @@
     form .input_box {
         display: flex;
         justify-content: space-between;
+        
     }
 
     .input_box .input_field {
-        width: 48.5%
+        width: 48.5%;
     }
 
     .field .item {
@@ -41,16 +42,29 @@
         margin: 1rem 0;
     }
 
-    .field .item::placeholder {
-        color: rgba(255, 255, 255, .3);
+    .field .item:hover {
+        background: var(--second_bg_color);
+        transition: .5s;
     }
 
-    .field .error_txt {
+    .field .item.error {
+        border: #d93025 1px solid;
+    }
+
+    .field .item::placeholder {
+        color: var(--placeholder_color)
+    }
+
+    .field .error_message {
         font-size: 1.3rem;
         color: #d93025;
         text-align: left;
         margin: -.5rem 0 .8rem;
         display: none;
+    }
+
+    .field .error_message.show_message {
+        display: block;
     }
 
     form .textarea_field .item {

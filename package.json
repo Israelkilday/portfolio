@@ -19,6 +19,8 @@
     "react-icons": "^4.11.0",
     "react-router-dom": "^6.16.0",
     "react-tsparticles": "^2.12.2",
+    "sweetalert2": "^11.10.2",
+    "sweetalert2-react-content": "^5.0.7",
     "swiper": "^11.0.5",
     "tsparticles": "^2.12.0"
   },

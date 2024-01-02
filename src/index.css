@@ -9,7 +9,9 @@
   text-decoration: none;
   outline: none;
   font-family: 'Orbitron', sans-serif;
+  letter-spacing: .1rem;
   list-style: none;
+
 }
 
 ::-webkit-scrollbar {
@@ -33,9 +35,9 @@
 :root {
   --bg_color: #1f242d;
   --second_bg_color:#323946;
-  /* --text_color: #fff; */
   --text_color: #ededed;
   --main_color: #0ef;
+  --placeholder_color: rgba(255, 255, 255, .3); 
 }
 
  .light_mode {
@@ -43,6 +45,7 @@
    --text_color: #020617; 
    --second_bg_color: #cbd5e1 ;
    --main_color: #dc2626; 
+   --placeholder_color: #808080; 
    transition: 1.5s;
 }
      
