@@ -7,7 +7,14 @@
     flex-direction: column;
 }
 
-.contact h2 {
+.header_container {
+    display: flex;
+    justify-content: space-around;
+    width: 600px;
+    margin-bottom: 0;
+}
+
+ .header_container h2 {
     margin-bottom: .5rem;
     font-size: 3.5rem;    
     text-align: center;
@@ -27,6 +34,52 @@
         transform: translate(0);
         filter: blur(0);
     }
+}
+
+.header_container .social_media {
+    display: flex;    
+    gap: 1rem;
+}
+
+.social_media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: transparent;
+    border: .2rem solid var(--main_color);
+    border-radius: 50%;
+    font-size: 1.6rem;
+    color: var(--main_color);
+    /* margin: 1rem 1.5rem 1rem 0; */
+    margin: 1rem 0 1rem;
+    transition: .8s ease;
+    position: relative;
+}    
+
+.whatsapp_link:hover {
+    color: #fff; 
+    background: #25D366; 
+    border: none;
+}
+
+.instagram_link:hover {
+    color: #fff; 
+    background: #C13584;
+    border: none;
+}
+
+.linkedin_link:hover {
+    color: #fff; 
+    background:  #2867B2;
+    border: none;
+}
+
+.github_link:hover {
+    color: #fff; 
+    background:  #181717;;
+    border: none;
 }
 
 .contact form {
@@ -156,8 +209,17 @@ form .textarea_field .error_txt  {
 }
 
 @media (max-width: 768px) {
-    .contact h2 {
-        margin-top: 3rem;
+    .header_container {
+        width: 70%;
+    }
+
+    .header_container h2 {
+        margin-top: 2rem;
+    }
+
+    .social_media .icon_container {
+        position: relative;
+        top: 1.5rem;
     }
 
     .contact form {
@@ -174,9 +236,29 @@ form .textarea_field .error_txt  {
     }    
 }
 
-@media (max-width: 520px) {   
-    .contact form {
+@media (max-width: 640px) {
+    .header_container h2 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 545px) {   
+    .header_container {
         width: 100%;
     }
+
+    .contact form {
+        width: 100%;
+    } 
 } 
+
+@media (max-width: 410px) {
+    .header_container {
+        justify-content: space-between;
+    }
+
+    .header_container h2 {
+        font-size: 2.7rem;
+    }
+}
 
