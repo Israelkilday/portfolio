@@ -1,316 +1,182 @@
-    .contact {
-        min-height: 100vh;
-        padding: 8rem 6% 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+.contact {
+    min-height: 100vh;
+    padding: 8rem 6% 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact h2 {
+    margin-bottom: .5rem;
+    font-size: 3.5rem;    
+    text-align: center;
+    opacity: 0;
+    animation: animate .8s ease-in-out  1 forwards;
+}
+
+@keyframes animate {
+    from {
+        opacity: 0;
+        transform: translate(0, -100px);
+        filter: blur(33px);
     }
 
+    to {
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+.contact form {
+    width: 600px;
+    text-align: center;
+}
+
+form .input_box {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.input_box .input_field {
+    width: 48.5%;
+}
+
+.field .item {
+    width: 100%;
+    padding: 1.4rem;
+    background: transparent;
+    border: .2rem solid var(--main_color);
+    outline:  none;
+    border-radius: .6rem;
+    font-size: 1.5rem;
+    color: var(--text_color);
+    margin: 1rem 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.field .item:hover {
+    background: var(--second_bg_color);
+    transition: .5s;
+}
+
+    
+.field .item.error {
+    border: #d93025 1px solid;
+}
+    
+.field .item::placeholder {
+    color: var(--placeholder_color);
+    font-family: 'Orbitron', sans-serif;   
+    font-size: 1.3rem;
+}
+
+.field .error_message {
+    font-size: 1.3rem;
+    color: #d93025;
+    text-align: left;
+    margin: -.5rem 0 .1rem;
+    display: none;
+}
+
+.field .error_message.show_message {
+    display: block;
+}
+
+form .textarea_field .item {
+    resize: none;
+}
+
+form .textarea_field .error_txt  {
+    margin-top: -.8rem;
+}
+
+@keyframes button_contact {
+    from {
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+.btn_box {
+    position: relative;
+    opacity: 0;
+    animation: button_contact .8s ease-in-out 1.2s 1 forwards;
+}
+
+.btn_box .btn {
+    position: relative;
+    display: inline-block;
+    padding: 1.2rem 3.2rem;
+    background: var(--main_color);
+    border-radius: .6rem;
+    border: .2rem solid var(--main_color);
+    box-shadow: 0 0 1rem var(--main_color);
+    color: var(--bg_color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    overflow: hidden;
+    transition: .5s ease;
+    z-index: 1;
+    outline: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    margin-top: 1rem;
+
+}
+
+.btn_box .btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg_color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn_box .btn:hover::before {
+    width: 100%;
+}
+
+.btn_box .btn:hover {
+    box-shadow: none;
+    color: var(--main_color);
+}
+
+@media (max-width: 768px) {
     .contact h2 {
-        margin-bottom: .5rem;
-        font-size: 3.5rem;    
-        text-align: center;
-            /* opacity: 0; */
-        /* animation: animate .8s ease-in-out  1 forwards; */
+        margin-top: 3rem;
     }
 
     .contact form {
-        width: 600px;
-        text-align: center;
-    }
-
+        width: 70%;
+    } 
+   
     form .input_box {
         display: flex;
-        justify-content: space-between;
-        
+        flex-direction: column;  
     }
 
     .input_box .input_field {
-        width: 48.5%;
-    }
-
-    .field .item {
         width: 100%;
-        padding: 1.4rem;
-        background: transparent;
-        border: .2rem solid var(--main_color);
-        outline:  none;
-        border-radius: .6rem;
-        font-size: 1.3rem;
-        color: var(--text_color);
-        margin: 1rem 0;
-    }
+    }    
+}
 
-    .field .item:hover {
-        background: var(--second_bg_color);
-        transition: .5s;
-    }
-
-    .field .item.error {
-        border: #d93025 1px solid;
-    }
-
-    .field .item::placeholder {
-        color: var(--placeholder_color)
-    }
-
-    .field .error_message {
-        font-size: 1.3rem;
-        color: #d93025;
-        text-align: left;
-        margin: -.5rem 0 .8rem;
-        display: none;
-    }
-
-    .field .error_message.show_message {
-        display: block;
-    }
-
-    form .textarea_field .item {
-        resize: none;
-    }
-
-    form .textarea_field .error_txt  {
-        margin-top: -.8rem;
-    }
-
-    form button {
-        padding: 1.2rem 3.2rem;
-        background: var(--main_color);
-        border: none;
-        outline: none;
-        border-radius: .6rem;
-        box-shadow: 0 0 1rem var(--main_color);
-        font-size: 1.6rem;
-        color: var(--second_bg_color);
-        letter-spacing: .1rem;
-        font-weight: 600;
-        cursor: pointer;
-        margin-top: 1rem;
-        transition: .5s;
-    }
-
-    form button:hover {
-        box-shadow: none;
-    }
-
-    
-
-
-
-
-
-
-
-
-
-
-
-    /* @keyframes animate {
-        from {
-            opacity: 0;
-            transform: translate(0, -100px);
-            filter: blur(33px);
-        }
-    
-        to {
-            opacity: 1;
-            transform: translate(0);
-            filter: blur(0);
-        }
-    }
-
+@media (max-width: 520px) {   
     .contact form {
-        max-width: 70rem;
-        margin: 1rem auto;
-        text-align: center;
-        margin-bottom: 3rem;
-
-    }
-    
-    form .input_box {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;   
-    }
-
-    form .input_box input,
-    form textarea::placeholder {
-        font-family: 'Orbitron', sans-serif;   
-    }
-
-    form .input_box input,
-    form textarea {
-        width: 100%;
-        padding: 1.5rem;
-        font-size: 1.6rem;
-        color: var(--text_color);
-        background: transparent;
-        border-radius: .8rem;
-        margin: .7rem 0;    
-        font-family: 'Poppins', sans-serif;
-        border: solid 1px var(--main_color);
-    }
-        
-    form .input_box input:hover,
-    form textarea:hover {
-        border: none;
-        background: var(--second_bg_color);
-        transition: .5s;
-    }
-
-    .contact form .input_box input {
-        width: 49%;
-    }
-
-    .input_name {
-        opacity: 0;
-        animation: inputLeft .8s ease-in-out .3s 1 forwards;
-    }
-
-    .input_fone {
-        opacity: 0;
-        animation: inputLeft .8s ease-in-out .6s 1 forwards;
-    }
-
-    @keyframes inputLeft {
-        from {
-            opacity: 0;
-            transform: translate(-100px, 0);
-            filter: blur(33px);
-        }
-    
-        to {
-            opacity: 1;
-            transform: translate(0);
-            filter: blur(0);
-        }
-    }
-
-    .input_email {
-        opacity: 0;
-        animation: inputRight .8s ease-in-out .3s 1 forwards;
-    }
-
-    .input_subject {
-        opacity: 0;
-        animation: inputRight .8s ease-in-out .6s 1 forwards;
-    }
-
-    @keyframes inputRight {
-        from {
-            opacity: 0;
-            transform: translate(100px, 0);
-            filter: blur(33px);
-        }
-    
-        to {
-            opacity: 1;
-            transform: translate(0);
-            filter: blur(0);
-        }
-    }
-
-    .input_textarea {
-        opacity: 0;
-        animation: textarea .8s ease-in-out .9s 1 forwards;
-    }
-
-    @keyframes textarea {
-        from {
-            opacity: 0;
-            transform: translate(0, 100px);
-            filter: blur(33px);
-        }
-    
-        to {
-            opacity: 1;
-            transform: translate(0);
-            filter: blur(0);
-        }
-    }
-
-    
-    .contact form textarea {
-        resize: none; 
-    }
-
-    .hidden {
-        display: none;
-    }
-
-    .btn_box {
-        opacity: 0;
-        animation: button .8s ease-in-out 1.2s 1 forwards;
-    }
-
-    @keyframes button {
-        from {
-            opacity: 0;
-            transform: translate(0, 100px);
-            filter: blur(33px);
-        }
-    
-        to {
-            opacity: 1;
-            transform: translate(0);
-            filter: blur(0);
-        }
-    }
-    
-    .btn_box {
-        position: relative;
-    }
-
-    .btn_box .btn {
-        position: relative;
-        display: inline-block;
-        padding: 1rem 2rem;
-        background: var(--main_color);
-        border-radius: 4rem;
-        border: .2rem solid var(--main_color);
-        box-shadow: 0 0 1rem var(--main_color);
-        font-size: 1.4rem;
-        color: var(--bg_color);
-        letter-spacing: .1rem;
-        font-weight: 600;
-        overflow: hidden;
-        transition: .5s ease;
-        z-index: 1;
-        margin-top: 2rem;
-        cursor: pointer;
-    }
-
-    .btn_box .btn::before{
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 100%;
-        background: var(--bg_color);
-        z-index: -1;
-        transition: .5s;
-    }
-
-    .btn_box .btn:hover::before {
         width: 100%;
     }
+} 
 
-    .btn_box .btn:hover {
-        box-shadow: none;
-        color: var(--main_color);
-    }
-
-    @media (max-width: 768px) {
-        .contact h2 {
-            margin-top: 5rem;
-        }        
-    }
-
-    @media (max-width: 450px) {   
-        .contact form .input_box input {
-            width: 100%;
-        }
-    } */

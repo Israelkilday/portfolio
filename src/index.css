@@ -75,6 +75,74 @@ h2 {
   font-size: 4rem;
 }
 
+/* CONTACT STYLE */
+#name {
+  opacity: 0;
+  animation: inputLeft .8s ease-in-out .3s 1 forwards;
+}
+
+#phone {
+  opacity: 0;
+  animation: inputLeft .8s ease-in-out .6s 1 forwards;
+}
+
+@keyframes inputLeft {
+  from {
+      opacity: 0;
+      transform: translate(-100px, 0);
+      filter: blur(33px);
+  }
+
+  to {
+      opacity: 1;
+      transform: translate(0);
+      filter: blur(0);
+  }
+}
+
+#email {
+  opacity: 0;
+  animation: inputRight .8s ease-in-out .3s 1 forwards;
+}
+
+#subject {
+  opacity: 0;
+  animation: inputRight .8s ease-in-out .6s 1 forwards;
+}
+
+@keyframes inputRight {
+  from {
+      opacity: 0;
+      transform: translate(100px, 0);
+      filter: blur(33px);
+  }
+
+  to {
+      opacity: 1;
+      transform: translate(0);
+      filter: blur(0);
+  }
+}
+
+#message {
+  opacity: 0;
+  animation: textarea .8s ease-in-out .9s 1 forwards;
+}
+
+@keyframes textarea {
+  from {
+      opacity: 0;
+      transform: translate(0, 100px);
+      filter: blur(33px);
+  }
+
+  to {
+      opacity: 1;
+      transform: translate(0);
+      filter: blur(0);
+  }
+}
+
 /* <========== breakpoints ==========> */
 
 @media (max-width: 768px) {
