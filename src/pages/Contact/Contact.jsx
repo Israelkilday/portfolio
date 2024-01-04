@@ -175,9 +175,6 @@ const Contact = () => {
               </NavLink>
             </motion.div>
           </div>
-
-
-
         </div>
 
         <form className={styles.form} onSubmit={sendEmail}>

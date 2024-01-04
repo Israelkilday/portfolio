@@ -68,37 +68,46 @@ label {
 }
 
 .input_darc_light_mode {
+    width: 2rem;
+    height: 2rem;
     position: absolute;
     opacity: 0;
     cursor: pointer;
 }
 
-.input_darc_light_mode:checked~.moon_icon {
+/* .input_darc_light_mode:checked~.moon_icon { */
+.input_darc_light_mode:checked~.sun_icon {
     transition-delay: 0s;
     transform: rotate(360deg) scale(0);
 }
 
-.moon_icon {
+/* .moon_icon { */
+.sun_icon {
     font-size: 2.4rem;
     color: var(--text_color);
     transition: .6s ease;
     transition-delay: .6s;
 }
 
-.input_darc_light_mode:checked~.sun_icon {
+/* .input_darc_light_mode:checked~.sun_icon { */
+.input_darc_light_mode:checked~.moon_icon {
     transition-delay: .6s;
     transform: scale(1) rotate(360deg);
 }
 
-.sun_icon {
+/* .sun_icon { */
+.moon_icon {
     position: absolute;
     font-size: 2.4rem;
     color: var(--text_color);
     transform: scale(0);
     transition: .7s ease;
+    cursor: pointer;
 }
 
 .input_palette_colors {
+    width: 2rem;
+    height: 2rem;
     position: absolute;
     opacity: 0;
     cursor: pointer;    

@@ -11,7 +11,6 @@
     display: flex;
     justify-content: space-around;
     width: 600px;
-    margin-bottom: 0;
 }
 
  .header_container h2 {
@@ -209,6 +208,10 @@ form .textarea_field .error_txt  {
 }
 
 @media (max-width: 768px) {
+    .contact {
+        padding: 6rem 6% 2rem;
+    }
+
     .header_container {
         width: 70%;
     }
