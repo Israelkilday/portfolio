@@ -156,7 +156,7 @@ const About = () => {
               ease: [0.2, 0, 0.2, 1]
             }}
           >
-            <h2><span>//</span> Quem é  <span>Israel Kilday</span></h2>
+            <h2><span>//</span> Quem é <span>Israel Kilday</span></h2>
 
             <p>
               - Olá, prazer em conhecer! Me chamo Israel Kilday.

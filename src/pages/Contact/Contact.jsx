@@ -31,8 +31,6 @@ const Contact = () => {
   function sendEmail(e) {
     e.preventDefault();
 
-    // validateEmail();
-
     if (name === "" || email === "" || phone === "" || subject === "" || message === "") {
       setNameError(name === "");
       setEmailError(email === "");
@@ -81,15 +79,6 @@ const Contact = () => {
       console.log("ERRO AO ENVIAR O EMAIL ", error)
     });
   };
-
-  // const validateEmail = (email) => {
-  //   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  //   if (setEmail !== emailRegex ) {
-  //     setEmailError(true)
-  //   } 
-  //   return emailRegex.test(email);
-  // };
 
   return (
     <Transition>
@@ -239,7 +228,7 @@ const Contact = () => {
           <div className={styles.input_box}>
             <div className={`${styles.input_field} ${styles.field}`}>
               <input
-                type="text"
+                type="number"
                 placeholder="Número do Telefone"
                 className={`${styles.item} ${phoneError ? styles.error : ""}`}
                 id="phone"
