@@ -1,11 +1,12 @@
  # 👨‍💻 Music Blog 
-
+<div align="center"><br>  
  Este é meu primeiro portfólio pessoal feito com ReactJS e Typescript, apresento aqui alguns dos meus projetos  
  e informações sobre mim.  
  Cresci muito como desenvolvedor Front End fazendo este projeto, Foi feito com muito esforço, muita dedicação  
  e muita atenção aos detalhes.  
  Acredito que este seja só o começo da minha jornada como Desenvolvedor web, pois ainda tenho muito que aprender  
  e melhorar.
+ </div>
 
  ## 🎨 Layout 💻 && 📱 Mobile  
  
