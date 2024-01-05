@@ -4,8 +4,6 @@ import styles from "./About.module.css"
 import Transition from "../../components/Transition";
 // IMGAGENS
 import About_img from "../Home/imgs/home_test_img_2.0.png"
-// REACT ROUTER DOM
-import { NavLink } from "react-router-dom";
 // FRAMER MOTION
 import { motion } from "framer-motion";
 // REACT ICONS
@@ -46,7 +44,7 @@ const item = {
 
 const About = () => {
   return (
-    <Transition>
+    <Transition onAnimationComplete={() => { }}>
       <section className={styles.about}>
         <div className={styles.container_img_skills}>
           <motion.div
@@ -166,7 +164,6 @@ const About = () => {
             </p>
           </motion.div>
         </div>
-
       </section>
     </Transition>
   );

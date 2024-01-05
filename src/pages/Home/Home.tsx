@@ -16,7 +16,7 @@ import { motion } from "framer-motion";
 const Home = () => {
     return (
         <>
-            <Transition >
+            <Transition onAnimationComplete={() => { }} >
                 <section className={styles.home}>
                     <div className={styles.home_content}>
                         <ParticlesBackground />
@@ -145,7 +145,7 @@ const Home = () => {
                 </section>
             </Transition>
         </>
-    )
+    );
 };
 
 export default Home; 

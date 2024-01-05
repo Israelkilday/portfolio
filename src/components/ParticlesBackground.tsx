@@ -1,16 +1,29 @@
+// HOOKS
 import React, { useCallback } from 'react';
+// PARTICLES
 import Particles from "react-tsparticles"
 import { loadFull } from "tsparticles";
+import { Engine, IOptions } from 'tsparticles-engine';
+// CONTEXT
 import { useTheme } from '../context/ThemeContext';
 
+type RecursivePartial<T> = {
+  [P in keyof T]?: T[P] extends (infer U)[]
+      ? RecursivePartial<U>[]
+      : T[P] extends object
+      ? RecursivePartial<T[P]>
+      : T[P];
+};
+
 const ParticlesBackground = () => {
-    const particlesInit = useCallback((engine) => {
+    const particlesInit = useCallback((engine: Engine) => {
         loadFull(engine)
+        return Promise.resolve();
     }, []);
 
     const {mainColor} = useTheme();
 
-    const particlesConfig = {
+    const particlesConfig: RecursivePartial<IOptions> = {
         "particles": {
           "number": {
             "value": 45,

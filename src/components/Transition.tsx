@@ -3,9 +3,14 @@ import styles from "./Transition.module.css"
 // FRAMER MOTION
 import { motion } from "framer-motion"
 // HOOKS 
-import { useEffect } from "react";
+import { ReactNode, useEffect } from "react";
 
-const Transition = ({ children, onAnimationComplete }) => {
+interface TransitionProps {
+    children: ReactNode;
+    onAnimationComplete: () => void;
+}
+
+const Transition = ({ children, onAnimationComplete }: TransitionProps) => {
     useEffect(() => {
         const removeOverflowHidden = () => {
             document.body.style.overflow = "visible";

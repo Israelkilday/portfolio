@@ -11,10 +11,10 @@ import styles from "./Navbar.module.css";
 import { useTheme } from '../context/ThemeContext';
 
 const Navbar = () => {
-    const [lightMode, setLightMode] = useState(false);
-    const [paletteOpen, setPaletteOpen] = useState(false);
-    const [selectedColor, setSelectedColor] = useState(null);
-    const [paletteInputInvisible, setPaletteInputInvisible] = useState(false);
+    const [lightMode, setLightMode] = useState<boolean>(false);
+    const [paletteOpen, setPaletteOpen] = useState<boolean>(false);
+    const [selectedColor, setSelectedColor] = useState<string | null>(null);
+    const [paletteInputInvisible, setPaletteInputInvisible] = useState<boolean>(false);
 
     const { mainColor, setMainColor } = useTheme();
 
@@ -43,9 +43,9 @@ const Navbar = () => {
         setPaletteOpen(!paletteOpen)
     }
 
-    const handleColorSelection = (color: string | null) => {
+    const handleColorSelection = (color: string) => {
         setSelectedColor(color);
-    } 
+    }
 
     useEffect(() => {
         if (selectedColor === "ball_0") {
@@ -68,8 +68,8 @@ const Navbar = () => {
             document.documentElement.style.setProperty("--main_color", "#0ef");
             document.documentElement.style.setProperty("--text_color", "#fff");
             setMainColor("#0ef");
-        } 
- 
+        }
+
     }, [selectedColor]);
 
     return (
@@ -87,7 +87,7 @@ const Navbar = () => {
                         onClick={handleLinkClick}
                         className={`${styles.active_menu}
                                     ${showMenu ? styles.animation_menu : ""}`}
-                        style={{ "--i": 0 }}
+                        style={{ ["--i" as string]: 0 }}
                     >
                         <NavLink
                             to="/"
@@ -101,7 +101,7 @@ const Navbar = () => {
                         onClick={handleLinkClick}
                         className={`${styles.active_menu}
                                     ${showMenu ? styles.animation_menu : ""}`}
-                        style={{ "--i": 1 }}
+                        style={{ ["--i" as string]: 1 }}
                     >
                         <NavLink
                             to="/about"
@@ -115,7 +115,7 @@ const Navbar = () => {
                         onClick={handleLinkClick}
                         className={`${styles.active_menu}
                                     ${showMenu ? styles.animation_menu : ""}`}
-                        style={{ "--i": 2 }}
+                        style={{ ["--i" as string]: 2 }}
                     >
                         <NavLink
                             to="/portfolio"
@@ -129,7 +129,7 @@ const Navbar = () => {
                         onClick={handleLinkClick}
                         className={`${styles.active_menu}
                                     ${showMenu ? styles.animation_menu : ""}`}
-                        style={{ "--i": 3 }}
+                        style={{ ["--i" as string]: 3 }}
                     >
                         <NavLink
                             to="/contact"
@@ -167,39 +167,33 @@ const Navbar = () => {
                     >
                         <button
                             className={`${styles.ball} ${styles.ball_0}`}
-                            style={{ "--p": 1 }}
+                            style={{ ["--p" as string]: 1 }}
                             onClick={() => handleColorSelection("ball_0")}
                         ></button>
 
                         <button
                             className={`${styles.ball} ${styles.ball_1}`}
-                            style={{ "--p": 2 }}
+                            style={{ ["--p" as string]: 2 }}
                             onClick={() => handleColorSelection("ball_1")}
                         ></button>
 
                         <button
                             className={`${styles.ball} ${styles.ball_2}`}
-                            style={{ "--p": 3 }}
+                            style={{ ["--p" as string]: 3 }}
                             onClick={() => handleColorSelection("ball_2")}
                         ></button>
 
                         <button
                             className={`${styles.ball} ${styles.ball_3}`}
-                            style={{ "--p": 4 }}
+                            style={{ ["--p" as string]: 4 }}
                             onClick={() => handleColorSelection("ball_3")}
                         ></button>
 
                         <button
                             className={`${styles.ball} ${styles.ball_4}`}
-                            style={{ "--p": 5 }}
+                            style={{ ["--p" as string]: 5 }}
                             onClick={() => handleColorSelection("ball_4")}
-                        ></button>
-
-                        {/* <button
-                            className={`${styles.ball} ${styles.ball_5}`}
-                            style={{ "--p": 6 }}
-                            onClick={() => handleColorSelection("ball_5")}
-                        ></button> */}
+                        ></button>                        
                     </div>
                 </label>
 

@@ -16,19 +16,19 @@ import { motion } from "framer-motion";
 import { FaGithub, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
 
 const Contact = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [phone, setPhone] = useState<string>("");
+  const [subject, setSubject] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
 
-  const [nameError, setNameError] = useState(false);
-  const [emailError, setEmailError] = useState(false);
-  const [phoneError, setPhoneError] = useState(false);
-  const [subjectError, setSubjectError] = useState(false);
-  const [messageError, setMessageError] = useState(false);
+  const [nameError, setNameError] = useState<boolean>(false);
+  const [emailError, setEmailError] = useState<boolean>(false);
+  const [phoneError, setPhoneError] = useState<boolean>(false);
+  const [subjectError, setSubjectError] = useState<boolean>(false);
+  const [messageError, setMessageError] = useState<boolean>(false);
 
-  function sendEmail(e) {
+  function sendEmail(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     if (name === "" || email === "" || phone === "" || subject === "" || message === "") {
@@ -81,7 +81,7 @@ const Contact = () => {
   };
 
   return (
-    <Transition>
+    <Transition onAnimationComplete={() => { }} >
       <section className={styles.contact}>
         <div className={styles.header_container}>
           <h2><span>//</span>  Contate <span>Me!</span></h2>
@@ -271,8 +271,8 @@ const Contact = () => {
               name=""
               placeholder="Sua mensagem"
               id="message"
-              cols="30"
-              rows="10"
+              cols={30}
+              rows={10}
               className={`${styles.item} ${messageError ? styles.error : ""}`}
               onChange={(e) => {
                 setMessage(e.target.value)

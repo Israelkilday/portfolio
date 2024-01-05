@@ -14,23 +14,11 @@ import { ThemeProvider } from './context/ThemeContext';
 // FRAMER MOTION
 import { AnimatePresence } from 'framer-motion';
 
-const useAnimationTheme = () => {
-  const container = document.querySelector(".container");
-
-  const cloneContainer = container.cloneNode(true);
-
-  cloneContainer.id = "light_container";
-
-  document.body.appendChild(cloneContainer);
-
-}
-
 function App() {
   const location = useLocation();
   return (
     <>
       <ThemeProvider >
-
         <Navbar />
         <div className="container" id="container" >
           <AnimatePresence mode='wait'>
@@ -42,7 +30,6 @@ function App() {
             </Routes>
           </AnimatePresence>
         </div>
-
       </ThemeProvider>
     </>
   );
