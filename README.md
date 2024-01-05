@@ -1,8 +1,11 @@
  # 👨‍💻 Music Blog 
 
- Este é um projeto pessoal, uma aplicação web construída com React, integrada ao Firebase para criar, editar e visualizar Posts.  
- O objetivo é criar Posts falando de música em geral, aproveitei para iniciar o Blog postando sobre algumas de minhas bandas favoritas, mais sinta-se a vontade para postar sobre 
- qualquer estilo musical!
+ Este é meu primeiro portfólio pessoal feito com ReactJS e Typescript, apresento aqui alguns dos meus projetos  
+ e informações sobre mim.  
+ Cresci muito como desenvolvedor Front End fazendo este projeto, Foi feito com muito esforço, muita dedicação  
+ e muita atenção aos detalhes.  
+ Acredito que este seja só o começo da minha jornada como Desenvolvedor web, pois ainda tenho muito que aprender  
+ e melhorar.
 
  ## 🎨 Layout 💻 && 📱 Mobile  
  
