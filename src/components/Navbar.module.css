@@ -251,11 +251,11 @@ label {
         }
 
         .links_list.active {
-            height: 21rem;
+            height: 22rem;
         }
 
         .links_list li {
-            margin: 1.9rem 0 0.8rem;
+            margin: 2.1rem 0 0.8rem;
             text-align: center;
             opacity: 0;
             transition: .3s ease;

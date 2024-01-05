@@ -92,7 +92,7 @@ const Portfolio = () => {
   return (
     <Transition onAnimationComplete={() => setTransitionCompleted(true)}>
     {transitionCompleted && (
-      <section className={styles.container}>
+      <section className={styles.portfolio}>
         <h2 className={styles.heading}><span>//</span> Principais <span>Projetos</span></h2>
 
         <Swiper

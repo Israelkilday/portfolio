@@ -5,7 +5,7 @@
    list-style-type: none;
  }
 
- .container {
+ .portfolio {
     width: 100%;
     max-width: 1400px;
     max-height: 100vh;
@@ -14,7 +14,7 @@
     overflow: hidden;
 }
 
-.container .heading  {
+.portfolio .heading  {
     margin: 10rem 0 3rem;
     text-align: center;
     font-size: 3.5rem;
@@ -22,7 +22,7 @@
     animation: animate .8s ease-in-out  1 forwards;
 }
 
-.container .portfolio_container {
+.portfolio .portfolio_container {
     border-radius: 2rem;
     display: flex;
     width: 100%;
@@ -165,11 +165,11 @@
 }
 
 @media (max-width: 580px) {
-    .container {
+    .portfolio {
         padding: 0 2%;
     }
 
-   .container .heading {
+   .portfolio .heading {
         margin: 17rem 0 8rem;        
     }
 
