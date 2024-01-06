@@ -15,6 +15,7 @@ const Navbar = () => {
     const [paletteOpen, setPaletteOpen] = useState<boolean>(false);
     const [selectedColor, setSelectedColor] = useState<string | null>(null);
     const [paletteInputInvisible, setPaletteInputInvisible] = useState<boolean>(false);
+    const [soundClick, setSoundClick] = useState<boolean>(false)
 
     const { mainColor, setMainColor } = useTheme();
 
@@ -71,6 +72,30 @@ const Navbar = () => {
         }
 
     }, [selectedColor]);
+
+    const handleAudioDoubleClick = () => {
+        const audio = new Audio("/sounds/double_click.mp3");
+
+        if (!soundClick) {
+            audio.pause(); 
+        } else {
+            audio.play();
+        }
+
+        setSoundClick(soundClick);
+    }
+
+    const handleAudioButtonClick = () => {
+        const audio = new Audio("/sounds/button_click.mp3");
+
+        if (!soundClick) {
+            audio.pause(); 
+        } else {
+            audio.play();
+        }
+
+        setSoundClick(soundClick);
+    }
 
     return (
         <header className={styles.header}>
@@ -146,7 +171,10 @@ const Navbar = () => {
                     <input
                         type="checkbox"
                         className={styles.input_darc_light_mode}
-                        onClick={handleToggleLightMode}
+                        onClick={() => {
+                            handleToggleLightMode();
+                            handleAudioButtonClick();
+                        }}
                     />
 
                     <FaMoon className={styles.moon_icon} />
@@ -157,7 +185,10 @@ const Navbar = () => {
                     <input
                         type="checkbox"
                         className={styles.input_palette_colors}
-                        onClick={handlePaletteToggle}
+                        onClick={() => {
+                            handlePaletteToggle();
+                            handleAudioButtonClick();
+                        }}
                     />
 
                     <FaPalette className={styles.palette} />
@@ -198,7 +229,10 @@ const Navbar = () => {
                 </label>
 
                 <button
-                    onClick={handleClickButton}
+                    onClick={() =>{
+                        handleClickButton();
+                        handleAudioDoubleClick();
+                    }}
                     className={`${styles.btn_menu}
                 ${showMenu ? styles.active : ""}`}
                 >

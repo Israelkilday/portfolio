@@ -129,7 +129,7 @@
 } 
 
 .links .link::before{
-    background: black;
+    background: #000;
     content: "";
     height: 100%;
     left: 0;
