@@ -76,26 +76,22 @@ const Navbar = () => {
     const handleAudioDoubleClick = () => {
         const audio = new Audio("/sounds/double_click.mp3");
 
-        if (!soundClick) {
+        if (soundClick) {
             audio.pause(); 
         } else {
             audio.play();
         }
-
-        setSoundClick(soundClick);
-    }
+    };
 
     const handleAudioButtonClick = () => {
         const audio = new Audio("/sounds/button_click.mp3");
 
-        if (!soundClick) {
+        if (soundClick) {
             audio.pause(); 
         } else {
             audio.play();
         }
-
-        setSoundClick(soundClick);
-    }
+    };
 
     return (
         <header className={styles.header}>
@@ -109,7 +105,10 @@ const Navbar = () => {
             <nav>
                 <ul className={`${styles.links_list} ${showMenu ? styles.active : ""}`}>
                     <li
-                        onClick={handleLinkClick}
+                        onClick={() => {
+                            handleLinkClick();
+                            handleAudioDoubleClick();
+                        }}
                         className={`${styles.active_menu}
                                     ${showMenu ? styles.animation_menu : ""}`}
                         style={{ ["--i" as string]: 0 }}
@@ -123,7 +122,10 @@ const Navbar = () => {
                     </li>
 
                     <li
-                        onClick={handleLinkClick}
+                        onClick={() => {
+                            handleLinkClick();
+                            handleAudioDoubleClick();
+                        }}
                         className={`${styles.active_menu}
                                     ${showMenu ? styles.animation_menu : ""}`}
                         style={{ ["--i" as string]: 1 }}
@@ -137,7 +139,10 @@ const Navbar = () => {
                     </li>
 
                     <li
-                        onClick={handleLinkClick}
+                        onClick={() => {
+                            handleLinkClick();
+                            handleAudioDoubleClick();
+                        }}
                         className={`${styles.active_menu}
                                     ${showMenu ? styles.animation_menu : ""}`}
                         style={{ ["--i" as string]: 2 }}
@@ -151,7 +156,10 @@ const Navbar = () => {
                     </li>
 
                     <li
-                        onClick={handleLinkClick}
+                        onClick={() => {
+                            handleLinkClick();
+                            handleAudioDoubleClick();
+                        }}
                         className={`${styles.active_menu}
                                     ${showMenu ? styles.animation_menu : ""}`}
                         style={{ ["--i" as string]: 3 }}
