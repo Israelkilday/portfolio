@@ -70,6 +70,8 @@ Se você deseja contribuir com este projeto, siga estas etapas:
 
 ## 🔗 Link do Projeto
 
+https://github.com/Israelkilday/portfolio
+
 ## 🧠 Autor
 
 [![linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/israel-kilday-machado-de-souza-801482230)
