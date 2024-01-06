@@ -7,7 +7,7 @@ import Transition from '../../components/Transition';
 // REACT ICONS
 import { FaGithub, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
 // IMGAGENS
-import Home_img from "./imgs/home_test_img_2.0.png"
+import Home_img from "../../../public/imgs/home_test_img_2.0.png"
 // PARTICLES
 import ParticlesBackground from '../../components/ParticlesBackground';
 // FRAMER MOTION
@@ -149,3 +149,6 @@ const Home = () => {
 };
 
 export default Home; 
+
+
+

@@ -68,6 +68,7 @@ const Contact = () => {
           icon: "success"
         });
       }
+
       console.log("EMAIL ENVIADO", response.status, response.text)
       setName("")
       setEmail("")
@@ -218,7 +219,6 @@ const Contact = () => {
               >
                 Email não pode ficar em branco
               </div>
-
             </div>
           </div>
 

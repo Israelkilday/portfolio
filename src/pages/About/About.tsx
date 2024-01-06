@@ -3,7 +3,7 @@ import styles from "./About.module.css"
 // COMPONENT
 import Transition from "../../components/Transition";
 // IMGAGENS
-import About_img from "../Home/imgs/home_test_img_2.0.png"
+import About_img from "../../../public/imgs/home_test_img_2.0.png";
 // FRAMER MOTION
 import { motion } from "framer-motion";
 // REACT ICONS
@@ -32,7 +32,7 @@ const container = {
       staggerChildren: 0.2
     }
   }
-}
+};
 
 const item = {
   hidden: { y: 20, opacity: 0 },
@@ -40,7 +40,7 @@ const item = {
     y: 0,
     opacity: 1
   }
-}
+};
 
 const About = () => {
   return (
@@ -60,7 +60,6 @@ const About = () => {
           </motion.div>
 
           <div className={styles.skills}>
-
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}

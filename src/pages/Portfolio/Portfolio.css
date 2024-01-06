@@ -1,26 +1,26 @@
  .animation-cards {
-  opacity: 0;
   animation: animate .8s ease-in-out .3s 1 forwards;
+  opacity: 0;
 }
 
 @keyframes animate {
   from {
+      filter: blur(33px);
       opacity: 0;
       transform: translate(0, 100px);
-         filter: blur(33px);
   }
 
   to {
       opacity: 1;
-      transform: translate(0);
       filter: blur(0);
+      transform: translate(0);
   }
 }
 
 .swiper-pagination .swiper-pagination-bullet {
-  width: 10px; 
-  height: 10px;
   background-color: #fff; 
+  height: 10px;
+  width: 10px; 
 }
 
 .swiper-button-next::after {
@@ -34,12 +34,14 @@
 }
 
 .teste {
-  display: flex;
-  justify-content: space-between;
-  width: 1000px;
   background: #666666;
-  height: 1000px;
-
   border-radius: 2rem;
   display: flex;
+  display: flex;
+  height: 1000px;
+  justify-content: space-between;
+  width: 1000px;
 }
+
+
+

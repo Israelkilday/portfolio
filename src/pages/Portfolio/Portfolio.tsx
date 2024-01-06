@@ -11,9 +11,9 @@ import Transition from "../../components/Transition";
 import { Swiper, SwiperSlide } from "swiper/react"
 import { EffectCoverflow } from "swiper/modules";
 // IMGAGENS
-import Portfolio_img0 from "../Home/imgs/project_0.png"
-import Portfolio_img1 from "../Home/imgs/project_1.png"
-import Portfolio_img2 from "../Home/imgs/project_2.png"
+import Portfolio_img0 from "../../../public/imgs/project_0.png"
+import Portfolio_img1 from "../../../public/imgs/project_1.png"
+import Portfolio_img2 from "../../../public/imgs/project_2.png"
 
 const Portfolio = () => {
   const [slidePerview, setSlidePerview] = useState<number>(3);
@@ -25,7 +25,7 @@ const Portfolio = () => {
       id: 0,
       image: Portfolio_img1,
       name: "Secret World",
-      description: "Este é um projeto de jogo de palavras secretas construído em React com Vite e TypeScript. Consiste em adivinhar palavras por meio de pistas com um número limitado de tentativas onde as letras corretas serão exibidas nos painéis e as erradas em uma lista ganhando e somando pontos a cada palavra adivinhada",
+      description: "Este é um projeto de um jogo de palavras secretas construído em React com Vite e TypeScript. Consiste em adivinhar palavras por meio de pistas com um número limitado de tentativas onde as letras corretas serão exibidas nos painéis e as erradas em uma lista ganhando e somando pontos a cada palavra adivinhada",
       technologies: [
         "React",
         "Hooks",

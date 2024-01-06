@@ -1,11 +1,11 @@
 .about {
-    display: flex;
     align-items: center;
-    justify-content: center;
+    display: flex;
     gap: 15rem;
+    justify-content: center;
     min-height: 100vh;
-    padding: 10rem 6% 2rem;
     overflow: hidden;
+    padding: 10rem 6% 2rem;
 }
 
 .container_img_skills {
@@ -13,9 +13,9 @@
 }
 
 .container_img_skills img {
-    width: 27vw;
-    margin-bottom: 3rem;
     animation: floatImage 4s ease-in-out infinite;
+    margin-bottom: 3rem;
+    width: 27vw;
 }
 
 @keyframes floatImage {
@@ -33,19 +33,19 @@
 }
 
 .about_content {
-    width: 85%;
-    border-radius: 10px;
-    padding: 1rem 2rem;
     background: rgba(0, 0, 0, .1);
+    border-radius: 10px;
     backdrop-filter: blur(20px);
     box-shadow: var(--main_color) 0 0 1rem;
     margin-bottom: 8rem;
+    padding: 1rem 2rem;
+    width: 85%;
 }
 
 .about_content h2 {
-    text-align: left;
-    line-height: 1.2;    
     font-size: 3rem;
+    line-height: 1.2;    
+    text-align: left;
 }
 
 .about_content p {
@@ -55,11 +55,10 @@
 
 .skills {
     display: flex;
-    position: absolute;
-    width: 100vw;
-    top: 90%;
-    /* left: 20%; */
     justify-content: center;
+    position: absolute;
+    top: 90%;
+    width: 100vw;
 }
 
 .skills h3 {
@@ -69,12 +68,10 @@
 }
 
 .icons_container {
-    /* display: grid; */
-    /* grid-template-columns: repeat(5, 1fr); */
-    display: flex;
-    position: relative;
     bottom: 2.5rem;
+    display: flex;
     gap: 1rem;
+    position: relative;
 }
 
 .box_icon {
@@ -82,26 +79,20 @@
 }
 
 .box_icon:hover .icon_descripition  {
-    /* opacity: 1; */
+    display: block;
     top: -25%; 
     transform: translate(-50%, 0%);
-    display: block;
 }
 
 .icon_descripition {
-    letter-spacing: .1rem;
-    text-transform: uppercase;
+    display: none;            
     font-size: 1.2rem;
     font-weight: bold;
-    position: absolute;
-    top: 50%;
+    letter-spacing: .1rem;
     left: 50%;
-    /* transform: translate(-50%, -50%); */
-    /* opacity: 0;
-    transition: opacity 0.5s ease-in-out,
-                top 0.5s ease-in-out,
-                transform 0.5s ease-in-out; */
-    display: none;            
+    position: absolute;
+    text-transform: uppercase;
+    top: 50%;
 }
 
 .icons_container .react,
@@ -117,16 +108,15 @@
 .mysql,
 .canva,
 .vscode {
-    display: inline-flex;
-    width: 4.5rem;
-    height: 4.5rem;
-    border: .1rem solid var(--main_color);
     border-radius: 25%;
-    /* font-size: 1.6rem; */
+    border: .1rem solid var(--main_color);
+    display: inline-flex;
     color: var(--main_color);
+    height: 4.5rem;
     margin: 1rem 0 0.8rem;
     padding: 0.4rem;
     transition: .3s ease;
+    width: 4.5rem;
 }
 
 .icons_container .react:hover,
@@ -143,8 +133,8 @@
 .vscode:hover {   
     box-shadow: 0 0 1rem var(--main_color);
     background-color: var(--main_color);
-    color: var(--bg_color);
     border: none;
+    color: var(--bg_color);
  }
 
  /* <========== breakpoints ==========> */
@@ -202,9 +192,9 @@
     }
 
     .skills h3 {
-        text-align: center;
         font-size: 2.7rem;
         margin-bottom: 3rem;
+        text-align: center;
     }
 
     .container_img_skills {
@@ -216,12 +206,11 @@
     }
 
     .icons_container {
+        border-radius: 1rem;
         display: grid;
         grid-template-columns: repeat(6, 1fr);
-        /* border: 1px var(--main_color) solid; */
-        border-radius: 1rem;
-        width: auto;
         padding-left: 1rem;
+        width: auto;
     }
 
     .icons_container .react,
@@ -238,26 +227,18 @@
     .canva,
     .vscode {
         height: 5rem;
-        width: 5rem;
         margin-bottom: 1.1rem;
+        width: 5rem;
     }
 }
 
 @media (max-width: 440px) {
     .about {
-        padding: 7rem 3% 2rem;
         max-height: 100vh;
+        padding: 7rem 3% 2rem;
     }
 }
  
-
-
-
-
-
-
-
-
 
 
 

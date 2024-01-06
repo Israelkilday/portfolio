@@ -5,162 +5,156 @@
    list-style-type: none;
  }
 
- .portfolio {
-    width: 100%;
-    max-width: 1400px;
-    max-height: 100vh;
-    margin: 0 auto;
-    padding: 0 4rem;
-    overflow: hidden;
+.portfolio {
+   max-width: 1400px;
+   max-height: 100vh;
+   margin: 0 auto;
+   overflow: hidden;
+   padding: 0 4rem;
+   width: 100%;
 }
 
 .portfolio .heading  {
-    margin: 10rem 0 3rem;
-    text-align: center;
-    font-size: 3.5rem;
-    opacity: 0;
     animation: animate .8s ease-in-out  1 forwards;
+    font-size: 3.5rem;
+    margin: 10rem 0 3rem;
+    opacity: 0;
+    text-align: center;
 }
 
 .portfolio .portfolio_container {
     border-radius: 2rem;
     display: flex;
-    width: 100%;
     height: 360px;
+    width: 100%;
 }
 
 .item_slide {
-    width: 100%;
+    border-radius: 2rem;
     height: 360px;
     object-fit:cover;
-    border-radius: 2rem;
+    width: 100%;
 }
 
 .portfolio_container .portfolio_content {
-    position: absolute;
-    width: 100%;
-    height: 360px;
+    align-items: center;
     border-radius: 2rem;
     background: rgba(255, 255, 255, 0.1); 
     backdrop-filter: blur(50px); 
+    position: absolute;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
     display: none;
+    flex-direction: column;
+    height: 360px;
+    justify-content: center;
     padding: 0 1rem;
+    text-align: center;
+    width: 100%;
 }
 
 .portfolio_container:hover .portfolio_content {
-    transition: all 1s ease;
     display: block;
+    transition: all 1s ease;
 }
 
 .portfolio_content .name {
-    padding-top: 1rem;
+    animation: animate .8s ease-in-out  1 forwards;
     color: #fff;
     font-size: 2rem;
-    text-transform: uppercase;
     font-weight: bold;
-    opacity: 0;
     letter-spacing: .1rem;
-    animation: animate .8s ease-in-out  1 forwards;
+    opacity: 0;
+    padding-top: 1rem;
+    text-transform: uppercase;
 }
 
 .portfolio_content .description {
+    animation: animate .8s ease-in-out .3s 1 forwards;
     color: #ffffff; 
+    line-height: 2rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
     opacity: 0;
-    animation: animate .8s ease-in-out .3s 1 forwards;
-    line-height: 2rem;
 }
   
 .portfolio_content h3 {
+    letter-spacing: .1rem;
     margin-bottom: .6rem;
     text-transform: uppercase;
-    letter-spacing: .1rem;
 }
   
 .portfolio_content .technologies {
-    opacity: 0;
     animation: animate .8s ease-in-out .6s 1 forwards;
     color: #fff;
+    opacity: 0;
 }
   
 .technologies ul li {
-    display: inline flex;
-    margin-bottom: 1.5rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-right: 1rem;
-    padding: .5rem;
     background-color:#666666;
     border-radius: .5rem;
+    display: inline flex;
+    font-size: 1.2rem;
+    font-weight: bold;
     letter-spacing: .1rem;
+    margin-bottom: 1.5rem;
+    margin-right: 1rem;
+    padding: .5rem;
 }
   
 .portfolio_content .links {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    opacity: 0;
     animation: animate .8s ease-in-out .9s 1 forwards;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    opacity: 0;
     position: relative;
-    
 }
   
 .portfolio_content .links .link {
-    cursor: pointer;
-    padding: 8px 18px;
-    position: relative;
-    display: inline-block;
     background: transparent;
     border-radius: .5rem;
-    border: #fff solid .2rem;
-    font-size: 1.4rem;
+    border: none;
+    border: 2px solid #fff;
+    cursor: pointer;
     color: #fff;
-    letter-spacing: .1rem;
+    display: inline-block;
+    font-size: 1.4rem;
     font-weight: 600;
+    letter-spacing: .1rem;
     overflow: hidden;
+    padding: 8px 18px;
+    position: relative;
     transition: .5s ease;
     z-index: 1;
 } 
 
 .links .link::before{
+    background: black;
     content: "";
+    height: 100%;
+    left: 0;
     position: absolute;
     top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: #666666;
-    z-index: -1;
     transition: .5s;
+    width: 0;
+    z-index: -1;
 }
 
 .portfolio_content .links .link:hover::before {
     width: 100%;
 }
-  
-.portfolio_content .links .link:hover {
-    color: #fff;
-    border: 1px solid #fff;
-    box-shadow: 0 0 1rem #666666;
-}
     
 @keyframes animate {
     from {
+        filter: blur(33px);
         opacity: 0;
         transform: translate(0, 100px);
-           filter: blur(33px);
     }
   
     to {
+        filter: blur(0);
         opacity: 1;
         transform: translate(0);
-        filter: blur(0);
     }
 }
 
@@ -190,15 +184,6 @@
         font-size: 1.5rem;
     }
 }
-
-
-
-
-
-
-
-
-
 
 
 

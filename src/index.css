@@ -4,13 +4,13 @@
 * {
   box-sizing: border-box;
   border: none;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  outline: none;
   font-family: 'Orbitron', sans-serif;
   letter-spacing: .1rem;
   list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  text-decoration: none;
 
 }
 
@@ -34,18 +34,18 @@
 
 :root {
   --bg_color: #1f242d;
-  --second_bg_color:#323946;
-  --text_color: #ededed;
   --main_color: #0ef;
   --placeholder_color: rgba(255, 255, 255, .3); 
+  --second_bg_color:#323946;
+  --text_color: #ededed;
 }
 
  .light_mode {
    --bg_color: #f0f3fd;  
-   --text_color: #020617; 
-   --second_bg_color: #cbd5e1 ;
    --main_color: #dc2626; 
    --placeholder_color: #808080; 
+   --second_bg_color: #cbd5e1 ;
+   --text_color: #020617; 
    transition: 1.5s;
 }
      
@@ -66,8 +66,8 @@ span {
 
 p {
   font-size: 1.6rem;
-  margin: 1rem 0 3rem;
   font-family: 'Poppins', sans-serif;
+  margin: 1rem 0 3rem;
 }
 
 h2 {
@@ -77,69 +77,69 @@ h2 {
 
 /* CONTACT STYLE */
 #name {
-  opacity: 0;
   animation: inputLeft .8s ease-in-out .3s 1 forwards;
+  opacity: 0;
 }
 
 #phone {
-  opacity: 0;
   animation: inputLeft .8s ease-in-out .6s 1 forwards;
+  opacity: 0;
 }
 
 @keyframes inputLeft {
   from {
+      filter: blur(33px);
       opacity: 0;
       transform: translate(-100px, 0);
-      filter: blur(33px);
   }
 
   to {
+      filter: blur(0);
       opacity: 1;
       transform: translate(0);
-      filter: blur(0);
   }
 }
 
 #email {
-  opacity: 0;
   animation: inputRight .8s ease-in-out .3s 1 forwards;
+  opacity: 0;
 }
 
 #subject {
-  opacity: 0;
   animation: inputRight .8s ease-in-out .6s 1 forwards;
+  opacity: 0;
 }
 
 @keyframes inputRight {
   from {
       opacity: 0;
-      transform: translate(100px, 0);
       filter: blur(33px);
+      transform: translate(100px, 0);
   }
 
   to {
+      filter: blur(0);
       opacity: 1;
       transform: translate(0);
-      filter: blur(0);
   }
 }
 
 #message {
-  opacity: 0;
   animation: textarea .8s ease-in-out .9s 1 forwards;
+  opacity: 0;
 }
 
 @keyframes textarea {
   from {
+      filter: blur(33px);
       opacity: 0;
       transform: translate(0, 100px);
-      filter: blur(33px);
   }
 
   to {
+      filter: blur(0);
       opacity: 1;
       transform: translate(0);
-      filter: blur(0);
   }
 }
 
@@ -150,11 +150,6 @@ h2 {
     font-size: 50%;
   }
 }
-
-
-
-
-
 
 
 

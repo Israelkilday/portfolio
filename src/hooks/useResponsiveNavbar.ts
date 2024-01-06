@@ -6,12 +6,11 @@ export const useResponsiveNavbar = () => {
 
     const handleClickButton = () => {
         setShowMenu(!showMenu);
-    }
+    };
 
     const handleLinkClick = () => {
         setShowMenu(false);
-    }
+    };
 
     return { handleClickButton, handleLinkClick, showMenu };
-
-}
+};

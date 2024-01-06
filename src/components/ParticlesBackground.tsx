@@ -133,19 +133,16 @@ const ParticlesBackground = () => {
         },
         "retina_detect": true
       }
-      
-    //   export default particlesConfig;
-    
+
     return (
         <div>
             <Particles
-                // id="tsparticles"
                 options={particlesConfig}
                 init={particlesInit}
             />
         </div>
-    )
-}
+    );
+};
 
 export default ParticlesBackground;
 
