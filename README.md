@@ -1,4 +1,4 @@
- # 👨‍💻 Music Blog 
+ # 👨‍💻 Portfolio I.K Dev 
 <div align="center"><br>  
  Este é meu primeiro portfólio pessoal feito com ReactJS e Typescript, apresento aqui alguns dos meus projetos  
  e informações sobre mim.  
@@ -69,6 +69,8 @@ Se você deseja contribuir com este projeto, siga estas etapas:
 5. Abra uma solicitação pull.
 
 ## 🔗 Link do Projeto
+
+https://github.com/Israelkilday/portfolio
 
 ## 🧠 Autor
 
