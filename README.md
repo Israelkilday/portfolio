@@ -1,6 +1,6 @@
  # 👨‍💻 Portfolio I.K Dev 
 <div align="center"><br>  
- Este é meu primeiro portfólio pessoal feito com ReactJS e Typescript, apresento aqui alguns dos meus projetos  
+ Este é meu primeiro Portfólio pessoal feito com ReactJS e Typescript, apresento aqui alguns dos meus projetos  
  e informações sobre mim.  
  Cresci muito como desenvolvedor Front End fazendo este projeto, Foi feito com muito esforço, muita dedicação  
  e muita atenção aos detalhes.  
@@ -9,7 +9,9 @@
  </div>
 
  ## 🎨 Layout 💻 && 📱 Mobile  
- 
+
+https://github.com/Israelkilday/portfolio/assets/101229204/a2128e2f-c607-4c7b-a3e5-94de408603ce
+
  ## ⚙️ Pré-requisitos
 
  - Node.js (v14.0.0 ou superior)
@@ -19,11 +21,13 @@
  
  - React
  - React Router DOM
+ - React Icons(para ícones)
  - Vite
  - Swiper (para a seção de portfólio)
  - EmailJS (para o formulário de contato)
  - SweetAlert (para notificações)
  - Framer Motion (para algumas animações)
+ - Particles.js(animação de partículas)
  - Typescript
  - Javascript
  - CSS
@@ -70,12 +74,14 @@ Se você deseja contribuir com este projeto, siga estas etapas:
 
 ## 🔗 Link do Projeto
 
-https://github.com/Israelkilday/portfolio
+https://portfolio--zeta-nine.vercel.app/
 
 ## 🧠 Autor
 
-[![linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/israel-kilday-machado-de-souza-801482230)
-
 israel.kilday@yahoo.com.br
+
+[![linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/israel-kilday-machado-de-souza-801482230) <a href="mailto:israelkilday27@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-333333?style=for-the-badge&logo=gmail&logoColor=red" />
+</a>
 
  ### Obrigado por visitar meu projeto! 👋 
