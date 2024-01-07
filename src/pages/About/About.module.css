@@ -139,6 +139,16 @@
 
  /* <========== breakpoints ==========> */
 
+ @media (max-width: 1100px) {
+    .about_content h2 {
+        font-size: 2rem;
+    }
+
+    .about_content p {
+        font-size: 1.5rem;
+    }
+ }
+
  @media (max-width: 991px) {
     .container_img_skills img {
         width: 35vw;
@@ -149,6 +159,27 @@
 
     .skills {
         width: auto;
+    }
+
+    .icons_container .react,
+    .redux,
+    .javascript,
+    .git,
+    .bootstrap,
+    .css,
+    .html,
+    .github,
+    .typescript,
+    .firebase,
+    .mysql,
+    .canva,
+    .vscode {
+        height: 3.8rem;
+        width: 3.8rem;
+    }
+
+    .skills h3 {
+        font-size: 2.2rem;
     }
 }
 
@@ -167,6 +198,10 @@
 
     .container_img_skills img {
         width: 40vw;
+    }
+
+    .skills h3 {
+        font-size: 1.8rem;
     }
 }
 
