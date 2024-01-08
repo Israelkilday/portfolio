@@ -48,6 +48,7 @@ https://github.com/Israelkilday/portfolio/assets/101229204/a2128e2f-c607-4c7b-a3
  - Animações dinâmicas
  - Envio de formulário de E-mail
  - Links ativos
+ - Navegação Dinâmica entre páginas(SPA)
 
  ## 🤝Contribuição
 
