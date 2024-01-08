@@ -216,6 +216,10 @@
         margin-top: 3rem;
     }
 
+    .about_content h2 {
+        font-size: 2.7rem;
+    }
+
     .about_content p {
         font-size: 1.9rem;
     }
@@ -227,7 +231,7 @@
     }
 
     .skills h3 {
-        font-size: 3rem;
+        font-size: 2.7rem;
         margin-bottom: 3rem;
         text-align: center;
     }
