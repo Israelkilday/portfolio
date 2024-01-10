@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 // REACT ICONS
 import { FaGitAlt } from "react-icons/fa6";
 import { GrMysql } from "react-icons/gr";
-import { SiCanva } from "react-icons/si";
+import { SiCanva, SiTailwindcss } from "react-icons/si";
 import {
   BiLogoTypescript,
   BiLogoReact,
@@ -19,7 +19,7 @@ import {
   BiLogoFirebase,
   BiLogoRedux,
   BiLogoVisualStudio,
-  BiLogoBootstrap
+  // BiLogoBootstrap
 } from "react-icons/bi";
 
 const container = {
@@ -106,8 +106,8 @@ const About = () => {
               </motion.div>
 
               <motion.div variants={item} className={styles.box_icon}>
-                <span className={styles.icon_descripition}>Bootstrap</span>
-                <BiLogoBootstrap className={styles.bootstrap} />
+                <span className={styles.icon_descripition}>Tailwind</span>
+                <SiTailwindcss className={styles.tailwind} />
               </motion.div>
 
               <motion.div variants={item} className={styles.box_icon}>
