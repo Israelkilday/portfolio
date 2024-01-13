@@ -75,7 +75,7 @@ Se você deseja contribuir com este projeto, siga estas etapas:
 
 ## 🔗 Link do Projeto
 
-https://portfolio--zeta-nine.vercel.app/
+https://portfolioikdev-zeta-nine.vercel.app/
 
 ## 🧠 Autor
 
