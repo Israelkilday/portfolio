@@ -21,13 +21,14 @@ https://github.com/Israelkilday/portfolio/assets/101229204/a2128e2f-c607-4c7b-a3
  
  - React
  - React Router DOM
- - React Icons(para ícones)
+ - React Icons(Para ícones)
+ - Context API(Para compartilhar temas dinamicamente)
  - Vite
- - Swiper (para a seção de portfólio)
- - EmailJS (para o formulário de contato)
- - SweetAlert (para notificações)
- - Framer Motion (para algumas animações)
- - Particles.js(animação de partículas)
+ - Swiper (Para a seção de portfólio)
+ - EmailJS (Para o formulário de contato)
+ - SweetAlert (Para notificações)
+ - Framer Motion (Para algumas animações)
+ - Particles.js(Animação de partículas)
  - Typescript
  - Javascript
  - CSS
