@@ -46,7 +46,7 @@
     animation: animate .8s ease-in-out .6s 1 forwards;
     opacity: 0;
     position: relative;
-    width: 41.3rem;
+    width: 41.4rem;
 }
 
 .home_content .animation_text {
@@ -72,7 +72,7 @@
     0%, 
     10%,
     100% {
-        background-position: -41.3rem 0;
+        background-position: -41.4rem 0;
     }
 
     65%,
