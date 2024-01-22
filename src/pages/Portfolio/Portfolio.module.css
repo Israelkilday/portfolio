@@ -32,7 +32,7 @@
 .item_slide {
     border-radius: 2rem;
     height: 360px;
-    object-fit:cover;
+    object-fit: cover;
     width: 100%;
 }
 
