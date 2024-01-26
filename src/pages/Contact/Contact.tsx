@@ -56,10 +56,10 @@ const Contact = () => {
     };
 
     emailjs.send(
-      "service_kseykmd",
-      "template_lwsac3m",
+      "service_7um5d2w",
+      "template_wpza33d",
       templateParams,
-      "mdijYFp_vy0CuY4_a",
+      "SzK4tZv53k8B-JB4j",
     ).then((response) => {
       if (response.status === 200) {
         Swal.fire({
