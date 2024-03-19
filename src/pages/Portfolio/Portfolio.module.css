@@ -54,7 +54,7 @@
 
 .portfolio_container:hover .portfolio_content {
     display: block;
-    transition: all 1s ease;
+    transition: all 1s ease;    
 }
 
 .portfolio_content .name {
@@ -70,35 +70,42 @@
 
 .portfolio_content .description {
     animation: animate .8s ease-in-out .3s 1 forwards;
-    color: #ffffff; 
+    color: #fff; 
     line-height: 2rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    margin: .5rem 0 .8rem;
     opacity: 0;
 }
   
 .portfolio_content h3 {
     letter-spacing: .1rem;
-    margin-bottom: .6rem;
+    font-weight: bold;    
+    margin-bottom: .5rem;
     text-transform: uppercase;
 }
   
 .portfolio_content .technologies {
     animation: animate .8s ease-in-out .6s 1 forwards;
     color: #fff;
+    margin-bottom: 1rem;
     opacity: 0;
+    
 }
   
 .technologies ul li {
-    background-color:#666666;
     border-radius: .5rem;
     display: inline flex;
     font-size: 1.2rem;
-    font-weight: bold;
     letter-spacing: .1rem;
-    margin-bottom: 1rem;
-    margin-right: 1rem;
+    margin-bottom: .4rem;
+    margin-right: .3rem;
     padding: .5rem;
+}
+
+.technologies ul li:hover  {
+    background-color:#000000;
+    border: none;
+    transition: .3s;    
 }
   
 .portfolio_content .links {
@@ -164,11 +171,12 @@
     }
 
    .portfolio .heading {
-        margin: 17rem 0 8rem;        
+        margin: 17rem 0 4rem;        
     }
-
+    
     .portfolio_content .description {
         font-size: 1.9rem;
+        line-height: 2.2rem;
     }
 
     .portfolio_content .technologies h3 {

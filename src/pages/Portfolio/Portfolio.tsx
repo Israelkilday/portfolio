@@ -12,7 +12,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow } from "swiper/modules";
 // IMGAGENS
 import Portfolio_img0 from "../../../public/imgs/project_0.png"
-import Portfolio_img1 from "../../../public/imgs/project_1.png"
+import Portfolio_img1 from "../../../public/imgs/project_1.jpg"
 import Portfolio_img2 from "../../../public/imgs/project_2.png"
 
 const Portfolio = () => {
@@ -52,6 +52,7 @@ const Portfolio = () => {
         "CSS",
         "HTML",
         "Firebase",
+        "Firestore"
       ],
       linkDeploy: "https://musicblog-drab.vercel.app/",
       linkRepository: "https://github.com/Israelkilday/musicblog",
@@ -116,7 +117,6 @@ const Portfolio = () => {
           >
             {data.map((item) => (
               <SwiperSlide key={item.id} className="teste" >
-
                 <div className={styles.portfolio_container}>
                   <img src={item.image}
                     alt={item.name}
