@@ -23,7 +23,7 @@ const Portfolio = () => {
   const data = [
     {
       id: 0,
-      image: Portfolio_img1,
+      image: Portfolio_img0,
       name: "Secret World",
       description: "Este é um projeto de um jogo de palavras secretas construído em React com Vite e TypeScript. Consiste em adivinhar palavras por meio de pistas com um número limitado de tentativas onde as letras corretas serão exibidas nos painéis e as erradas em uma lista ganhando e somando pontos a cada palavra adivinhada",
       technologies: [
@@ -40,7 +40,7 @@ const Portfolio = () => {
 
     {
       id: 1,
-      image: Portfolio_img0,
+      image: Portfolio_img1,
       name: "Music Blog",
       description: "Este é um projeto pessoal, uma aplicação web construída com React, integrada ao Firebase para criar, editar e visualizar Posts. O objetivo é criar Posts falando de música em geral, aproveitei para iniciar o Blog postando sobre algumas de minhas bandas favoritas, mais sinta-se a vontade para postar sobre qualquer estilo musical!",
       technologies: [
