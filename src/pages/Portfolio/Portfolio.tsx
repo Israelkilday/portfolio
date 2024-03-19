@@ -11,7 +11,7 @@ import Transition from "../../components/Transition";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow } from "swiper/modules";
 // IMGAGENS
-import Portfolio_img0 from "../../../public/imgs/project_0.jpg"
+import Portfolio_img0 from "../../../public/imgs/project_0.png"
 import Portfolio_img1 from "../../../public/imgs/project_1.png"
 import Portfolio_img2 from "../../../public/imgs/project_2.png"
 
