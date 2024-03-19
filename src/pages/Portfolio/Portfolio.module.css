@@ -135,6 +135,13 @@
     z-index: 1;
 } 
 
+.portfolio_content .links .link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+
 .links .link::before{
     background: #000;
     content: "";
