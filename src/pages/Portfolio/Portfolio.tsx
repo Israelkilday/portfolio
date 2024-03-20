@@ -28,32 +28,31 @@ const Portfolio = () => {
       id: 0,
       image: Portfolio_img0,
       name: "Secret World",
-      description: "Este é um projeto de um jogo de palavras secretas construído em React com Vite e TypeScript. Consiste em adivinhar palavras por meio de pistas com um número limitado de tentativas onde as letras corretas serão exibidas nos painéis e as erradas em uma lista ganhando e somando pontos a cada palavra adivinhada",
+      description: "Aplicação desenvolvida utilizando React, Typescript, Vite e CSS Modules. Foi adotada uma abordagem de componentização para organizar e reutilizar o código de forma eficiente. Foram utilizados hooks como useState, useEffect e useRef para gerenciar o estado dos componentes, manipular efeitos colaterais e interagir com elementos do DOM de maneira declarativa.",
       technologies: [
         "React",
-        "Hooks",
+        "Custom hooks",
         "Typescript",
         "Javascript",
-        "CSS",
-        "HTML",
+        "CSS Modules",
+        "JSX",
       ],
       linkDeploy: "https://israelkilday.github.io/Secret-Word/",
       linkRepository: "https://github.com/Israelkilday/Secret-Word",
     },
-
     {
       id: 1,
       image: Portfolio_img1,
       name: "Music Blog",
-      description: "Este é um projeto pessoal, uma aplicação web construída com React, integrada ao Firebase para criar, editar e visualizar Posts. O objetivo é criar Posts falando de música em geral, aproveitei para iniciar o Blog postando sobre algumas de minhas bandas favoritas, mais sinta-se a vontade para postar sobre qualquer estilo musical!",
+      description: "Single Page Application(SPA) fullstack desenvolvida utilizando React, Typescript e integração com Firebase e db Firestore. Ele inclui um contexto de autenticação que fornece informações sobre o usuário autenticado para os componentes da aplicação. Nele são armazenados dados de usuários, como imagens, títulos e conteúdo de postagens do Blog.",
       technologies: [
         "React",
         "React Router Dom",
         "Context API",
         "Typescript",
         "Javascript",
-        "CSS",
-        "HTML",
+        "CSS Modules",
+        "JSX",
         "Firebase",
         "Firestore"
       ],
@@ -130,7 +129,7 @@ const Portfolio = () => {
                     <p className={styles.description}>{item.description}</p>
 
                     <div className={styles.technologies}>
-                      <h3>Tecnologias Ultilizadas:</h3>
+                      <h3>Principais Tecnologias:</h3>
                       <ul>
                         {item.technologies && item.technologies.map((tech, index) => (
                           <li key={index}>{tech}</li>

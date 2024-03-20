@@ -87,7 +87,7 @@
 .portfolio_content .technologies {
     animation: animate .8s ease-in-out .6s 1 forwards;
     color: #fff;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
     opacity: 0;
     
 }
