@@ -72,6 +72,7 @@
     display: flex;
     gap: 1rem;
     position: relative;
+    padding-right: 13rem;
 }
 
 .box_icon {
@@ -86,12 +87,11 @@
 
 .icon_descripition {
     display: none;            
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: bold;
-    letter-spacing: .1rem;
+    letter-spacing: .2rem;
     left: 50%;
     position: absolute;
-    text-transform: uppercase;
     top: 50%;
 }
 
@@ -138,19 +138,7 @@
         width: auto;
     }
 
-    .icons_container .react,
-    .redux,
-    .javascript,
-    .git,
-    .tailwind,
-    .css,
-    .html,
-    .github,
-    .typescript,
-    .firebase,
-    .mysql,
-    .canva,
-    .vscode {
+    .icons_container .icon {
         height: 3.8rem;
         width: 3.8rem;
     }
@@ -171,6 +159,7 @@
 
     .icons_container {
         bottom: 0.8rem;
+        padding-right: 2rem;
     }
 
     .container_img_skills img {
@@ -224,27 +213,13 @@
     .icons_container {
         border-radius: 1rem;
         display: grid;
-        grid-template-columns: repeat(7, 1fr);
+        grid-template-columns: repeat(8, 1fr);
         padding-left: 1rem;
         width: auto;
     }
 
-    .icons_container .react,
-    .redux,
-    .javascript,
-    .git,
-    .tailwind,
-    .css,
-    .html,
-    .github,
-    .typescript,
-    .firebase,
-    .mysql,
-    .canva,
-    .vscode {
-        height: 5rem;
+    .icons_container .icon {
         margin-bottom: 1.1rem;
-        width: 5rem;
     }
 }
 

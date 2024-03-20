@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 // REACT ICONS
 import { TbBrandNextjs } from "react-icons/tb";
 import { FaGitAlt } from "react-icons/fa6";
-import { SiCanva, SiPrisma, SiTailwindcss } from "react-icons/si";
+import { SiCanva, SiMongodb, SiPrisma, SiTailwindcss } from "react-icons/si";
 import {
   BiLogoTypescript,
   BiLogoReact,
@@ -22,6 +22,7 @@ import {
   BiLogoPostgresql,
   // BiLogoBootstrap
 } from "react-icons/bi";
+import { FaNodeJs } from "react-icons/fa";
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -149,6 +150,16 @@ const About = () => {
               <motion.div variants={item} className={styles.box_icon}>
                 <span className={styles.icon_descripition}>Next.js</span>
                 <TbBrandNextjs  className={styles.icon} />
+              </motion.div>
+              
+              <motion.div variants={item} className={styles.box_icon}>
+                <span className={styles.icon_descripition}>Node.js</span>
+                <FaNodeJs className={styles.icon}/>
+              </motion.div>
+              
+              <motion.div variants={item} className={styles.box_icon}>
+                <span className={styles.icon_descripition}>MongoDB</span>
+                <SiMongodb className={styles.icon}/>
               </motion.div>
             </motion.div>
           </div>
