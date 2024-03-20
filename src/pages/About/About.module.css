@@ -220,6 +220,12 @@
 
     .icons_container .icon {
         margin-bottom: 1.1rem;
+        height: 4.2rem;
+        width: 4.2rem;
+    }
+    
+    .icon_descripition {
+        font-size: 1.4rem;
     }
 }
 
