@@ -7,9 +7,9 @@ import About_img from "../../../public/imgs/home_test_img_2.0.png";
 // FRAMER MOTION
 import { motion } from "framer-motion";
 // REACT ICONS
+import { TbBrandNextjs } from "react-icons/tb";
 import { FaGitAlt } from "react-icons/fa6";
-import { GrMysql } from "react-icons/gr";
-import { SiCanva, SiTailwindcss } from "react-icons/si";
+import { SiCanva, SiPrisma, SiTailwindcss } from "react-icons/si";
 import {
   BiLogoTypescript,
   BiLogoReact,
@@ -19,6 +19,7 @@ import {
   BiLogoFirebase,
   BiLogoRedux,
   BiLogoVisualStudio,
+  BiLogoPostgresql,
   // BiLogoBootstrap
 } from "react-icons/bi";
 
@@ -82,62 +83,72 @@ const About = () => {
             >
               <motion.div variants={item} className={styles.box_icon}>
                 <span className={styles.icon_descripition}>React</span>
-                <BiLogoReact className={styles.react} />
+                <BiLogoReact className={styles.icon} />
               </motion.div>
 
               <motion.div variants={item} className={styles.box_icon}>
                 <span className={styles.icon_descripition}>Redux</span>
-                <BiLogoRedux className={styles.redux} />
+                <BiLogoRedux className={styles.icon} />
               </motion.div>
 
               <motion.div variants={item} className={styles.box_icon}>
                 <span className={styles.icon_descripition}>Typescript</span>
-                <BiLogoTypescript className={styles.typescript} />
+                <BiLogoTypescript className={styles.icon} />
               </motion.div>
 
               <motion.div variants={item} className={styles.box_icon}>
                 <span className={styles.icon_descripition}>Javascript</span>
-                <BiLogoJavascript className={styles.javascript} />
+                <BiLogoJavascript className={styles.icon} />
               </motion.div>
 
               <motion.div variants={item} className={styles.box_icon}>
-                <span className={styles.icon_descripition}>MySQL</span>
-                <GrMysql className={styles.mysql} />
+                <span className={styles.icon_descripition}>PostgreSQL</span>
+                <BiLogoPostgresql className={styles.icon} />
               </motion.div>
 
               <motion.div variants={item} className={styles.box_icon}>
                 <span className={styles.icon_descripition}>Tailwind</span>
-                <SiTailwindcss className={styles.tailwind} />
+                <SiTailwindcss className={styles.icon} />
               </motion.div>
 
               <motion.div variants={item} className={styles.box_icon}>
                 <span className={styles.icon_descripition}>Git</span>
-                <FaGitAlt className={styles.git} />
+                <FaGitAlt className={styles.icon} />
               </motion.div>
 
               <motion.div variants={item} className={styles.box_icon}>
                 <span className={styles.icon_descripition}>CSS</span>
-                <BiLogoCss3 className={styles.css} />
+                <BiLogoCss3 className={styles.icon} />
               </motion.div>
 
               <motion.div variants={item} className={styles.box_icon}>
                 <span className={styles.icon_descripition}>HTML</span>
-                <BiLogoHtml5 className={styles.html} />
+                <BiLogoHtml5 className={styles.icon} />
               </motion.div>
 
               <motion.div variants={item} className={styles.box_icon}>
                 <span className={styles.icon_descripition}>Firebase</span>
-                <BiLogoFirebase className={styles.firebase} />
+                <BiLogoFirebase className={styles.icon} />
               </motion.div>
 
               <motion.div variants={item} className={styles.box_icon}>
                 <span className={styles.icon_descripition}>Canva</span>
-                <SiCanva className={styles.canva} />
+                <SiCanva className={styles.icon} />
               </motion.div>
 
               <motion.div variants={item} className={styles.box_icon}>
                 <span className={styles.icon_descripition}>VScode</span>
-                <BiLogoVisualStudio className={styles.vscode} />
+                <BiLogoVisualStudio className={styles.icon} />
+              </motion.div>
+              
+              <motion.div variants={item} className={styles.box_icon}>
+                <span className={styles.icon_descripition}>Prisma</span>
+                <SiPrisma className={styles.icon} />
+              </motion.div>
+              
+              <motion.div variants={item} className={styles.box_icon}>
+                <span className={styles.icon_descripition}>Next.js</span>
+                <TbBrandNextjs  className={styles.icon} />
               </motion.div>
             </motion.div>
           </div>
