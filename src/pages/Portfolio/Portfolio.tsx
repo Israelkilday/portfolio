@@ -36,6 +36,7 @@ const Portfolio = () => {
         "Javascript",
         "CSS Modules",
         "JSX",
+        "Vite",
       ],
       linkDeploy: "https://israelkilday.github.io/Secret-Word/",
       linkRepository: "https://github.com/Israelkilday/Secret-Word",
@@ -54,7 +55,8 @@ const Portfolio = () => {
         "CSS Modules",
         "JSX",
         "Firebase",
-        "Firestore"
+        "Firestore",
+        "Vite",
       ],
       linkDeploy: "https://musicblog-drab.vercel.app/",
       linkRepository: "https://github.com/Israelkilday/musicblog",
