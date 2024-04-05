@@ -17,6 +17,7 @@ import { FaGithub } from "react-icons/fa";
 import Portfolio_img0 from "../../../public/imgs/project_0.png"
 import Portfolio_img1 from "../../../public/imgs/project_1.jpg"
 import Portfolio_img2 from "../../../public/imgs/project_2.png"
+import Portfolio_img3 from "../../../public/imgs/project_3.png"
 
 const Portfolio = () => {
   const [slidePerview, setSlidePerview] = useState<number>(3);
@@ -28,7 +29,7 @@ const Portfolio = () => {
       id: 0,
       image: Portfolio_img0,
       name: "Secret World",
-      description: "Aplicação desenvolvida utilizando React, Typescript, Vite e CSS Modules. Foi adotada uma abordagem de componentização para organizar e reutilizar o código de forma eficiente. Foram utilizados hooks como useState, useEffect e useRef para gerenciar o estado dos componentes, manipular efeitos colaterais e interagir com elementos do DOM de maneira declarativa.",
+      description: "Jogo de adivinhação de palavras secretas desenvolvido utilizando React, Typescript, Vite e CSS Modules. Foi adotada uma abordagem de componentização para organizar e reutilizar o código de forma eficiente. Foram utilizados hooks como useState, useEffect e useRef para gerenciar o estado dos componentes, manipular efeitos colaterais e interagir com elementos do DOM de maneira declarativa.",
       technologies: [
         "React",
         "Custom hooks",
@@ -43,6 +44,28 @@ const Portfolio = () => {
     },
     {
       id: 1,
+      image: Portfolio_img3,
+      name: "BarberBlend",
+      description: "Plataforma de agendamento online que simplifica o processo de reserva de horários em diversas barbearias. Neste projeto, implementei uma funcionalidade de agendamento e cancelamento intuitiva e sincronizada, permitindo aos usuários marcar e desmarcar serviços de forma fácil e eficiente",
+      technologies: [
+        "Next.14",
+        "NextAuth.js",
+        "Typescript",
+        "Zod",
+        "React.js",
+        "React Hook Form",
+        "TailwindCSS",
+        "Shadcn/ui",
+        "Prisma ORM",
+        "Supabase",
+        "PostgresSQL",
+        "Date-fns",
+      ],
+      linkDeploy: "https://fullstack-barbershop.vercel.app/",
+      linkRepository: "https://github.com/Israelkilday/BARBERBLEND",
+    },
+    {
+      id: 2,
       image: Portfolio_img1,
       name: "Music Blog",
       description: "Single Page Application(SPA) fullstack desenvolvida utilizando React, Typescript e integração com Firebase e db Firestore. Ele inclui um contexto de autenticação que fornece informações sobre o usuário autenticado para os componentes da aplicação. Nele são armazenados dados de usuários, como imagens, títulos e conteúdo de postagens do Blog.",
@@ -61,9 +84,8 @@ const Portfolio = () => {
       linkDeploy: "https://musicblog-drab.vercel.app/",
       linkRepository: "https://github.com/Israelkilday/musicblog",
     },
-
     {
-      id: 2,
+      id: 3,
       image: Portfolio_img2,
       name: "Rede Social feita com ReactJS",
       description: "Projeto em produção, estou me desafiando em fazer uma Rede social utilizando ReactJs e outras tecnologias, Trabalhando para que logo esteja disponível por aqui!",
