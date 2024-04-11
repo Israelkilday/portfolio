@@ -42,18 +42,17 @@
     position: relative;
 }
 
-.home_content .transparent_text {
-    animation: animate .8s ease-in-out .6s 1 forwards;
-    opacity: 0;
-    position: relative;
-    width: 41.4rem;
-}
-
 .home_content .animation_text {
     font-family: 'Orbitron', sans-serif;
     font-size: 3.3rem;
 }
 
+.home_content .transparent_text {
+    animation: animate .8s ease-in-out .6s 1 forwards;
+    opacity: 0;
+    position: relative;
+    width: 40.2rem;
+}
 
 .home_content .transparent_text .animation_text {
     animation-delay: 2s;

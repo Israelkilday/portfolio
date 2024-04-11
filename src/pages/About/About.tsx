@@ -1,5 +1,5 @@
 // CSS
-import styles from "./About.module.css"
+import styles from "./About.module.css";
 // COMPONENT
 import Transition from "../../components/Transition";
 // IMGAGENS
@@ -31,22 +31,22 @@ const container = {
     scale: 1,
     transition: {
       delayChildren: 0.5,
-      staggerChildren: 0.2
-    }
-  }
+      staggerChildren: 0.2,
+    },
+  },
 };
 
 const item = {
   hidden: { y: 20, opacity: 0 },
   visible: {
     y: 0,
-    opacity: 1
-  }
+    opacity: 1,
+  },
 };
 
 const About = () => {
   return (
-    <Transition onAnimationComplete={() => { }}>
+    <Transition onAnimationComplete={() => {}}>
       <section className={styles.about}>
         <div className={styles.container_img_skills}>
           <motion.div
@@ -55,7 +55,7 @@ const About = () => {
             transition={{
               duration: 2,
               delay: 0.3,
-              ease: [0.3, 0, 0.2, 1]
+              ease: [0.3, 0, 0.2, 1],
             }}
           >
             <img src={About_img} alt="about_img" />
@@ -68,7 +68,7 @@ const About = () => {
               transition={{
                 duration: 1,
                 delay: 0.6,
-                ease: [0.2, 0, 0.2, 1]
+                ease: [0.2, 0, 0.2, 1],
               }}
             >
               <h3>
@@ -141,47 +141,55 @@ const About = () => {
                 <span className={styles.icon_descripition}>VScode</span>
                 <BiLogoVisualStudio className={styles.icon} />
               </motion.div>
-              
+
               <motion.div variants={item} className={styles.box_icon}>
                 <span className={styles.icon_descripition}>Prisma</span>
                 <SiPrisma className={styles.icon} />
               </motion.div>
-              
+
               <motion.div variants={item} className={styles.box_icon}>
                 <span className={styles.icon_descripition}>Next.js</span>
-                <TbBrandNextjs  className={styles.icon} />
+                <TbBrandNextjs className={styles.icon} />
               </motion.div>
-              
+
               <motion.div variants={item} className={styles.box_icon}>
                 <span className={styles.icon_descripition}>Node.js</span>
-                <FaNodeJs className={styles.icon}/>
+                <FaNodeJs className={styles.icon} />
               </motion.div>
-              
+
               <motion.div variants={item} className={styles.box_icon}>
                 <span className={styles.icon_descripition}>MongoDB</span>
-                <SiMongodb className={styles.icon}/>
+                <SiMongodb className={styles.icon} />
               </motion.div>
             </motion.div>
           </div>
         </div>
 
         <div>
-          <motion.div className={styles.about_content}
+          <motion.div
+            className={styles.about_content}
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
               duration: 1,
               delay: 0.6,
-              ease: [0.2, 0, 0.2, 1]
+              ease: [0.2, 0, 0.2, 1],
             }}
           >
-            <h2><span>//</span> Quem é <span>Israel Kilday</span></h2>
+            <h2>
+              <span>//</span> Quem é <span>Israel Kilday</span>
+            </h2>
 
             <p>
-              - Olá, prazer em conhecer! Me chamo Israel Kilday.
-              Desenvolvedor web apaixonado e dedicado, com uma sólida experiência de 15 anos na área de vendas trago de bagagem softs skills que julgo serem importantes para area de desenvolvimento, estou atualmente em transição de carreira para seguir minha paixão pela programação. Possuo um amplo conhecimento em tecnologias web, incluindo JavaScript, React e TypeScript. Entusiasmado em aprender e evoluir constantemente, estou comprometido em aplicar minha experiência para criar soluções web inovadoras e impactantes. Determinado a contribuir ativamente para projetos desafiadores e colaborar em equipes dinâmicas.
-              Comunicativo por natureza, estou sempre pronto para desempenhar um papel em soluções inovadoras.
-              Vamos construir algo incrível juntos!
+              Desenvolvedor Web com ampla experiência no uso das principais
+              tecnologias do mercado, incluindo Typerscript, JavaScript, React,
+              Node.js, e PostgreSQL. Proficiente em padrões de projeto,
+              especialmente o MVC, comprometido com a implementação de boas
+              práticas para garantir a eficiência, escalabilidade e manutenção
+              dos projetos. Com histórico anterior como vendedor, trago de
+              bagagem habilidades excepcionais de comunicação, trabalho em
+              equipe e capacidade de entender e atender às necessidades dos
+              clientes.
             </p>
           </motion.div>
         </div>
@@ -191,3 +199,8 @@ const About = () => {
 };
 
 export default About;
+
+// Desenvolvedor web apaixonado e dedicado, com uma sólida experiência de 15 anos na área de vendas trago de bagagem softs skills que julgo serem importantes para area de desenvolvimento, estou atualmente em transição de carreira para seguir minha paixão pela programação. Possuo um amplo conhecimento em tecnologias web, incluindo JavaScript, React e TypeScript. Entusiasmado em aprender e evoluir constantemente, estou comprometido em aplicar minha experiência para criar soluções web inovadoras e impactantes.
+// Comunicativo por natureza, estou sempre pronto para desempenhar um
+// papel em soluções inovadoras. Vamos construir algo incrível
+// juntos!

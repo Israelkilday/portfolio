@@ -49,6 +49,7 @@
 }
 
 .about_content p {
+    font-size: large;
     line-height: 1.3;
     margin-bottom: 1rem;
 }
@@ -183,11 +184,11 @@
     }
 
     .about_content h2 {
-        font-size: 2.7rem;
+        font-size: 3rem;
     }
 
     .about_content p {
-        font-size: 1.9rem;
+        font-size: 2.1rem;
     }
 
     .skills {
@@ -220,8 +221,8 @@
 
     .icons_container .icon {
         margin-bottom: 1.1rem;
-        height: 4.2rem;
-        width: 4.2rem;
+        height: 4.5rem;
+        width: 4.5rem;
     }
     
     .icon_descripition {
