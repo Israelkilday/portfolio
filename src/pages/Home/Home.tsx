@@ -132,7 +132,7 @@ const Home = () => {
 
             <div className={styles.btn_box}>
               <a
-                href="./cv/IsraelKilday_CV_atualizado.pdf"
+                href="./cv/IsraelKilday_CV_atualizado_G.docx"
                 download
                 className={styles.btn}
               >
