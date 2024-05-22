@@ -1,21 +1,14 @@
-// CSS
 import styles from "./Home.module.css";
-// REACT ROUTER DOM
 import { NavLink } from "react-router-dom";
-// COMPONENTS
 import Transition from "../../components/Transition";
-// REACT ICONS
 import {
   FaGithub,
   FaInstagram,
   FaLinkedinIn,
   FaWhatsapp,
 } from "react-icons/fa6";
-// IMGAGENS
 import Home_img from "../../../public/imgs/home_test_img_2.0.png";
-// PARTICLES
 import ParticlesBackground from "../../components/ParticlesBackground";
-// FRAMER MOTION
 import { motion } from "framer-motion";
 
 const Home = () => {
