@@ -190,7 +190,7 @@ const About = () => {
               Desenvolvedor Web Full stack e solucionador de problemas com ampla
               experiência no uso das principais tecnologias do mercado,
               incluindo Typerscript, JavaScript, React, Node.js e PostgreSQL.
-              comprometido com a implementação de boas práticas para garantir a
+              Comprometido com a implementação de boas práticas para garantir a
               eficiência, escalabilidade e manutenção dos projetos. Atuei por
               mais de dez anos na área de vendas, o que me proporcionou um
               conjunto de Soft Skills valiosas para qualquer equipe de
