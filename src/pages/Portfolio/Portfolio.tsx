@@ -23,7 +23,7 @@ const Portfolio = () => {
       image: Portfolio_img1,
       name: "Music Blog",
       description:
-        "Single Page Application(SPA) fullstack desenvolvida utilizando React, Typescript e integração com Firebase e db Firestore. Ele inclui um contexto de autenticação que fornece informações sobre o usuário autenticado para os componentes da aplicação. Nele são armazenados dados de usuários, como imagens, títulos e conteúdo de postagens do Blog.",
+        "Single Page Applictaion(SPA) desenvolvida para criar, editar e visualizar posts com integração ao Firebase e db Firestore. Ele inclui um contexto de autenticação que fornece informações sobre o usuário autenticado para os componentes da aplicação. Nele são armazenados dados de usuários, como imagens, títulos e conteúdo de postagens do Blog.",
       technologies: [
         "React",
         "React Router Dom",
