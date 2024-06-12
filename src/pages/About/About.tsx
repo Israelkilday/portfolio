@@ -9,7 +9,13 @@ import { motion } from "framer-motion";
 // REACT ICONS
 import { TbBrandNextjs } from "react-icons/tb";
 import { FaGitAlt } from "react-icons/fa6";
-import { SiCanva, SiMongodb, SiPrisma, SiTailwindcss } from "react-icons/si";
+import {
+  SiCanva,
+  SiMongodb,
+  SiNestjs,
+  SiPrisma,
+  SiTailwindcss,
+} from "react-icons/si";
 import {
   BiLogoTypescript,
   BiLogoReact,
@@ -22,7 +28,7 @@ import {
   BiLogoPostgresql,
   // BiLogoBootstrap
 } from "react-icons/bi";
-import { FaNodeJs } from "react-icons/fa";
+import { FaFigma, FaNodeJs } from "react-icons/fa";
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -138,8 +144,8 @@ const About = () => {
               </motion.div>
 
               <motion.div variants={item} className={styles.box_icon}>
-                <span className={styles.icon_descripition}>VScode</span>
-                <BiLogoVisualStudio className={styles.icon} />
+                <span className={styles.icon_descripition}>Figma</span>
+                <FaFigma className={styles.icon} />
               </motion.div>
 
               <motion.div variants={item} className={styles.box_icon}>
@@ -158,8 +164,8 @@ const About = () => {
               </motion.div>
 
               <motion.div variants={item} className={styles.box_icon}>
-                <span className={styles.icon_descripition}>MongoDB</span>
-                <SiMongodb className={styles.icon} />
+                <span className={styles.icon_descripition}>NestJS</span>
+                <SiNestjs className={styles.icon} />
               </motion.div>
             </motion.div>
           </div>
@@ -181,15 +187,14 @@ const About = () => {
             </h2>
 
             <p>
-              Desenvolvedor Web com ampla experiência no uso das principais
-              tecnologias do mercado, incluindo Typerscript, JavaScript, React,
-              Node.js, e PostgreSQL. Proficiente em padrões de projeto,
-              especialmente o MVC, comprometido com a implementação de boas
-              práticas para garantir a eficiência, escalabilidade e manutenção
-              dos projetos. Com histórico anterior como vendedor, trago de
-              bagagem habilidades excepcionais de comunicação, trabalho em
-              equipe e capacidade de entender e atender às necessidades dos
-              clientes.
+              Desenvolvedor Web Full stack e solucionador de problemas com ampla
+              experiência no uso das principais tecnologias do mercado,
+              incluindo Typerscript, JavaScript, React, Node.js e PostgreSQL.
+              comprometido com a implementação de boas práticas para garantir a
+              eficiência, escalabilidade e manutenção dos projetos. Atuei por
+              mais de dez anos na área de vendas, o que me proporcionou um
+              conjunto de Soft Skills valiosas para qualquer equipe de
+              desenvolvimento.
             </p>
           </motion.div>
         </div>
@@ -199,8 +204,3 @@ const About = () => {
 };
 
 export default About;
-
-// Desenvolvedor web apaixonado e dedicado, com uma sólida experiência de 15 anos na área de vendas trago de bagagem softs skills que julgo serem importantes para area de desenvolvimento, estou atualmente em transição de carreira para seguir minha paixão pela programação. Possuo um amplo conhecimento em tecnologias web, incluindo JavaScript, React e TypeScript. Entusiasmado em aprender e evoluir constantemente, estou comprometido em aplicar minha experiência para criar soluções web inovadoras e impactantes.
-// Comunicativo por natureza, estou sempre pronto para desempenhar um
-// papel em soluções inovadoras. Vamos construir algo incrível
-// juntos!
