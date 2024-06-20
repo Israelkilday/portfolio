@@ -81,7 +81,7 @@ const Portfolio = () => {
         "PostgresSQL",
         "Date-fns",
       ],
-      linkDeploy: "https://fullstack-barbershop.vercel.app/",
+      linkDeploy: "https://barberblend.vercel.app/",
       linkRepository: "https://github.com/Israelkilday/BARBERBLEND",
     },
     {

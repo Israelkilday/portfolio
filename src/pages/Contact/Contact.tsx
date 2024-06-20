@@ -1,19 +1,16 @@
-// CSS
-import styles from "./Contact.module.css"
-// HOOKS
+import styles from "./Contact.module.css";
 import { useEffect, useState } from "react";
-// REACT ROUTER DOM
 import { NavLink } from "react-router-dom";
-// COMPONENT
 import Transition from "../../components/Transition";
-// EMAILJS
-import emailjs from "@emailjs/browser"
-// SWEETALERT
-import Swal from 'sweetalert2';
-// FRAMER MOTION
+import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
 import { motion } from "framer-motion";
-// REACT ICONS
-import { FaGithub, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
+import {
+  FaGithub,
+  FaInstagram,
+  FaLinkedinIn,
+  FaWhatsapp,
+} from "react-icons/fa6";
 
 const Contact = () => {
   const [name, setName] = useState<string>("");
@@ -31,14 +28,20 @@ const Contact = () => {
   function sendEmail(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
-    if (name === "" || email === "" || phone === "" || subject === "" || message === "") {
+    if (
+      name === "" ||
+      email === "" ||
+      phone === "" ||
+      subject === "" ||
+      message === ""
+    ) {
       setNameError(name === "");
       setEmailError(email === "");
       setPhoneError(phone === "");
       setSubjectError(subject === "");
       setMessageError(message === "");
 
-      return
+      return;
     }
 
     setNameError(false);
@@ -52,43 +55,50 @@ const Contact = () => {
       email: email,
       phone: phone,
       subject: subject,
-      message: message
+      message: message,
     };
 
-    emailjs.send(
-      "service_7um5d2w",
-      "template_wpza33d",
-      templateParams,
-      "SzK4tZv53k8B-JB4j",
-    ).then((response) => {
-      if (response.status === 200) {
-        Swal.fire({
-          title: "Otimo!",
-          text: "Mensagem enviada com sucesso!",
-          icon: "success"
-        });
-      }
+    emailjs
+      .send(
+        "service_7um5d2w",
+        "template_wpza33d",
+        templateParams,
+        "SzK4tZv53k8B-JB4j"
+      )
+      .then(
+        (response) => {
+          if (response.status === 200) {
+            Swal.fire({
+              title: "Otimo!",
+              text: "Mensagem enviada com sucesso!",
+              icon: "success",
+            });
+          }
 
-      console.log("EMAIL ENVIADO", response.status, response.text)
-      setName("")
-      setEmail("")
-      setPhone("")
-      setSubject("")
-      setMessage("")
-
-    }, (error) => {
-      console.log("ERRO AO ENVIAR O EMAIL ", error)
-    });
-  };
+          console.log("EMAIL ENVIADO", response.status, response.text);
+          setName("");
+          setEmail("");
+          setPhone("");
+          setSubject("");
+          setMessage("");
+        },
+        (error) => {
+          console.log("ERRO AO ENVIAR O EMAIL ", error);
+        }
+      );
+  }
 
   return (
-    <Transition onAnimationComplete={() => { }} >
+    <Transition onAnimationComplete={() => {}}>
       <section className={styles.contact}>
         <div className={styles.header_container}>
-          <h2><span>//</span>  Contate <span>Me!</span></h2>
+          <h2>
+            <span>//</span> Contate <span>Me!</span>
+          </h2>
 
           <div className={styles.social_media}>
-            <motion.div className={styles.icon_container}
+            <motion.div
+              className={styles.icon_container}
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
@@ -99,18 +109,20 @@ const Contact = () => {
                   type: "spring",
                   damping: 5,
                   stiffness: 100,
-                  restDelta: 0.001
-                }
+                  restDelta: 0.001,
+                },
               }}
             >
-              <NavLink to="https://api.whatsapp.com/send?phone=5585989295516"
+              <NavLink
+                to="https://api.whatsapp.com/send?phone=5585989295516"
                 className={styles.whatsapp_link}
               >
                 <FaWhatsapp />
               </NavLink>
             </motion.div>
 
-            <motion.div className={styles.icon_container}
+            <motion.div
+              className={styles.icon_container}
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
@@ -121,18 +133,20 @@ const Contact = () => {
                   type: "spring",
                   damping: 5,
                   stiffness: 100,
-                  restDelta: 0.001
-                }
+                  restDelta: 0.001,
+                },
               }}
             >
-              <NavLink to="https://www.instagram.com/israelkilday/"
+              <NavLink
+                to="https://www.instagram.com/israelkilday/"
                 className={styles.instagram_link}
               >
                 <FaInstagram />
               </NavLink>
             </motion.div>
 
-            <motion.div className={styles.icon_container}
+            <motion.div
+              className={styles.icon_container}
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
@@ -143,18 +157,20 @@ const Contact = () => {
                   type: "spring",
                   damping: 5,
                   stiffness: 100,
-                  restDelta: 0.001
-                }
+                  restDelta: 0.001,
+                },
               }}
             >
-              <NavLink to="https://www.linkedin.com/in/israeldevfrontend"
+              <NavLink
+                to="https://www.linkedin.com/in/israeldevfrontend"
                 className={styles.linkedin_link}
               >
                 <FaLinkedinIn />
               </NavLink>
             </motion.div>
 
-            <motion.div className={styles.icon_container}
+            <motion.div
+              className={styles.icon_container}
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
@@ -165,11 +181,12 @@ const Contact = () => {
                   type: "spring",
                   damping: 5,
                   stiffness: 100,
-                  restDelta: 0.001
-                }
+                  restDelta: 0.001,
+                },
               }}
             >
-              <NavLink to="https://github.com/Israelkilday"
+              <NavLink
+                to="https://github.com/Israelkilday"
                 className={styles.github_link}
               >
                 <FaGithub />
@@ -195,9 +212,12 @@ const Contact = () => {
 
               <div
                 id="error_name"
-                className={`${styles.error_message} ${nameError ? styles.show_message : ""}`}
+                className={`${styles.error_message} ${
+                  nameError ? styles.show_message : ""
+                }`}
               >
-                Nome não pode ficar em branco</div>
+                Nome não pode ficar em branco
+              </div>
             </div>
 
             <div className={`${styles.input_field} ${styles.field}`}>
@@ -215,7 +235,9 @@ const Contact = () => {
 
               <div
                 id="error_email"
-                className={`${styles.error_message} ${emailError ? styles.show_message : ""}`}
+                className={`${styles.error_message} ${
+                  emailError ? styles.show_message : ""
+                }`}
               >
                 Email não pode ficar em branco
               </div>
@@ -238,7 +260,9 @@ const Contact = () => {
 
               <div
                 id="error_phone"
-                className={`${styles.error_message} ${phoneError ? styles.show_message : ""}`}
+                className={`${styles.error_message} ${
+                  phoneError ? styles.show_message : ""
+                }`}
               >
                 Telefone não pode ficar em branco
               </div>
@@ -251,7 +275,7 @@ const Contact = () => {
                 id="subject"
                 className={`${styles.item} ${subjectError ? styles.error : ""}`}
                 onChange={(e) => {
-                  setSubject(e.target.value)
+                  setSubject(e.target.value);
                   setSubjectError(false);
                 }}
                 value={subject}
@@ -259,7 +283,9 @@ const Contact = () => {
 
               <div
                 id="error_subject"
-                className={`${styles.error_message} ${subjectError ? styles.show_message : ""}`}
+                className={`${styles.error_message} ${
+                  subjectError ? styles.show_message : ""
+                }`}
               >
                 Assunto não pode ficar em branco
               </div>
@@ -275,22 +301,26 @@ const Contact = () => {
               rows={10}
               className={`${styles.item} ${messageError ? styles.error : ""}`}
               onChange={(e) => {
-                setMessage(e.target.value)
+                setMessage(e.target.value);
                 setMessageError(false);
               }}
               value={message}
-            >
-            </textarea>
+            ></textarea>
 
             <div
               id="error_message"
-              className={`${styles.error_message} ${messageError ? styles.show_message : ""}`}
+              className={`${styles.error_message} ${
+                messageError ? styles.show_message : ""
+              }`}
             >
-              Mensagem não pode ficar em branco</div>
+              Mensagem não pode ficar em branco
+            </div>
           </div>
 
           <div className={styles.btn_box}>
-            <button className={styles.btn} type="submit">Enviar Mensagem</button>
+            <button className={styles.btn} type="submit">
+              Enviar Mensagem
+            </button>
           </div>
         </form>
       </section>
@@ -299,7 +329,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
-
-
-
