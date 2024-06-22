@@ -168,11 +168,6 @@ label {
 
 /* <========== breakpoints ==========> */
 
-@media (max-width: 991px) {
-  .header {
-    padding: 2rem 3%;
-  }
-}
 @media (max-width: 768px) {
   .header::before {
     background: rgba(0, 0, 0, 0.1);

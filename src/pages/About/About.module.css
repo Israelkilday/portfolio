@@ -1,4 +1,57 @@
 .about {
+  min-height: 100vh;
+  padding: 11rem 6%;
+}
+
+.box_about {
+  /* background: linear-gradient(110deg, #000103, 45%, #1e2631, 55%, #000103); */
+  background: linear-gradient(110deg, #1f242d 45%, #2a3a4a 55%, #1f242d);
+  padding: 2rem;
+  border: solid 0.1px #64748b;
+  border-radius: 1.5rem;
+}
+
+.box_title_about {
+  min-width: 100%;
+  display: flex;
+  gap: 2;
+}
+
+.box_title_about span {
+  font-size: 2em;
+}
+
+.title_about_box {
+  font-size: 2rem;
+  text-align: left;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #64748b;
+}
+
+/* .p_box_about {
+  color: #e2e8f0;
+} */
+
+/* export function CardBackgroundShine() {
+    return (
+      <div className="inline-flex animate-shine max-w-[350px] w-full items-center justify-center rounded-xl text-sm border border-white/10 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-4 py-5 transition-colors">
+        <div className="flex flex-col gap-2">
+          <h3 className="text-xl font-semibold text-neutral-200">Luxe</h3>
+          <p className="text-sm leading-[1.5] text-neutral-400">
+            Explore the new website that simplifies the creation of sophisticated
+            dark mode components.
+          </p>
+        </div>
+      </div>
+    );
+  } */
+
+.p_box_about {
+  margin-bottom: 0;
+}
+
+/* .about {
     align-items: center;
     display: flex;
     gap: 15rem;
@@ -9,234 +62,230 @@
 }
 
 .container_img_skills {
-    height: 45rem;
+  height: 45rem;
 }
 
 .container_img_skills img {
-    animation: floatImage 4s ease-in-out infinite;
-    margin-bottom: 3rem;
-    width: 27vw;
+  animation: floatImage 4s ease-in-out infinite;
+  margin-bottom: 3rem;
+  width: 27vw;
 }
 
 @keyframes floatImage {
-    0% {
-        transform: translateY(0)
-    }
+  0% {
+    transform: translateY(0);
+  }
 
-    50% {
-        transform: translateY(-2.4rem);
-    }
+  50% {
+    transform: translateY(-2.4rem);
+  }
 
-    100% {
-        transform: translateY(0);
-    }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .about_content {
-    background: rgba(0, 0, 0, .1);
-    border-radius: 10px;
-    backdrop-filter: blur(20px);
-    box-shadow: var(--main_color) 0 0 1rem;
-    margin-bottom: 8rem;
-    padding: 1rem 2rem;
-    width: 85%;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(20px);
+  box-shadow: var(--main_color) 0 0 1rem;
+  margin-bottom: 8rem;
+  padding: 1rem 2rem;
+  width: 85%;
 }
 
 .about_content h2 {
-    font-size: 3rem;
-    line-height: 1.2;    
-    text-align: left;
+  font-size: 3rem;
+  line-height: 1.2;
+  text-align: left;
 }
 
 .about_content p {
-    font-size: large;
-    line-height: 1.3;
-    margin-bottom: 1rem;
+  font-size: large;
+  line-height: 1.3;
+  margin-bottom: 1rem;
 }
 
 .skills {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 90%;
-    width: 100vw;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 90%;
+  width: 100vw;
 }
 
 .skills h3 {
-    font-size: 2.7rem;
-    margin-right: 2rem;
-    margin-bottom: 0;
+  font-size: 2.7rem;
+  margin-right: 2rem;
+  margin-bottom: 0;
 }
 
 .icons_container {
-    bottom: 2.5rem;
-    display: flex;
-    gap: 1rem;
-    position: relative;
-    padding-right: 13rem;
+  bottom: 2.5rem;
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  padding-right: 13rem;
 }
 
 .box_icon {
-    position: relative;
+  position: relative;
 }
 
-.box_icon:hover .icon_descripition  {
-    display: block;
-    top: -25%; 
-    transform: translate(-50%, 0%);
+.box_icon:hover .icon_descripition {
+  display: block;
+  top: -25%;
+  transform: translate(-50%, 0%);
 }
 
 .icon_descripition {
-    display: none;            
-    font-size: 1.3rem;
-    font-weight: bold;
-    letter-spacing: .2rem;
-    left: 50%;
-    position: absolute;
-    top: 50%;
+  display: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  left: 50%;
+  position: absolute;
+  top: 50%;
 }
 
 .icons_container .icon {
-    border-radius: 25%;
-    border: .1rem solid var(--main_color);
-    display: inline-flex;
-    color: var(--main_color);
-    height: 4.5rem;
-    margin: 1rem 0 0.8rem;
-    padding: 0.4rem;
-    transition: .3s ease;
-    width: 4.5rem;    
+  border-radius: 25%;
+  border: 0.1rem solid var(--main_color);
+  display: inline-flex;
+  color: var(--main_color);
+  height: 4.5rem;
+  margin: 1rem 0 0.8rem;
+  padding: 0.4rem;
+  transition: 0.3s ease;
+  width: 4.5rem;
 }
 
 .icons_container .icon:hover {
-    box-shadow: 0 0 1rem var(--main_color);
-    background-color: var(--main_color);
-    border: none;
-    color: var(--bg_color);
+  box-shadow: 0 0 1rem var(--main_color);
+  background-color: var(--main_color);
+  border: none;
+  color: var(--bg_color);
 }
 
- /* <========== breakpoints ==========> */
+/* <========== breakpoints ==========> */
 
- @media (max-width: 1100px) {
-    .about_content h2 {
-        font-size: 2.5rem;
-    }
+/* @media (max-width: 1100px) {
+  .about_content h2 {
+    font-size: 2.5rem;
+  }
 
-    .about_content p {
-        font-size: 1.5rem;
-    }
- }
+  .about_content p {
+    font-size: 1.5rem;
+  }
+}
 
- @media (max-width: 991px) {
-    .container_img_skills img {
-        width: 35vw;
-    }
-    .about_content {
-        width: 400px;
-    }
+@media (max-width: 991px) {
+  .container_img_skills img {
+    width: 35vw;
+  }
+  .about_content {
+    width: 400px;
+  }
 
-    .skills {
-        width: auto;
-    }
+  .skills {
+    width: auto;
+  }
 
-    .icons_container .icon {
-        height: 3.8rem;
-        width: 3.8rem;
-    }
+  .icons_container .icon {
+    height: 3.8rem;
+    width: 3.8rem;
+  }
 
-    .skills h3 {
-        font-size: 2.2rem;
-    }
+  .skills h3 {
+    font-size: 2.2rem;
+  }
 }
 
 @media (max-width: 768px) {
-    .about {
-        gap: 6rem
-    }
+  .about {
+    gap: 6rem;
+  }
 
-    .about_content {
-        width: auto;
-    }
+  .about_content {
+    width: auto;
+  }
 
-    .icons_container {
-        bottom: 0.8rem;
-        padding-right: 2rem;
-    }
+  .icons_container {
+    bottom: 0.8rem;
+    padding-right: 2rem;
+  }
 
-    .container_img_skills img {
-        width: 40vw;
-    }
+  .container_img_skills img {
+    width: 40vw;
+  }
 
-    .skills h3 {
-        font-size: 1.8rem;
-    }
+  .skills h3 {
+    font-size: 1.8rem;
+  }
 }
 
 @media (max-width: 650px) {
-    .about {
-        flex-direction: column-reverse;
-        gap: 0;
-    }
+  .about {
+    flex-direction: column-reverse;
+    gap: 0;
+  }
 
-    .about_content {
-        margin-bottom: 3rem;
-        margin-top: 3rem;
-    }
+  .about_content {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
 
-    .about_content h2 {
-        font-size: 3rem;
-    }
+  .about_content h2 {
+    font-size: 3rem;
+  }
 
-    .about_content p {
-        font-size: 2.1rem;
-    }
+  .about_content p {
+    font-size: 2.1rem;
+  }
 
-    .skills {
-        flex-direction: column;
-        position:static;
-        width: 100%;
-    }
+  .skills {
+    flex-direction: column;
+    position: static;
+    width: 100%;
+  }
 
-    .skills h3 {
-        font-size: 2.7rem;
-        margin-bottom: 3rem;
-        text-align: center;
-    }
+  .skills h3 {
+    font-size: 2.7rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
 
-    .container_img_skills {
-        height: auto;
-    }
+  .container_img_skills {
+    height: auto;
+  }
 
-    .container_img_skills img {
-        display: none;
-    }
+  .container_img_skills img {
+    display: none;
+  }
 
-    .icons_container {
-        border-radius: 1rem;
-        display: grid;
-        grid-template-columns: repeat(8, 1fr);
-        padding-left: 1rem;
-        width: auto;
-    }
+  .icons_container {
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    padding-left: 1rem;
+    width: auto;
+  }
 
-    .icons_container .icon {
-        margin-bottom: 1.1rem;
-        height: 4.5rem;
-        width: 4.5rem;
-    }
-    
-    .icon_descripition {
-        font-size: 1.4rem;
-    }
+  .icons_container .icon {
+    margin-bottom: 1.1rem;
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+
+  .icon_descripition {
+    font-size: 1.4rem;
+  }
 }
 
 @media (max-width: 440px) {
-    .about {
-        max-height: 100vh;
-        padding: 7rem 3% 2rem;
-    }
-}
- 
-
-
-
+  .about {
+    max-height: 100vh;
+    padding: 7rem 3% 2rem;
+  }
+}  */
