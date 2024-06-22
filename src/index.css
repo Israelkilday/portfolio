@@ -33,6 +33,7 @@
 
 :root {
   --bg_color: #1f242d;
+  /* --bg_color: rgb(4, 7, 29); */
   --main_color: #0ef;
   --placeholder_color: rgba(255, 255, 255, 0.3);
   --second_bg_color: #323946;

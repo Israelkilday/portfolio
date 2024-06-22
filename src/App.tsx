@@ -1,3 +1,4 @@
+import "./styles/global.css";
 import "./App.css";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
@@ -7,7 +8,6 @@ import Portfolio from "./pages/Portfolio/Portfolio";
 import Contact from "./pages/Contact/Contact";
 import { ThemeProvider } from "./context/ThemeContext";
 import { AnimatePresence } from "framer-motion";
-import Teste from "./pages/About/About";
 
 function App() {
   const location = useLocation();

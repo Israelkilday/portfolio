@@ -38,10 +38,49 @@ const item = {
   },
 };
 
+// export function CardBackgroundShine() {
+//   return (
+
+//   );
+// }
+
 const About = () => {
   return (
     <Transition onAnimationComplete={() => {}}>
-      <section className={styles.about}>
+      <div className="pt-48 px-11 w-full">
+        <div className="inline-flex max-w-[350px] min-w-full items-center justify-center rounded-xl text-sm border border-white/10 bg-[linear-gradient(110deg,#1f242d,45%,#2a3a4a,55%,#1f242d)] bg-[length:400%_100%] bg-[position:50%_50%] mb-10 px-7 pt-10 transition-colors">
+          <div className="flex flex-col gap-2">
+            <h3 className="text-3xl font-semibold bg-gradient-to-b from-[#0ef] to-white text-transparent bg-clip-text">
+              Quem é Israel Kilday
+            </h3>
+
+            <p className="text-2xl leading-[1.5] text-neutral-300">
+              Iniciei minha jornada na área de tecnologia em 2022 praticando
+              algoritmos e estruturas de dados, o que me estabeleceu uma base
+              sólida para minha carreira. Atualmente, sou um desenvolvedor Web
+              Full Stack e um solucionador de problemas com ampla experiência no
+              uso das principais tecnologias do mercado, incluindo TypeScript,
+              JavaScript, React, Node.js e PostgreSQL. Sou dedicado à
+              implementação de boas práticas para garantir a eficiência,
+              escalabilidade e manutenção dos projetos. Antes de ingressar na
+              tecnologia, atuei por mais de dez anos na área de vendas, o que me
+              proporcionou um conjunto valioso de soft skills, essenciais para
+              qualquer equipe de desenvolvimento.
+            </p>
+          </div>
+        </div>
+        <h2 className="text-3xl text-left font-semibold bg-gradient-to-b from-[#0ef] to-white text-transparent bg-clip-text">
+          Principais Tecnologias que eu ultilizo:
+        </h2>
+      </div>
+    </Transition>
+  );
+};
+
+export default About;
+
+{
+  /* <section className={styles.about}>
         <motion.div
           className={styles.box_about}
           initial={{ opacity: 0, scale: 0 }}
@@ -57,25 +96,14 @@ const About = () => {
           </h2>
 
           <p className={styles.p_box_about}>
-            Iniciei minha jornada na área de tecnologia em 2022 praticando
-            algoritmos e estruturas de dados, o que me estabeleceu uma base
-            sólida para minha carreira. Atualmente, sou um desenvolvedor Web
-            Full Stack e um solucionador de problemas com ampla experiência no
-            uso das principais tecnologias do mercado, incluindo TypeScript,
-            JavaScript, React, Node.js e PostgreSQL. Sou dedicado à
-            implementação de boas práticas para garantir a eficiência,
-            escalabilidade e manutenção dos projetos. Antes de ingressar na
-            tecnologia, atuei por mais de dez anos na área de vendas, o que me
-            proporcionou um conjunto valioso de soft skills, essenciais para
-            qualquer equipe de desenvolvimento.
           </p>
         </motion.div>
-      </section>
-    </Transition>
-  );
-};
 
-export default About;
+        <div>
+          <h2>teste</h2>
+        </div>
+      </section> */
+}
 
 {
   /* <div className={styles.container_img_skills}>
