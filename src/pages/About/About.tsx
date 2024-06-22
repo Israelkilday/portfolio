@@ -1,21 +1,10 @@
-// CSS
 import styles from "./About.module.css";
-// COMPONENT
 import Transition from "../../components/Transition";
-// IMGAGENS
 import About_img from "../../../public/imgs/home_test_img_2.0.png";
-// FRAMER MOTION
 import { motion } from "framer-motion";
-// REACT ICONS
 import { TbBrandNextjs } from "react-icons/tb";
 import { FaGitAlt } from "react-icons/fa6";
-import {
-  SiCanva,
-  SiMongodb,
-  SiNestjs,
-  SiPrisma,
-  SiTailwindcss,
-} from "react-icons/si";
+import { SiCanva, SiNestjs, SiPrisma, SiTailwindcss } from "react-icons/si";
 import {
   BiLogoTypescript,
   BiLogoReact,

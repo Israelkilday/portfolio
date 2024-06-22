@@ -1,17 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap");
 
 * {
   box-sizing: border-box;
   border: none;
-  font-family: 'Orbitron', sans-serif;
-  letter-spacing: .1rem;
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 0.1rem;
   list-style: none;
   margin: 0;
   outline: none;
   padding: 0;
   text-decoration: none;
-
 }
 
 ::-webkit-scrollbar {
@@ -35,20 +34,20 @@
 :root {
   --bg_color: #1f242d;
   --main_color: #0ef;
-  --placeholder_color: rgba(255, 255, 255, .3); 
-  --second_bg_color:#323946;
+  --placeholder_color: rgba(255, 255, 255, 0.3);
+  --second_bg_color: #323946;
   --text_color: #ededed;
 }
 
- .light_mode {
-   --bg_color: #f0f3fd;  
-   --main_color: #dc2626; 
-   --placeholder_color: #808080; 
-   --second_bg_color: #cbd5e1 ;
-   --text_color: #020617; 
-   transition: 1.5s;
+.light_mode {
+  --bg_color: #f0f3fd;
+  --main_color: #dc2626;
+  --placeholder_color: #808080;
+  --second_bg_color: #cbd5e1;
+  --text_color: #020617;
+  transition: 1.5s;
 }
-     
+
 html {
   font-size: 62.5%;
   overflow-x: hidden;
@@ -61,12 +60,12 @@ body {
 }
 
 span {
-  color: var(--main_color);   
+  color: var(--main_color);
 }
 
 p {
   font-size: 1.6rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 1rem 0 3rem;
 }
 
@@ -77,69 +76,69 @@ h2 {
 
 /* CONTACT STYLE */
 #name {
-  animation: inputLeft .8s ease-in-out .3s 1 forwards;
+  animation: inputLeft 0.8s ease-in-out 0.3s 1 forwards;
   opacity: 0;
 }
 
 #phone {
-  animation: inputLeft .8s ease-in-out .6s 1 forwards;
+  animation: inputLeft 0.8s ease-in-out 0.6s 1 forwards;
   opacity: 0;
 }
 
 @keyframes inputLeft {
   from {
-      filter: blur(33px);
-      opacity: 0;
-      transform: translate(-100px, 0);
+    filter: blur(33px);
+    opacity: 0;
+    transform: translate(-100px, 0);
   }
 
   to {
-      filter: blur(0);
-      opacity: 1;
-      transform: translate(0);
+    filter: blur(0);
+    opacity: 1;
+    transform: translate(0);
   }
 }
 
 #email {
-  animation: inputRight .8s ease-in-out .3s 1 forwards;
+  animation: inputRight 0.8s ease-in-out 0.3s 1 forwards;
   opacity: 0;
 }
 
 #subject {
-  animation: inputRight .8s ease-in-out .6s 1 forwards;
+  animation: inputRight 0.8s ease-in-out 0.6s 1 forwards;
   opacity: 0;
 }
 
 @keyframes inputRight {
   from {
-      opacity: 0;
-      filter: blur(33px);
-      transform: translate(100px, 0);
+    opacity: 0;
+    filter: blur(33px);
+    transform: translate(100px, 0);
   }
 
   to {
-      filter: blur(0);
-      opacity: 1;
-      transform: translate(0);
+    filter: blur(0);
+    opacity: 1;
+    transform: translate(0);
   }
 }
 
 #message {
-  animation: textarea .8s ease-in-out .9s 1 forwards;
+  animation: textarea 0.8s ease-in-out 0.9s 1 forwards;
   opacity: 0;
 }
 
 @keyframes textarea {
   from {
-      filter: blur(33px);
-      opacity: 0;
-      transform: translate(0, 100px);
+    filter: blur(33px);
+    opacity: 0;
+    transform: translate(0, 100px);
   }
 
   to {
-      filter: blur(0);
-      opacity: 1;
-      transform: translate(0);
+    filter: blur(0);
+    opacity: 1;
+    transform: translate(0);
   }
 }
 
@@ -150,6 +149,3 @@ h2 {
     font-size: 50%;
   }
 }
-
-
-
