@@ -38,19 +38,13 @@ const item = {
   },
 };
 
-// export function CardBackgroundShine() {
-//   return (
-
-//   );
-// }
-
 const About = () => {
   return (
     <Transition onAnimationComplete={() => {}}>
-      <div className="pt-48 px-11 w-full">
-        <div className="inline-flex max-w-[350px] min-w-full items-center justify-center rounded-xl text-sm border border-white/10 bg-[linear-gradient(110deg,#1f242d,45%,#2a3a4a,55%,#1f242d)] bg-[length:400%_100%] bg-[position:50%_50%] mb-10 px-7 pt-10 transition-colors">
+      <div className="w-full px-11 pt-48">
+        <div className="mb-10 inline-flex min-w-full max-w-[350px] items-center justify-center rounded-xl border border-white/10 bg-[linear-gradient(110deg,#1f242d,45%,#2a3a4a,55%,#1f242d)] bg-[length:400%_100%] bg-[position:50%_50%] px-7 pt-10 text-sm transition-colors">
           <div className="flex flex-col gap-2">
-            <h3 className="text-3xl font-semibold bg-gradient-to-b from-[#0ef] to-white text-transparent bg-clip-text">
+            <h3 className="bg-gradient-to-b from-[#0ef] to-white bg-clip-text text-3xl font-semibold text-transparent">
               Quem é Israel Kilday
             </h3>
 
@@ -69,9 +63,18 @@ const About = () => {
             </p>
           </div>
         </div>
-        <h2 className="text-3xl text-left font-semibold bg-gradient-to-b from-[#0ef] to-white text-transparent bg-clip-text">
-          Principais Tecnologias que eu ultilizo:
-        </h2>
+
+        <div>
+          <div className="mb-10 inline-flex min-w-full max-w-[350px] items-center justify-center rounded-xl border border-white/10 bg-[linear-gradient(110deg,#1f242d,45%,#2a3a4a,55%,#1f242d)] bg-[length:400%_100%] bg-[position:50%_50%] px-7 pt-10 text-sm transition-colors">
+            <div className="flex flex-col gap-2">
+              <h3 className="bg-gradient-to-b from-[#0ef] to-white bg-clip-text text-3xl font-semibold text-transparent">
+                Skills do Lado do Cliente (Frontend):
+              </h3>
+
+              <div className="grid"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </Transition>
   );
