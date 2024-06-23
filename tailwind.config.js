@@ -16,6 +16,13 @@ export default {
           },
         },
       },
+      colors: {
+        bg_color: "#1f242d",
+        main_color: "#0ef",
+        placeholder_color: "rgba(255, 255, 255, 0.3)",
+        second_bg_color: "#323946",
+        text_color: "#ededed",
+      },
     },
   },
   plugins: [],
