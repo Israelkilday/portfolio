@@ -64,7 +64,7 @@ const About = () => {
       <div className="px-11 pt-48 md:px-[15%] lg:flex lg:px-[6%] lg:pr-0">
         <div className="mb-16 items-center justify-center rounded-xl border-[1px] border-solid border-white/10 bg-[linear-gradient(110deg,#1f242d,45%,#2a3a4a,55%,#1f242d)] bg-[length:400%_100%] bg-[position:50%_50%] px-10 pt-10 text-sm transition-colors lg:max-h-[450px] lg:max-w-[500px]">
           <div className="flex flex-col gap-2">
-            <h3 className="bg-gradient-to-b from-[#0ef] to-white bg-clip-text text-4xl font-semibold text-transparent">
+            <h3 className="bg-gradient-to-b from-[#0ef] to-white bg-clip-text text-5xl font-semibold text-transparent">
               Quem é Israel Kilday
             </h3>
 
@@ -77,7 +77,7 @@ const About = () => {
                 ease: [0.2, 0, 0.2, 1],
               }}
             >
-              <p className="text-[16px] leading-[1.5] text-neutral-300">
+              <p className="text-[15px] leading-[1.5] text-neutral-300">
                 Iniciei minha jornada na área de tecnologia em 2022 praticando
                 algoritmos e estruturas de dados, o que me estabeleceu uma base
                 sólida para minha carreira. Atualmente, sou um desenvolvedor Web
