@@ -98,7 +98,7 @@ const About = () => {
           <div className="mb-16 inline-flex items-center justify-center rounded-xl border-[1px] border-solid border-white/10 bg-[linear-gradient(110deg,#1f242d,45%,#2a3a4a,55%,#1f242d)] bg-[length:400%_100%] bg-[position:50%_50%] px-7 pb-11 pt-10 text-sm transition-colors lg:min-w-[500px]">
             <div>
               <h3 className="mb-7 border-solid bg-gradient-to-b from-[#0ef] to-white bg-clip-text text-3xl font-semibold text-transparent">
-                Skills do Lado do Cliente (Frontend):
+                Skills do Lado do Cliente:
               </h3>
 
               <motion.div
@@ -124,7 +124,7 @@ const About = () => {
               </motion.div>
 
               <h3 className="mb-7 mt-10 border-solid bg-gradient-to-b from-[#0ef] to-white bg-clip-text text-3xl font-semibold text-transparent">
-                Skills do Lado do Servidor (Backend):
+                Skills do Lado do Servidor:
               </h3>
 
               <motion.div
