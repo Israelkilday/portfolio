@@ -114,7 +114,7 @@ const About = () => {
                       variants={item}
                       className="flex flex-col items-center"
                     >
-                      <span className="text-center text-xl font-semibold tracking-[2px] text-neutral-200">
+                      <span className="text-center text-xl text-neutral-200">
                         {icon.name}
                       </span>
                       <icon.img className="mt-2 text-left text-7xl text-[#0ef] lg:text-6xl" />
@@ -140,7 +140,7 @@ const About = () => {
                       variants={item}
                       className="flex flex-col items-center"
                     >
-                      <span className="text-center text-xl font-semibold tracking-[2px] text-neutral-200">
+                      <span className="text-center text-xl text-neutral-200">
                         {icon.name}
                       </span>
                       <icon.img className="mt-2 text-left text-7xl text-[#0ef] lg:text-6xl" />
