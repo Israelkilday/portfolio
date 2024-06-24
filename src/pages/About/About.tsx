@@ -2,7 +2,7 @@ import Transition from "../../components/Transition";
 import { motion } from "framer-motion";
 import { TbBrandNextjs } from "react-icons/tb";
 import { FaGitAlt } from "react-icons/fa6";
-import { SiCanva, SiNestjs, SiPrisma, SiPostman } from "react-icons/si";
+import { SiNestjs, SiPrisma, SiPostman } from "react-icons/si";
 import {
   BiLogoTypescript,
   BiLogoReact,
@@ -19,11 +19,11 @@ import { FaFigma, FaNodeJs } from "react-icons/fa";
 const iconsBack = [
   { id: 0, img: FaNodeJs, name: "NodeJs" },
   { id: 1, img: SiNestjs, name: "NestJs" },
-  { id: 2, img: BiLogoPostgresql, name: "PostgreSQL" },
+  { id: 2, img: SiPostman, name: "Postman" },
   { id: 3, img: SiPrisma, name: "Prisma" },
   { id: 4, img: BiLogoFirebase, name: "Firebase" },
-  { id: 5, img: SiPostman, name: "Postman" },
-  { id: 6, img: FaGitAlt, name: "Git" },
+  { id: 5, img: FaGitAlt, name: "Git" },
+  { id: 6, img: BiLogoPostgresql, name: "PostgreSQL" },
 ];
 
 const iconsFront = [
@@ -31,11 +31,11 @@ const iconsFront = [
   { id: 1, img: BiLogoReact, name: "React" },
   { id: 2, img: BiLogoRedux, name: "Redux" },
   { id: 3, img: BiLogoTypescript, name: "Typescript" },
-  { id: 4, img: BiLogoJavascript, name: "Javascript" },
-  { id: 5, img: BiLogoTailwindCss, name: "TailwindCSS" },
-  { id: 6, img: BiLogoCss3, name: "CSS" },
+  { id: 4, img: BiLogoCss3, name: "CSS" },
+  { id: 5, img: BiLogoTailwindCss, name: "Tailwind" },
+  { id: 6, img: FaFigma, name: "Figma" },
   { id: 7, img: BiLogoHtml5, name: "HTML" },
-  { id: 8, img: FaFigma, name: "Figma" },
+  { id: 8, img: BiLogoJavascript, name: "Javascript" },
 ];
 
 const container = {
