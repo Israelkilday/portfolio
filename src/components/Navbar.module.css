@@ -167,7 +167,11 @@ label {
 }
 
 /* <========== breakpoints ==========> */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
+  .header {
+    padding: 2rem 15%;
+  }
+
   .header::before {
     background: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(50px);
@@ -239,5 +243,11 @@ label {
     opacity: 1;
     transition-delay: calc(0.2s * var(--i));
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 764px) {
+  .header {
+    padding: 2rem 6%;
   }
 }

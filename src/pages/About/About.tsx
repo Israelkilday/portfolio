@@ -61,8 +61,8 @@ const item = {
 const About = () => {
   return (
     <Transition onAnimationComplete={() => {}}>
-      <div className="w-full px-11 pt-48">
-        <div className="mb-16 inline-flex min-w-full max-w-[350px] items-center justify-center rounded-xl border-[1px] border-solid border-white/10 bg-[linear-gradient(110deg,#1f242d,45%,#2a3a4a,55%,#1f242d)] bg-[length:400%_100%] bg-[position:50%_50%] px-7 pt-10 text-sm transition-colors">
+      <div className="px-11 pt-48 md:px-[6%] lg:flex lg:pr-0">
+        <div className="mb-16 items-center justify-center rounded-xl border-[1px] border-solid border-white/10 bg-[linear-gradient(110deg,#1f242d,45%,#2a3a4a,55%,#1f242d)] bg-[length:400%_100%] bg-[position:50%_50%] px-10 pt-10 text-sm transition-colors lg:max-h-[450px] lg:max-w-[500px]">
           <div className="flex flex-col gap-2">
             <h3 className="bg-gradient-to-b from-[#0ef] to-white bg-clip-text text-4xl font-semibold text-transparent">
               Quem é Israel Kilday
@@ -77,7 +77,7 @@ const About = () => {
                 ease: [0.2, 0, 0.2, 1],
               }}
             >
-              <p className="text-2xl leading-[1.5] text-neutral-300">
+              <p className="text-2xl leading-[1.5] text-neutral-300 lg:text-[16px]">
                 Iniciei minha jornada na área de tecnologia em 2022 praticando
                 algoritmos e estruturas de dados, o que me estabeleceu uma base
                 sólida para minha carreira. Atualmente, sou um desenvolvedor Web
@@ -94,15 +94,15 @@ const About = () => {
           </div>
         </div>
 
-        <div className="w-full">
-          <div className="mb-16 inline-flex min-w-full max-w-[350px] items-center justify-center rounded-xl border-[1px] border-solid border-white/10 bg-[linear-gradient(110deg,#1f242d,45%,#2a3a4a,55%,#1f242d)] bg-[length:400%_100%] bg-[position:50%_50%] px-7 pb-6 pt-10 text-sm transition-colors">
+        <div className="flex w-full flex-col items-center justify-between lg:min-w-[700px] lg:flex-row lg:pl-[6%]">
+          <div className="mb-16 inline-flex items-center justify-center rounded-xl border-[1px] border-solid border-white/10 bg-[linear-gradient(110deg,#1f242d,45%,#2a3a4a,55%,#1f242d)] bg-[length:400%_100%] bg-[position:50%_50%] px-7 pb-11 pt-10 text-sm transition-colors lg:min-w-[500px]">
             <div>
               <h3 className="mb-7 border-solid bg-gradient-to-b from-[#0ef] to-white bg-clip-text text-3xl font-semibold text-transparent">
                 Skills do Lado do Cliente (Frontend):
               </h3>
 
               <motion.div
-                className="grid min-w-full grid-cols-3 gap-5"
+                className="grid min-w-full grid-cols-5 gap-5"
                 variants={container}
                 initial="hidden"
                 animate="visible"
@@ -114,25 +114,21 @@ const About = () => {
                       variants={item}
                       className="flex flex-col items-center"
                     >
-                      <span className="text-center text-xl font-semibold tracking-[2px] text-neutral-300">
+                      <span className="text-center text-xl font-semibold tracking-[2px] text-neutral-200">
                         {icon.name}
                       </span>
-                      <icon.img className="mt-2 text-left text-7xl text-[#0ef]" />
+                      <icon.img className="mt-2 text-left text-7xl text-[#0ef] lg:text-6xl" />
                     </motion.div>
                   );
                 })}
               </motion.div>
-            </div>
-          </div>
 
-          <div className="mb-10 inline-flex min-w-full max-w-[350px] items-center justify-center rounded-xl border-[1px] border-solid border-white/10 bg-[linear-gradient(110deg,#1f242d,45%,#2a3a4a,55%,#1f242d)] bg-[length:400%_100%] bg-[position:50%_50%] px-7 pb-6 pt-10 text-sm transition-colors">
-            <div>
-              <h3 className="mb-7 border-solid bg-gradient-to-b from-[#0ef] to-white bg-clip-text text-3xl font-semibold text-transparent">
+              <h3 className="mb-7 mt-10 border-solid bg-gradient-to-b from-[#0ef] to-white bg-clip-text text-3xl font-semibold text-transparent">
                 Skills do Lado do Servidor (Backend):
               </h3>
 
               <motion.div
-                className="grid min-w-full grid-cols-3 gap-5"
+                className="grid min-w-full grid-cols-5 gap-5"
                 variants={container}
                 initial="hidden"
                 animate="visible"
@@ -144,16 +140,22 @@ const About = () => {
                       variants={item}
                       className="flex flex-col items-center"
                     >
-                      <span className="text-center text-xl font-semibold tracking-[2px] text-neutral-300">
+                      <span className="text-center text-xl font-semibold tracking-[2px] text-neutral-200">
                         {icon.name}
                       </span>
-                      <icon.img className="mt-2 text-left text-7xl text-[#0ef]" />
+                      <icon.img className="mt-2 text-left text-7xl text-[#0ef] lg:text-6xl" />
                     </motion.div>
                   );
                 })}
               </motion.div>
             </div>
           </div>
+
+          {/* <div className="mb-10 inline-flex items-center justify-center rounded-xl border-[1px] border-solid border-white/10 bg-[linear-gradient(110deg,#1f242d,45%,#2a3a4a,55%,#1f242d)] bg-[length:400%_100%] bg-[position:50%_50%] px-7 pb-6 pt-10 text-sm transition-colors">
+            <div>
+              
+            </div>
+          </div> */}
         </div>
       </div>
     </Transition>
