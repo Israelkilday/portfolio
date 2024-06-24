@@ -1,8 +1,8 @@
 import Transition from "../../components/Transition";
 import { motion } from "framer-motion";
-import { TbBrandNextjs } from "react-icons/tb";
+import { TbBrandNextjs, TbBrandPrisma } from "react-icons/tb";
 import { FaGitAlt } from "react-icons/fa6";
-import { SiNestjs, SiPrisma, SiPostman } from "react-icons/si";
+import { SiNestjs, SiPostman } from "react-icons/si";
 import {
   BiLogoTypescript,
   BiLogoReact,
@@ -13,14 +13,15 @@ import {
   BiLogoRedux,
   BiLogoPostgresql,
   BiLogoTailwindCss,
+  BiLogoFigma,
+  BiLogoNodejs,
 } from "react-icons/bi";
-import { FaFigma, FaNodeJs } from "react-icons/fa";
 
 const iconsBack = [
-  { id: 0, img: FaNodeJs, name: "NodeJs" },
+  { id: 0, img: BiLogoNodejs, name: "NodeJs" },
   { id: 1, img: SiNestjs, name: "NestJs" },
   { id: 2, img: SiPostman, name: "Postman" },
-  { id: 3, img: SiPrisma, name: "Prisma" },
+  { id: 3, img: TbBrandPrisma, name: "Prisma" },
   { id: 4, img: BiLogoFirebase, name: "Firebase" },
   { id: 5, img: FaGitAlt, name: "Git" },
   { id: 6, img: BiLogoPostgresql, name: "PostgreSQL" },
@@ -33,7 +34,7 @@ const iconsFront = [
   { id: 3, img: BiLogoTypescript, name: "Typescript" },
   { id: 4, img: BiLogoCss3, name: "CSS" },
   { id: 5, img: BiLogoTailwindCss, name: "Tailwind" },
-  { id: 6, img: FaFigma, name: "Figma" },
+  { id: 6, img: BiLogoFigma, name: "Figma" },
   { id: 7, img: BiLogoHtml5, name: "HTML" },
   { id: 8, img: BiLogoJavascript, name: "Javascript" },
 ];
@@ -114,7 +115,7 @@ const About = () => {
                       variants={item}
                       className="flex flex-col items-center"
                     >
-                      <span className="text-center text-xl text-neutral-200">
+                      <span className="text-center text-xl text-neutral-100">
                         {icon.name}
                       </span>
                       <icon.img className="mt-2 text-left text-7xl text-[#0ef] lg:text-6xl" />
@@ -140,7 +141,7 @@ const About = () => {
                       variants={item}
                       className="flex flex-col items-center"
                     >
-                      <span className="text-center text-xl text-neutral-200">
+                      <span className="text-center text-xl text-neutral-100">
                         {icon.name}
                       </span>
                       <icon.img className="mt-2 text-left text-7xl text-[#0ef] lg:text-6xl" />
