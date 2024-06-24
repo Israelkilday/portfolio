@@ -77,7 +77,7 @@ const About = () => {
                 ease: [0.2, 0, 0.2, 1],
               }}
             >
-              <p className="text-2xl leading-[1.5] text-neutral-300 lg:text-[16px]">
+              <p className="text-[16px] leading-[1.5] text-neutral-300">
                 Iniciei minha jornada na área de tecnologia em 2022 praticando
                 algoritmos e estruturas de dados, o que me estabeleceu uma base
                 sólida para minha carreira. Atualmente, sou um desenvolvedor Web
@@ -150,12 +150,6 @@ const About = () => {
               </motion.div>
             </div>
           </div>
-
-          {/* <div className="mb-10 inline-flex items-center justify-center rounded-xl border-[1px] border-solid border-white/10 bg-[linear-gradient(110deg,#1f242d,45%,#2a3a4a,55%,#1f242d)] bg-[length:400%_100%] bg-[position:50%_50%] px-7 pb-6 pt-10 text-sm transition-colors">
-            <div>
-              
-            </div>
-          </div> */}
         </div>
       </div>
     </Transition>
@@ -163,121 +157,3 @@ const About = () => {
 };
 
 export default About;
-
-/* 
-  <motion.div
-    className={styles.icons_container}
-    variants={container}
-    initial="hidden"
-    animate="visible"
-  >
-    <motion.div variants={item} className={styles.box_icon}>
-      <span className={styles.icon_descripition}>React</span>
-      <BiLogoReact className={styles.icon} />
-    </motion.div>
-
-    <motion.div variants={item} className={styles.box_icon}>
-      <span className={styles.icon_descripition}>Redux</span>
-      <BiLogoRedux className={styles.icon} />
-    </motion.div>
-
-    <motion.div variants={item} className={styles.box_icon}>
-      <span className={styles.icon_descripition}>Typescript</span>
-      <BiLogoTypescript className={styles.icon} />
-    </motion.div>
-
-    <motion.div variants={item} className={styles.box_icon}>
-      <span className={styles.icon_descripition}>Javascript</span>
-      <BiLogoJavascript className={styles.icon} />
-    </motion.div>
-
-    <motion.div variants={item} className={styles.box_icon}>
-      <span className={styles.icon_descripition}>PostgreSQL</span>
-      <BiLogoPostgresql className={styles.icon} />
-    </motion.div>
-
-    <motion.div variants={item} className={styles.box_icon}>
-      <span className={styles.icon_descripition}>Tailwind</span>
-      <SiTailwindcss className={styles.icon} />
-    </motion.div>
-
-    <motion.div variants={item} className={styles.box_icon}>
-      <span className={styles.icon_descripition}>Git</span>
-      <FaGitAlt className={styles.icon} />
-    </motion.div>
-
-    <motion.div variants={item} className={styles.box_icon}>
-      <span className={styles.icon_descripition}>CSS</span>
-      <BiLogoCss3 className={styles.icon} />
-    </motion.div>
-
-    <motion.div variants={item} className={styles.box_icon}>
-      <span className={styles.icon_descripition}>HTML</span>
-      <BiLogoHtml5 className={styles.icon} />
-    </motion.div>
-
-    <motion.div variants={item} className={styles.box_icon}>
-      <span className={styles.icon_descripition}>Firebase</span>
-      <BiLogoFirebase className={styles.icon} />
-    </motion.div>
-
-    <motion.div variants={item} className={styles.box_icon}>
-      <span className={styles.icon_descripition}>Canva</span>
-      <SiCanva className={styles.icon} />
-    </motion.div>
-
-    <motion.div variants={item} className={styles.box_icon}>
-      <span className={styles.icon_descripition}>Figma</span>
-      <FaFigma className={styles.icon} />
-    </motion.div>
-
-    <motion.div variants={item} className={styles.box_icon}>
-      <span className={styles.icon_descripition}>Prisma</span>
-      <SiPrisma className={styles.icon} />
-    </motion.div>
-
-    <motion.div variants={item} className={styles.box_icon}>
-      <span className={styles.icon_descripition}>Next.js</span>
-      <TbBrandNextjs className={styles.icon} />
-    </motion.div>
-
-    <motion.div variants={item} className={styles.box_icon}>
-      <span className={styles.icon_descripition}>Node.js</span>
-      <FaNodeJs className={styles.icon} />
-    </motion.div>
-
-    <motion.div variants={item} className={styles.box_icon}>
-      <span className={styles.icon_descripition}>NestJS</span>
-      <SiNestjs className={styles.icon} />
-    </motion.div>
-  </motion.div>
-</div>
-</div>
-
-<div>
-<motion.div
-  className={styles.about_content}
-  initial={{ opacity: 0, scale: 0 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{
-    duration: 1,
-    delay: 0.6,
-    ease: [0.2, 0, 0.2, 1],
-  }}
->
-  <h2>
-    <span>//</span> Quem é <span>Israel Kilday</span>
-  </h2>
-
-  <p>
-    Desenvolvedor Web Full stack e solucionador de problemas com ampla
-    experiência no uso das principais tecnologias do mercado,
-    incluindo Typerscript, JavaScript, React, Node.js e PostgreSQL.
-    Comprometido com a implementação de boas práticas para garantir a
-    eficiência, escalabilidade e manutenção dos projetos. Atuei por
-    mais de dez anos na área de vendas, o que me proporcionou um
-    conjunto de Soft Skills valiosas para qualquer equipe de
-    desenvolvimento.
-  </p>
-</motion.div>
-</div> */
