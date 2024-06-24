@@ -77,7 +77,7 @@ const About = () => {
                 ease: [0.2, 0, 0.2, 1],
               }}
             >
-              <p className="text-[15px] leading-[1.5] text-neutral-300">
+              <p className="text-[15px] leading-[1.5] text-neutral-300 lg:text-[16px]">
                 Iniciei minha jornada na área de tecnologia em 2022 praticando
                 algoritmos e estruturas de dados, o que me estabeleceu uma base
                 sólida para minha carreira. Atualmente, sou um desenvolvedor Web
