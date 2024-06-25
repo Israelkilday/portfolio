@@ -149,7 +149,7 @@ const Portfolio = () => {
             initialSlide={initialSlide}
           >
             {data.map((item) => (
-              <SwiperSlide key={item.id} className="teste">
+              <SwiperSlide key={item.id}>
                 <div className={styles.portfolio_container}>
                   <img
                     src={item.image}
