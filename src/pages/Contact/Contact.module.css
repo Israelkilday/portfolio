@@ -97,7 +97,7 @@ form .input_box {
 
 .field .item {
   background: transparent;
-  border: 0.2rem solid var(--main_color);
+  border: 0.1rem solid var(--main_color);
   border-radius: 0.6rem;
   color: var(--text_color);
   font-size: 1.5rem;
@@ -110,7 +110,7 @@ form .input_box {
 
 .field .item:hover {
   background: var(--second_bg_color);
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 .field .item.error {
@@ -197,7 +197,6 @@ form .textarea_field .item {
 }
 
 .btn_box .btn:hover {
-  box-shadow: none;
   color: var(--main_color);
 }
 
