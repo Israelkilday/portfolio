@@ -63,7 +63,7 @@ const Contact = () => {
         "service_7um5d2w",
         "template_wpza33d",
         templateParams,
-        "SzK4tZv53k8B-JB4j"
+        "SzK4tZv53k8B-JB4j",
       )
       .then(
         (response) => {
@@ -84,7 +84,7 @@ const Contact = () => {
         },
         (error) => {
           console.log("ERRO AO ENVIAR O EMAIL ", error);
-        }
+        },
       );
   }
 
@@ -92,7 +92,7 @@ const Contact = () => {
     <Transition onAnimationComplete={() => {}}>
       <section className={styles.contact}>
         <div className={styles.header_container}>
-          <h2>
+          <h2 className={styles.header_h2}>
             <span>//</span> Contate <span>Me!</span>
           </h2>
 

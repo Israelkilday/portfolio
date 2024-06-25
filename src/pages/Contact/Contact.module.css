@@ -1,265 +1,260 @@
 .contact {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 8rem 6% 2rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 8rem 6% 2rem;
 }
 
 .header_container {
-    display: flex;
-    justify-content: space-around;
-    width: 600px;
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
 }
 
- .header_container h2 {
-    animation: animate .8s ease-in-out  1 forwards;
-    font-size: 3.5rem;    
-    margin-bottom: .5rem;
-    opacity: 0;
-    text-align: center;
+.header_container .header_h2 {
+  animation: animate 0.8s ease-in-out 1 forwards;
+  font-size: 3.2rem;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  text-align: center;
+  font-weight: bold;
 }
 
 @keyframes animate {
-    from {
-        filter: blur(33px);
-        opacity: 0;
-        transform: translate(0, -100px);
-    }
+  from {
+    filter: blur(33px);
+    opacity: 0;
+    transform: translate(0, -100px);
+  }
 
-    to {
-        filter: blur(0);
-        opacity: 1;
-        transform: translate(0);
-    }
+  to {
+    filter: blur(0);
+    opacity: 1;
+    transform: translate(0);
+  }
 }
 
 .header_container .social_media {
-    display: flex;    
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .social_media a {
-    align-items: center;
-    background: transparent;
-    border: .2rem solid var(--main_color);
-    border-radius: 50%;
-    color: var(--main_color);
-    display: inline-flex;
-    font-size: 1.6rem;
-    height: 3.5rem;
-    justify-content: center;
-    margin: 1rem 0 1rem;
-    position: relative;
-    transition: .8s ease;
-    width: 3.5rem;
-}    
+  align-items: center;
+  background: transparent;
+  border: 0.2rem solid var(--main_color);
+  border-radius: 50%;
+  color: var(--main_color);
+  display: inline-flex;
+  font-size: 1.6rem;
+  height: 3.5rem;
+  justify-content: center;
+  margin: 1rem 0 1rem;
+  position: relative;
+  transition: 0.2s ease;
+  width: 3.5rem;
+}
 
 .whatsapp_link:hover {
-    color: #fff; 
-    background: #25D366; 
-    border: none;
+  color: #fff;
+  background: #25d366;
+  border: none;
 }
 
 .instagram_link:hover {
-    background: #C13584;
-    border: none;
-    color: #fff; 
+  background: #c13584;
+  border: none;
+  color: #fff;
 }
 
 .linkedin_link:hover {
-    border: none;
-    background:  #2867B2;
-    color: #fff; 
+  border: none;
+  background: #2867b2;
+  color: #fff;
 }
 
 .github_link:hover {
-    border: none;
-    background:  #181717;;
-    color: #fff; 
+  border: none;
+  background: #181717;
+  color: #fff;
 }
 
 .contact form {
-    text-align: center;
-    width: 600px;
+  text-align: center;
+  width: 600px;
 }
 
 form .input_box {
-    display: flex;
-    justify-content: space-between;
-    
+  display: flex;
+  justify-content: space-between;
 }
 
 .input_box .input_field {
-    width: 48.5%;
+  width: 48.5%;
 }
 
 .field .item {
-    background: transparent;
-    border: .2rem solid var(--main_color);
-    border-radius: .6rem;
-    color: var(--text_color);
-    font-size: 1.5rem;
-    font-family: 'Poppins', sans-serif;
-    margin: 1rem 0;
-    outline:  none;
-    padding: 1.4rem;
-    width: 100%;
+  background: transparent;
+  border: 0.2rem solid var(--main_color);
+  border-radius: 0.6rem;
+  color: var(--text_color);
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  margin: 1rem 0;
+  outline: none;
+  padding: 1rem;
+  width: 100%;
 }
 
 .field .item:hover {
-    background: var(--second_bg_color);
-    transition: .5s;
+  background: var(--second_bg_color);
+  transition: 0.5s;
 }
 
-    
 .field .item.error {
-    border: #d93025 1px solid;
+  border: #d93025 1px solid;
 }
-    
+
 .field .item::placeholder {
-    color: var(--placeholder_color);
-    font-family: 'Orbitron', sans-serif;   
-    font-size: 1.3rem;
+  color: var(--placeholder_color);
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.3rem;
 }
 
 .field .error_message {
-    color: #d93025;
-    font-size: 1.3rem;
-    display: none;
-    margin: -.5rem 0 .1rem;
-    text-align: left;
+  color: #d93025;
+  font-size: 1.2rem;
+  display: none;
+  margin: -0.5rem 0 0rem;
+  text-align: left;
 }
 
 .field .error_message.show_message {
-    display: block;
+  display: block;
 }
 
 form .textarea_field .item {
-    resize: none;
-}
-
-form .textarea_field .error_txt  {
-    margin-top: -.8rem;
+  resize: none;
+  height: 220px;
+  margin-bottom: 0.6rem;
 }
 
 @keyframes button_contact {
-    from {
-        opacity: 0;
-        filter: blur(33px);
-        transform: translate(0, 100px);
-    }
+  from {
+    opacity: 0;
+    filter: blur(33px);
+    transform: translate(0, 100px);
+  }
 
-    to {
-        filter: blur(0);
-        opacity: 1;
-        transform: translate(0);
-    }
+  to {
+    filter: blur(0);
+    opacity: 1;
+    transform: translate(0);
+  }
 }
 
 .btn_box {
-    animation: button_contact .8s ease-in-out 1.2s 1 forwards;
-    position: relative;
-    opacity: 0;
+  animation: button_contact 0.8s ease-in-out 1.2s 1 forwards;
+  position: relative;
+  opacity: 0;
 }
 
 .btn_box .btn {
-    background: var(--main_color);
-    border-radius: .6rem;
-    box-shadow: 0 0 1rem var(--main_color);
-    border: .2rem solid var(--main_color);
-    color: var(--bg_color);
-    cursor: pointer;
-    display: inline-block;
-    font-weight: 600;
-    font-size: 1.6rem;
-    letter-spacing: .1rem;
-    margin-top: 1rem;
-    position: relative;
-    padding: 1.2rem 3.2rem;
-    overflow: hidden;
-    outline: none;
-    transition: .5s ease;
-    z-index: 1;
+  background: var(--main_color);
+  border-radius: 0.6rem;
+  border: 0.2rem solid var(--main_color);
+  color: var(--bg_color);
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  margin-top: 1rem;
+  position: relative;
+  padding: 1rem 3rem;
+  overflow: hidden;
+  outline: none;
+  transition: 0.5s ease;
+  z-index: 1;
 }
 
-.btn_box .btn::before{
-    background: var(--bg_color);
-    content: "";
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    transition: .5s;
-    width: 0;
-    z-index: -1;
+.btn_box .btn::before {
+  background: var(--bg_color);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: 0.5s;
+  width: 0;
+  z-index: -1;
 }
 
 .btn_box .btn:hover::before {
-    width: 100%;
+  width: 100%;
 }
 
 .btn_box .btn:hover {
-    box-shadow: none;
-    color: var(--main_color);
+  box-shadow: none;
+  color: var(--main_color);
 }
 
 @media (max-width: 768px) {
-    .contact {
-        padding: 6rem 6% 2rem;
-    }
+  .contact {
+    padding: 6rem 6% 2rem;
+  }
 
-    .header_container {
-        width: 70%;
-    }
+  .header_container {
+    width: 70%;
+  }
 
-    .header_container h2 {
-        margin-top: 2rem;
-    }
+  .header_container .header_h2 {
+    margin-top: 2rem;
+  }
 
-    .social_media .icon_container {
-        position: relative;
-        top: 1.5rem;
-    }
+  .social_media .icon_container {
+    position: relative;
+    top: 1.5rem;
+  }
 
-    .contact form {
-        width: 70%;
-    } 
-   
-    form .input_box {
-        flex-direction: column;  
-        display: flex;
-    }
+  .contact form {
+    width: 70%;
+  }
 
-    .input_box .input_field {
-        width: 100%;
-    }    
+  form .input_box {
+    flex-direction: column;
+    display: flex;
+  }
+
+  .input_box .input_field {
+    width: 100%;
+  }
 }
 
 @media (max-width: 640px) {
-    .header_container h2 {
-        font-size: 3rem;
-    }
+  .header_container .header_h2 {
+    font-size: 3rem;
+  }
 }
 
-@media (max-width: 545px) {   
-    .header_container {
-        width: 100%;
-    }
+@media (max-width: 545px) {
+  .header_container {
+    width: 100%;
+  }
 
-    .contact form {
-        width: 100%;
-    } 
-} 
+  .contact form {
+    width: 100%;
+  }
+}
 
 @media (max-width: 410px) {
-    .header_container {
-        justify-content: space-between;
-    }
+  .header_container {
+    justify-content: space-between;
+  }
 
-    .header_container h2 {
-        font-size: 2.7rem;
-    }
+  .header_container .header_h2 {
+    font-size: 2.7rem;
+  }
 }
-
