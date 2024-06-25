@@ -172,7 +172,7 @@
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 780px) {
   .portfolio {
     padding: 0 2%;
   }
@@ -188,7 +188,6 @@
 
   .portfolio_content .technologies h3 {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
   }
 
   .technologies ul li {

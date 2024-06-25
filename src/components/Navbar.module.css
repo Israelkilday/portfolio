@@ -229,11 +229,11 @@ label {
     width: 100%;
   }
   .links_list.active {
-    height: 22rem;
+    height: 24rem;
   }
   .links_list li {
     justify-content: center;
-    margin: 2.1rem 0 0.8rem;
+    margin: 2.2rem 0 0.8rem;
     opacity: 0;
     text-align: center;
     transition: 0.3s ease;
