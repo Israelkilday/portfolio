@@ -62,12 +62,12 @@ const item = {
 const About = () => {
   return (
     <Transition onAnimationComplete={() => {}}>
-      <div className="px-11 pt-48 md:px-[15%] lg:flex lg:px-[6%] lg:pr-0">
-        <div className="mb-16 items-center justify-center rounded-xl border-[1px] border-solid border-white/10 bg-[linear-gradient(110deg,#1f242d,45%,#2a3a4a,55%,#1f242d)] bg-[length:400%_100%] bg-[position:50%_50%] px-10 pt-10 text-sm transition-colors lg:max-h-[450px] lg:max-w-[500px]">
-          <div className="flex flex-col gap-2">
-            <h3 className="bg-gradient-to-b from-[#0ef] to-white bg-clip-text text-5xl font-semibold text-transparent">
+      <main className="px-11 pt-48 md:px-[15%] lg:flex lg:px-[6%] lg:pr-0">
+        <section className="mb-16 items-center justify-center rounded-xl border-[1px] border-solid border-white/10 bg-[linear-gradient(110deg,#1f242d,45%,#2a3a4a,55%,#1f242d)] bg-[length:400%_100%] bg-[position:50%_50%] px-10 pt-10 text-sm transition-colors lg:max-h-[450px] lg:max-w-[500px]">
+          <header className="flex flex-col gap-2">
+            <h1 className="bg-gradient-to-b from-[#0ef] to-white bg-clip-text text-5xl font-semibold text-transparent">
               Quem é Israel Kilday
-            </h3>
+            </h1>
 
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
@@ -92,17 +92,17 @@ const About = () => {
                 skills, essenciais para qualquer equipe de desenvolvimento.
               </p>
             </motion.div>
-          </div>
-        </div>
+          </header>
+        </section>
 
-        <div className="flex w-full flex-col items-center justify-between lg:min-w-[700px] lg:flex-row lg:pl-[6%]">
+        <section className="flex w-full flex-col items-center justify-between lg:min-w-[700px] lg:flex-row lg:pl-[6%]">
           <div className="mb-16 inline-flex items-center justify-center rounded-xl border-[1px] border-solid border-white/10 bg-[linear-gradient(110deg,#1f242d,45%,#2a3a4a,55%,#1f242d)] bg-[length:400%_100%] bg-[position:50%_50%] px-7 pb-11 pt-10 text-sm transition-colors lg:min-w-[500px]">
-            <div>
-              <h3 className="mb-7 border-solid bg-gradient-to-b from-[#0ef] to-white bg-clip-text text-3xl font-semibold text-transparent">
+            <header>
+              <h2 className="mb-7 border-solid bg-gradient-to-b from-[#0ef] to-white bg-clip-text text-3xl font-semibold text-transparent">
                 Skills do Lado do Cliente:
-              </h3>
+              </h2>
 
-              <motion.div
+              <motion.ul
                 className="grid min-w-full grid-cols-5 gap-5"
                 variants={container}
                 initial="hidden"
@@ -110,7 +110,7 @@ const About = () => {
               >
                 {iconsFront.map((icon) => {
                   return (
-                    <motion.div
+                    <motion.li
                       key={icon.id}
                       variants={item}
                       className="flex flex-col items-center"
@@ -119,16 +119,16 @@ const About = () => {
                         {icon.name}
                       </span>
                       <icon.img className="mt-2 text-left text-7xl text-[#0ef] lg:text-6xl" />
-                    </motion.div>
+                    </motion.li>
                   );
                 })}
-              </motion.div>
+              </motion.ul>
 
-              <h3 className="mb-7 mt-10 border-solid bg-gradient-to-b from-[#0ef] to-white bg-clip-text text-3xl font-semibold text-transparent">
+              <h2 className="mb-7 mt-10 border-solid bg-gradient-to-b from-[#0ef] to-white bg-clip-text text-3xl font-semibold text-transparent">
                 Skills do Lado do Servidor:
-              </h3>
+              </h2>
 
-              <motion.div
+              <motion.ul
                 className="grid min-w-full grid-cols-5 gap-5"
                 variants={container}
                 initial="hidden"
@@ -136,7 +136,7 @@ const About = () => {
               >
                 {iconsBack.map((icon) => {
                   return (
-                    <motion.div
+                    <motion.li
                       key={icon.id}
                       variants={item}
                       className="flex flex-col items-center"
@@ -145,14 +145,14 @@ const About = () => {
                         {icon.name}
                       </span>
                       <icon.img className="mt-2 text-left text-7xl text-[#0ef] lg:text-6xl" />
-                    </motion.div>
+                    </motion.li>
                   );
                 })}
-              </motion.div>
-            </div>
+              </motion.ul>
+            </header>
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
     </Transition>
   );
 };
