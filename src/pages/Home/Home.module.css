@@ -31,6 +31,7 @@
   font-family: "Montserrat", sans-serif;
   opacity: 0;
   position: relative;
+  margin-left: 0;
 }
 
 .home_content .animate_h1 {

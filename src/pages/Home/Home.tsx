@@ -13,10 +13,10 @@ import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <>
+    <main>
       <Transition onAnimationComplete={() => {}}>
         <section className={styles.home}>
-          <div className={styles.home_content}>
+          <header className={styles.home_content}>
             <ParticlesBackground />
 
             <h3 className={styles.first_h3}>
@@ -29,8 +29,8 @@ const Home = () => {
               <h3 className={styles.animation_text}>Software Developer</h3>
             </div>
 
-            <div className={styles.social_media}>
-              <motion.div
+            <article className={styles.social_media}>
+              <motion.ul
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{
@@ -45,15 +45,17 @@ const Home = () => {
                   },
                 }}
               >
-                <NavLink
-                  to="https://api.whatsapp.com/send?phone=5585989295516"
-                  className={styles.whatsapp_link}
-                >
-                  <FaWhatsapp />
-                </NavLink>
-              </motion.div>
+                <li>
+                  <NavLink
+                    to="https://api.whatsapp.com/send?phone=5585989295516"
+                    className={styles.whatsapp_link}
+                  >
+                    <FaWhatsapp />
+                  </NavLink>
+                </li>
+              </motion.ul>
 
-              <motion.div
+              <motion.ul
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{
@@ -68,15 +70,17 @@ const Home = () => {
                   },
                 }}
               >
-                <NavLink
-                  to="https://www.instagram.com/israelkilday/"
-                  className={styles.instagram_link}
-                >
-                  <FaInstagram />
-                </NavLink>
-              </motion.div>
+                <li>
+                  <NavLink
+                    to="https://www.instagram.com/israelkilday/"
+                    className={styles.instagram_link}
+                  >
+                    <FaInstagram />
+                  </NavLink>
+                </li>
+              </motion.ul>
 
-              <motion.div
+              <motion.ul
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{
@@ -91,15 +95,17 @@ const Home = () => {
                   },
                 }}
               >
-                <NavLink
-                  to="https://www.linkedin.com/in/israeldevfrontend"
-                  className={styles.linkedin_link}
-                >
-                  <FaLinkedinIn />
-                </NavLink>
-              </motion.div>
+                <li>
+                  <NavLink
+                    to="https://www.linkedin.com/in/israeldevfrontend"
+                    className={styles.linkedin_link}
+                  >
+                    <FaLinkedinIn />
+                  </NavLink>
+                </li>
+              </motion.ul>
 
-              <motion.div
+              <motion.ul
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{
@@ -114,14 +120,16 @@ const Home = () => {
                   },
                 }}
               >
-                <NavLink
-                  to="https://github.com/Israelkilday"
-                  className={styles.github_link}
-                >
-                  <FaGithub />
-                </NavLink>
-              </motion.div>
-            </div>
+                <li>
+                  <NavLink
+                    to="https://github.com/Israelkilday"
+                    className={styles.github_link}
+                  >
+                    <FaGithub />
+                  </NavLink>
+                </li>
+              </motion.ul>
+            </article>
 
             <div className={styles.btn_box}>
               <a
@@ -132,7 +140,7 @@ const Home = () => {
                 Download CV
               </a>
             </div>
-          </div>
+          </header>
 
           <motion.div
             className={styles.home_img}
@@ -144,11 +152,11 @@ const Home = () => {
               ease: [0.2, 0, 0.2, 1],
             }}
           >
-            <img src={Home_img} alt="home_img" />
+            <img src={Home_img} alt="Imagem de I.A de Israel Kilday" />
           </motion.div>
         </section>
       </Transition>
-    </>
+    </main>
   );
 };
 
