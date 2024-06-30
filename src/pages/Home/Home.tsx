@@ -46,12 +46,14 @@ const Home = () => {
                 }}
               >
                 <li>
-                  <NavLink
-                    to="https://api.whatsapp.com/send?phone=5585989295516"
+                  <a
+                    href="https://api.whatsapp.com/send?phone=5585989295516"
                     className={styles.whatsapp_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <FaWhatsapp />
-                  </NavLink>
+                  </a>
                 </li>
               </motion.ul>
 

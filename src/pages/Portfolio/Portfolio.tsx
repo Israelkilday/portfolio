@@ -1,7 +1,6 @@
 import "./Portfolio.css";
 import styles from "./Portfolio.module.css";
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
 import Transition from "../../components/Transition";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow } from "swiper/modules";
@@ -125,10 +124,10 @@ const Portfolio = () => {
   return (
     <Transition onAnimationComplete={() => setTransitionCompleted(true)}>
       {transitionCompleted && (
-        <section className={styles.portfolio}>
-          <h2 className={styles.heading}>
+        <main className={styles.portfolio}>
+          <h1 className={styles.heading}>
             <span>//</span> Principais <span>Projetos</span>
-          </h2>
+          </h1>
 
           <Swiper
             className="animation-cards"
@@ -150,49 +149,55 @@ const Portfolio = () => {
           >
             {data.map((item) => (
               <SwiperSlide key={item.id}>
-                <div className={styles.portfolio_container}>
+                <article className={styles.portfolio_container}>
                   <img
                     src={item.image}
                     alt={item.name}
                     className={styles.item_slide}
                   />
-                  <div className={styles.portfolio_content}>
+
+                  <header className={styles.portfolio_content}>
                     <h2 className={styles.name}>{item.name}</h2>
                     <p className={styles.description}>{item.description}</p>
 
-                    <div className={styles.technologies}>
+                    <section className={styles.technologies}>
                       <h3>Principais Tecnologias:</h3>
+
                       <ul>
                         {item.technologies &&
                           item.technologies.map((tech, index) => (
                             <li key={index}>{tech}</li>
                           ))}
                       </ul>
-                    </div>
+                    </section>
 
-                    <div className={styles.links}>
-                      <NavLink
-                        to={item.linkDeploy || ""}
+                    <section className={styles.links}>
+                      <a
+                        href={item.linkDeploy || ""}
+                        target="blank"
+                        rel="noopener noreferrer"
                         className={styles.link}
                       >
                         Deploy
                         <FaExternalLinkAlt className={styles.icon} />
-                      </NavLink>
+                      </a>
 
-                      <NavLink
-                        to={item.linkRepository || ""}
+                      <a
+                        href={item.linkRepository || ""}
                         className={styles.link}
+                        target="blank"
+                        rel="noopener noreferrer"
                       >
                         GitHub
                         <FaGithub className={styles.icon} />
-                      </NavLink>
-                    </div>
-                  </div>
-                </div>
+                      </a>
+                    </section>
+                  </header>
+                </article>
               </SwiperSlide>
             ))}
           </Swiper>
-        </section>
+        </main>
       )}
     </Transition>
   );
