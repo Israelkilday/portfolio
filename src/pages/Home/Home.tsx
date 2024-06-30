@@ -1,5 +1,4 @@
 import styles from "./Home.module.css";
-import { NavLink } from "react-router-dom";
 import Transition from "../../components/Transition";
 import {
   FaGithub,
@@ -73,12 +72,14 @@ const Home = () => {
                 }}
               >
                 <li>
-                  <NavLink
-                    to="https://www.instagram.com/israelkilday/"
+                  <a
+                    href="https://www.instagram.com/israelkilday/"
                     className={styles.instagram_link}
+                    target="blank"
+                    rel="noopener noreferrer"
                   >
                     <FaInstagram />
-                  </NavLink>
+                  </a>
                 </li>
               </motion.ul>
 
@@ -98,12 +99,14 @@ const Home = () => {
                 }}
               >
                 <li>
-                  <NavLink
-                    to="https://www.linkedin.com/in/israeldevfrontend"
+                  <a
+                    href="https://www.linkedin.com/in/israeldevfrontend"
                     className={styles.linkedin_link}
+                    target="blank"
+                    rel="noopener noreferrer"
                   >
                     <FaLinkedinIn />
-                  </NavLink>
+                  </a>
                 </li>
               </motion.ul>
 
@@ -123,12 +126,14 @@ const Home = () => {
                 }}
               >
                 <li>
-                  <NavLink
-                    to="https://github.com/Israelkilday"
+                  <a
+                    href="https://github.com/Israelkilday"
                     className={styles.github_link}
+                    target="blank"
+                    rel="noopener noreferrer"
                   >
                     <FaGithub />
-                  </NavLink>
+                  </a>
                 </li>
               </motion.ul>
             </article>
@@ -138,6 +143,8 @@ const Home = () => {
                 href="./cv/IsraelKilday_CV_atualizado_G.docx"
                 download
                 className={styles.btn}
+                target="blank"
+                rel="noopener noreferrer"
               >
                 Download CV
               </a>
