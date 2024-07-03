@@ -1,6 +1,5 @@
 import styles from "./Contact.module.css";
-import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useState } from "react";
 import Transition from "../../components/Transition";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
