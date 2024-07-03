@@ -90,13 +90,13 @@ const Contact = () => {
 
   return (
     <Transition onAnimationComplete={() => {}}>
-      <section className={styles.contact}>
-        <div className={styles.header_container}>
-          <h2 className={styles.header_h2}>
+      <main className={styles.contact}>
+        <header className={styles.header_container}>
+          <h1 className={styles.header_h2}>
             <span>//</span> Contate <span>Me!</span>
-          </h2>
+          </h1>
 
-          <div className={styles.social_media}>
+          <article className={styles.social_media}>
             <motion.div
               className={styles.icon_container}
               initial={{ opacity: 0, scale: 0.5 }}
@@ -113,12 +113,14 @@ const Contact = () => {
                 },
               }}
             >
-              <NavLink
-                to="https://api.whatsapp.com/send?phone=5585989295516"
+              <a
+                href="https://api.whatsapp.com/send?phone=5585989295516"
                 className={styles.whatsapp_link}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaWhatsapp />
-              </NavLink>
+              </a>
             </motion.div>
 
             <motion.div
@@ -137,12 +139,14 @@ const Contact = () => {
                 },
               }}
             >
-              <NavLink
-                to="https://www.instagram.com/israelkilday/"
+              <a
+                href="https://www.instagram.com/israelkilday/"
                 className={styles.instagram_link}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaInstagram />
-              </NavLink>
+              </a>
             </motion.div>
 
             <motion.div
@@ -161,12 +165,14 @@ const Contact = () => {
                 },
               }}
             >
-              <NavLink
-                to="https://www.linkedin.com/in/israeldevfrontend"
+              <a
+                href="https://www.linkedin.com/in/israeldevfrontend"
                 className={styles.linkedin_link}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaLinkedinIn />
-              </NavLink>
+              </a>
             </motion.div>
 
             <motion.div
@@ -185,18 +191,20 @@ const Contact = () => {
                 },
               }}
             >
-              <NavLink
-                to="https://github.com/Israelkilday"
+              <a
+                href="https://github.com/Israelkilday"
                 className={styles.github_link}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaGithub />
-              </NavLink>
+              </a>
             </motion.div>
-          </div>
-        </div>
+          </article>
+        </header>
 
         <form className={styles.form} onSubmit={sendEmail}>
-          <div className={styles.input_box}>
+          <fieldset className={styles.input_box}>
             <div className={`${styles.input_field} ${styles.field}`}>
               <input
                 type="text"
@@ -242,9 +250,9 @@ const Contact = () => {
                 Email não pode ficar em branco
               </div>
             </div>
-          </div>
+          </fieldset>
 
-          <div className={styles.input_box}>
+          <fieldset className={styles.input_box}>
             <div className={`${styles.input_field} ${styles.field}`}>
               <input
                 type="number"
@@ -290,9 +298,9 @@ const Contact = () => {
                 Assunto não pode ficar em branco
               </div>
             </div>
-          </div>
+          </fieldset>
 
-          <div className={`${styles.textarea_field} ${styles.field}`}>
+          <fieldset className={`${styles.textarea_field} ${styles.field}`}>
             <textarea
               name=""
               placeholder="Sua mensagem"
@@ -315,7 +323,7 @@ const Contact = () => {
             >
               Mensagem não pode ficar em branco
             </div>
-          </div>
+          </fieldset>
 
           <div className={styles.btn_box}>
             <button className={styles.btn} type="submit">
@@ -323,7 +331,7 @@ const Contact = () => {
             </button>
           </div>
         </form>
-      </section>
+      </main>
     </Transition>
   );
 };
