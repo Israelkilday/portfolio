@@ -36,51 +36,6 @@
   }
 }
 
-.header_container .social_media {
-  display: flex;
-  gap: 1rem;
-}
-
-.social_media a {
-  align-items: center;
-  background: transparent;
-  border: 0.2rem solid var(--main_color);
-  border-radius: 50%;
-  color: var(--main_color);
-  display: inline-flex;
-  font-size: 1.6rem;
-  height: 3.5rem;
-  justify-content: center;
-  margin: 1rem 0 1rem;
-  position: relative;
-  transition: 0.2s ease;
-  width: 3.5rem;
-}
-
-.whatsapp_link:hover {
-  color: #fff;
-  background: #25d366;
-  border: none;
-}
-
-.instagram_link:hover {
-  background: #c13584;
-  border: none;
-  color: #fff;
-}
-
-.linkedin_link:hover {
-  border: none;
-  background: #2867b2;
-  color: #fff;
-}
-
-.github_link:hover {
-  border: none;
-  background: #181717;
-  color: #fff;
-}
-
 .contact form {
   text-align: center;
   width: 600px;

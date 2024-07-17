@@ -3,13 +3,7 @@ import { useState } from "react";
 import Transition from "../../components/Transition";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
-import { motion } from "framer-motion";
-import {
-  FaGithub,
-  FaInstagram,
-  FaLinkedinIn,
-  FaWhatsapp,
-} from "react-icons/fa6";
+import SocialMedia from "../../components/SocialMedia";
 
 const Contact = () => {
   const [name, setName] = useState<string>("");
@@ -95,111 +89,7 @@ const Contact = () => {
             <span>//</span> Contate <span>Me!</span>
           </h1>
 
-          <article className={styles.social_media}>
-            <motion.div
-              className={styles.icon_container}
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 3,
-                delay: 1.2,
-                ease: [0, 0.71, 0.2, 1.01],
-                scale: {
-                  type: "spring",
-                  damping: 5,
-                  stiffness: 100,
-                  restDelta: 0.001,
-                },
-              }}
-            >
-              <a
-                href="https://api.whatsapp.com/send?phone=5585989295516"
-                className={styles.whatsapp_link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaWhatsapp />
-              </a>
-            </motion.div>
-
-            <motion.div
-              className={styles.icon_container}
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 3,
-                delay: 1.5,
-                ease: [0, 0.71, 0.2, 1.01],
-                scale: {
-                  type: "spring",
-                  damping: 5,
-                  stiffness: 100,
-                  restDelta: 0.001,
-                },
-              }}
-            >
-              <a
-                href="https://www.instagram.com/israelkilday/"
-                className={styles.instagram_link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaInstagram />
-              </a>
-            </motion.div>
-
-            <motion.div
-              className={styles.icon_container}
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.3,
-                delay: 1.7,
-                ease: [0, 0.71, 0.2, 1.01],
-                scale: {
-                  type: "spring",
-                  damping: 5,
-                  stiffness: 100,
-                  restDelta: 0.001,
-                },
-              }}
-            >
-              <a
-                href="https://www.linkedin.com/in/israeldevfrontend"
-                className={styles.linkedin_link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedinIn />
-              </a>
-            </motion.div>
-
-            <motion.div
-              className={styles.icon_container}
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 3,
-                delay: 1.9,
-                ease: [0, 0.71, 0.2, 1.01],
-                scale: {
-                  type: "spring",
-                  damping: 5,
-                  stiffness: 100,
-                  restDelta: 0.001,
-                },
-              }}
-            >
-              <a
-                href="https://github.com/Israelkilday"
-                className={styles.github_link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaGithub />
-              </a>
-            </motion.div>
-          </article>
+          <SocialMedia />
         </header>
 
         <form className={styles.form} onSubmit={sendEmail}>

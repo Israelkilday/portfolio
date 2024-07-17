@@ -1,0 +1,44 @@
+.social_media {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social_media a {
+  align-items: center;
+  border: 0.2rem solid var(--main_color);
+  background: transparent;
+  border-radius: 50%;
+  color: var(--main_color);
+  display: inline-flex;
+  font-size: 1.6rem;
+  height: 3.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+  position: relative;
+  transition: 0.2s ease;
+  width: 3.5rem;
+}
+
+.whatsapp_link:hover {
+  color: #fff;
+  background: #25d366;
+  border: none;
+}
+
+.instagram_link:hover {
+  color: #fff;
+  background: #c13584;
+  border: none;
+}
+
+.linkedin_link:hover {
+  color: #fff;
+  background: #2867b2;
+  border: none;
+}
+
+.github_link:hover {
+  color: #fff;
+  background: #181717;
+  border: none;
+}
