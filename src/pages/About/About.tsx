@@ -2,7 +2,7 @@ import Transition from "../../components/Transition";
 import { motion } from "framer-motion";
 import { TbBrandNextjs, TbBrandPrisma } from "react-icons/tb";
 import { FaGitAlt } from "react-icons/fa6";
-import { SiNestjs, SiPostman } from "react-icons/si";
+import { SiNestjs, SiPostman, SiJest, SiVitest } from "react-icons/si";
 import {
   BiLogoTypescript,
   BiLogoReact,
@@ -25,6 +25,8 @@ const iconsBack = [
   { id: 4, img: BiLogoFirebase, name: "Firebase" },
   { id: 5, img: FaGitAlt, name: "Git" },
   { id: 6, img: BiLogoPostgresql, name: "PostgreSQL" },
+  { id: 7, img: SiJest, name: "Jest" },
+  { id: 7, img: SiVitest, name: "Vitest" },
 ];
 
 const iconsFront = [
@@ -79,17 +81,18 @@ const About = () => {
               }}
             >
               <p className="text-[15px] leading-[1.5] text-neutral-300 lg:text-[16px]">
-                Iniciei minha jornada na área de tecnologia em 2022 praticando
+                Iniciei minha jornada na área de tecnologia em 2021, praticando
                 algoritmos e estruturas de dados, o que me estabeleceu uma base
-                sólida para minha carreira. Atualmente, sou um desenvolvedor Web
-                Full Stack e um solucionador de problemas com ampla experiência
-                no uso das principais tecnologias do mercado, incluindo
-                TypeScript, JavaScript, React, Node.js e PostgreSQL. Sou
-                dedicado à implementação de boas práticas para garantir a
-                eficiência, escalabilidade e manutenção dos projetos. Antes de
-                ingressar na tecnologia, atuei por mais de dez anos na área de
-                vendas, o que me proporcionou um conjunto valioso de soft
-                skills, essenciais para qualquer equipe de desenvolvimento.
+                sólida para minha carreira. Atuo como desenvolvedor Web Full
+                Stack e um solucionador de problemas com ampla experiência no
+                uso das principais tecnologias do mercado, utilizo testes
+                unitários com Jest/Vitest e TDD garantindo a qualidade e
+                confiabilidade do meu código. Proficiente no padrão MVC e outras
+                abordagens para desenvolvimento estruturado. Entusiasta de boas
+                práticas para garantir a eficiência, escalabilidade e manutenção
+                dos projetos. Atuei por mais de dez anos na área de vendas, o
+                que me proporcionou habilidades interpessoais excepcionais para
+                colaboração e trabalho em equipe.
               </p>
             </motion.div>
           </header>
