@@ -10,6 +10,7 @@ import Portfolio_img0 from "../../../public/imgs/project_0.jpg";
 import Portfolio_img1 from "../../../public/imgs/project_1.jpg";
 import Portfolio_img2 from "../../../public/imgs/project_2.jpg";
 import Portfolio_img3 from "../../../public/imgs/project_3.jpg";
+import Portfolio_img4 from "../../../public/imgs/project_4.jpg";
 
 const Portfolio = () => {
   const [slidePerview, setSlidePerview] = useState<number>(3);
@@ -101,6 +102,33 @@ const Portfolio = () => {
       linkDeploy: "https://israelkilday.github.io/Secret-Word/",
       linkRepository: "https://github.com/Israelkilday/Secret-Word",
     },
+    {
+      id: 4,
+      image: Portfolio_img4,
+      name: "Gabrielle Medeiros",
+      description:
+        "Este é um projeto Freelancer desenvolvido para o salão de beleza Gabrielle Medeiros. O objetivo do projeto foi criar uma landing page moderna e funcional, destacando os serviços oferecidos pelo salão, com foco na especialidade de alisamento personalizado.",
+      technologies: [
+        "Next.14",
+        "React",
+        "Typescript",
+        "Contex API",
+        "React Countup",
+        "React Player",
+        "React Responsive",
+        "React Icons",
+        "Framer Motion",
+        "TailwindCSS",
+        "Shadcn/ui",
+        "Husky",
+        "ESLint",
+        "Prettier",
+        "Git",
+        "JSX",
+      ],
+      linkDeploy: "https://gabrielle-medeiros.vercel.app/",
+      linkRepository: "https://github.com/Israelkilday/GABRIELLE-MEDEIROS",
+    },
   ];
 
   useEffect(() => {
@@ -135,7 +163,7 @@ const Portfolio = () => {
             effect="coverflow"
             grabCursor={true}
             centeredSlides={true}
-            loop={false}
+            loop={true}
             coverflowEffect={{
               rotate: 0,
               stretch: 0,
