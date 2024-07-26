@@ -112,7 +112,7 @@ const Portfolio = () => {
         "Next.14",
         "React",
         "Typescript",
-        "Contex API",
+        "Context API",
         "React Countup",
         "React Player",
         "React Responsive",
