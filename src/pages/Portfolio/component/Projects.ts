@@ -138,8 +138,8 @@ const data = [
       "Json",
       "Vite",
     ],
-    linkDeploy: "https://gabrielle-medeiros.vercel.app/",
-    linkRepository: "https://github.com/Israelkilday/GABRIELLE-MEDEIROS",
+    linkDeploy: "https://devetube-playlists.vercel.app/",
+    linkRepository: "https://github.com/Israelkilday/DEVTUBE-PLAYLISTS",
   },
 ];
 
