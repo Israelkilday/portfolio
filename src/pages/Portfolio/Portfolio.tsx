@@ -11,6 +11,7 @@ import Portfolio_img1 from "../../../public/imgs/project_1.jpg";
 import Portfolio_img2 from "../../../public/imgs/project_2.jpg";
 import Portfolio_img3 from "../../../public/imgs/project_3.jpg";
 import Portfolio_img4 from "../../../public/imgs/project_4.jpg";
+import Portfolio_img5 from "../../../public/imgs/project_5.jpg";
 
 const Portfolio = () => {
   const [slidePerview, setSlidePerview] = useState<number>(3);
@@ -125,6 +126,30 @@ const Portfolio = () => {
         "Prettier",
         "Git",
         "JSX",
+      ],
+      linkDeploy: "https://gabrielle-medeiros.vercel.app/",
+      linkRepository: "https://github.com/Israelkilday/GABRIELLE-MEDEIROS",
+    },
+    {
+      id: 4,
+      image: Portfolio_img5,
+      name: "DEVTUBE PLAYLISTS",
+      description:
+        "Plataforma de exibição de playlists com vídeos de programação selecionados do YouTube. Utilizando React e Redux Toolkit, implementei uma interface dinâmica e intuitiva, proporcionando aos usuários uma experiência fluida na navegação. Os vídeos são gerenciados por uma API personalizada que criei e armazenei no JSONPlaceholder.",
+      technologies: [
+        "React",
+        "Typescript",
+        "Redux Toolkit",
+        "React Player",
+        "React Icons",
+        "TailwindCSS",
+        "Husky",
+        "ESLint",
+        "Prettier",
+        "Git",
+        "JSX",
+        "Json",
+        "Vite",
       ],
       linkDeploy: "https://gabrielle-medeiros.vercel.app/",
       linkRepository: "https://github.com/Israelkilday/GABRIELLE-MEDEIROS",
