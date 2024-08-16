@@ -10,7 +10,7 @@ import data from "./component/Projects";
 
 const Portfolio = () => {
   const [slidePerview, setSlidePerview] = useState<number>(3);
-  const [initialSlide] = useState<number>(1);
+  const [initialSlide] = useState<number>(2);
   const [transitionCompleted, setTransitionCompleted] = useState(false);
 
   useEffect(() => {
