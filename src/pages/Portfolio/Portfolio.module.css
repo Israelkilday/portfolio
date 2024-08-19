@@ -7,6 +7,7 @@
 
 .portfolio {
   min-width: 1350px;
+  /* max-width: 1400px; */
   max-height: 100vh;
   margin: 0 auto;
   overflow: hidden;
@@ -172,8 +173,16 @@
   }
 }
 
+/* <========== breakpoints ==========> */
+@media (max-width: 1024px) {
+  .portfolio {
+    min-width: 1000px;
+  }
+}
+
 @media (max-width: 780px) {
   .portfolio {
+    min-width: 0;
     padding: 0 2%;
   }
 

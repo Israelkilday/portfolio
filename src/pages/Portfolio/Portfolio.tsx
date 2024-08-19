@@ -17,10 +17,16 @@ const Portfolio = () => {
     function handleResize() {
       if (window.innerWidth < 580) {
         setSlidePerview(1);
+      } else if (window.innerWidth < 1000) {
+        setSlidePerview(2);
       } else {
         setSlidePerview(3);
       }
     }
+
+    // else {
+    //   setSlidePerview(3);
+    // }
 
     handleResize();
 
