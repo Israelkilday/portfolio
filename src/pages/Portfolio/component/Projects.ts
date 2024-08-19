@@ -74,24 +74,6 @@ const data = [
   },
   {
     id: 3,
-    image: Portfolio_img0,
-    name: "Secret World",
-    description:
-      "Jogo de adivinhação de palavras secretas desenvolvido utilizando React, Typescript, Vite e CSS Modules. Foi adotada uma abordagem de componentização para organizar e reutilizar o código de forma eficiente. Foram utilizados hooks como useState, useEffect e useRef para gerenciar o estado dos componentes, manipular efeitos colaterais e interagir com elementos do DOM de maneira declarativa.",
-    technologies: [
-      "React",
-      "Custom hooks",
-      "Typescript",
-      "Javascript",
-      "CSS Modules",
-      "JSX",
-      "Vite",
-    ],
-    linkDeploy: "https://israelkilday.github.io/Secret-Word/",
-    linkRepository: "https://github.com/Israelkilday/Secret-Word",
-  },
-  {
-    id: 4,
     image: Portfolio_img4,
     name: "Gabrielle Medeiros",
     description:
@@ -130,6 +112,7 @@ const data = [
       "React Player",
       "React Icons",
       "TailwindCSS",
+      "Vitest",
       "Husky",
       "ESLint",
       "Prettier",
@@ -140,6 +123,24 @@ const data = [
     ],
     linkDeploy: "https://devetube-playlists.vercel.app/",
     linkRepository: "https://github.com/Israelkilday/DEVTUBE-PLAYLISTS",
+  },
+  {
+    id: 5,
+    image: Portfolio_img0,
+    name: "Secret World",
+    description:
+      "Jogo de adivinhação de palavras secretas desenvolvido utilizando React, Typescript, Vite e CSS Modules. Foi adotada uma abordagem de componentização para organizar e reutilizar o código de forma eficiente. Foram utilizados hooks como useState, useEffect e useRef para gerenciar o estado dos componentes, manipular efeitos colaterais e interagir com elementos do DOM de maneira declarativa.",
+    technologies: [
+      "React",
+      "Custom hooks",
+      "Typescript",
+      "Javascript",
+      "CSS Modules",
+      "JSX",
+      "Vite",
+    ],
+    linkDeploy: "https://israelkilday.github.io/Secret-Word/",
+    linkRepository: "https://github.com/Israelkilday/Secret-Word",
   },
 ];
 

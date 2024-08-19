@@ -6,7 +6,7 @@
 }
 
 .portfolio {
-  max-width: 1400px;
+  min-width: 1350px;
   max-height: 100vh;
   margin: 0 auto;
   overflow: hidden;
