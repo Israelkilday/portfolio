@@ -116,8 +116,6 @@ const data = [
       "Husky",
       "ESLint",
       "Prettier",
-      "Git",
-      "JSX",
       "Json",
       "Vite",
     ],
