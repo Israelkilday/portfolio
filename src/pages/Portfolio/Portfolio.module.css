@@ -7,7 +7,6 @@
 
 .portfolio {
   min-width: 1350px;
-  /* max-width: 1400px; */
   max-height: 100vh;
   margin: 0 auto;
   overflow: hidden;
@@ -75,7 +74,7 @@
   color: #000000;
   font-weight: bolder;
   line-height: 2rem;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   margin: 0.4rem 0 0.8rem;
   opacity: 0;
 }
@@ -98,19 +97,19 @@
 
 .technologies ul li {
   border-radius: 0.5rem;
+  background-color: #ffffff;
   font-weight: bold;
   display: inline flex;
   font-size: 1.1rem;
   font-weight: bolder;
   letter-spacing: 0.1rem;
-  margin-bottom: 0rem;
-  margin-right: 0.3rem;
+  margin-bottom: 0.4rem;
+  margin-right: 0.4rem;
   padding: 0.5rem;
 }
 
 .technologies ul li:hover {
-  background-color: #ffffff;
-  border: none;
+  background-color: var(--main_color);
   transition: 0.3s;
 }
 
@@ -197,14 +196,12 @@
   .portfolio_content .description {
     font-size: 1.9rem;
     line-height: 2.2rem;
-  }
-
-  .portfolio_content .technologies h3 {
-    font-size: 1.5rem;
+    margin: 0.4rem 0 1.5rem;
   }
 
   .technologies ul li {
     font-size: 1.5rem;
+    margin-bottom: 1.1rem;
   }
 
   .portfolio_content .links .link {

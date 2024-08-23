@@ -77,7 +77,7 @@ const Portfolio = () => {
                     <p className={styles.description}>{item.description}</p>
 
                     <section className={styles.technologies}>
-                      <h3>Principais Tecnologias:</h3>
+                      {/* <h3>Principais Tecnologias:</h3> */}
 
                       <ul>
                         {item.technologies &&
