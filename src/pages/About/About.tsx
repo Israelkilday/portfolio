@@ -65,7 +65,7 @@ const About = () => {
   return (
     <Transition onAnimationComplete={() => {}}>
       <main className="px-11 pt-48 md:px-[15%] lg:flex lg:px-[6%] lg:pr-0">
-        <section className="mb-16 items-center justify-center rounded-xl border-[1px] border-solid border-white/10 bg-[linear-gradient(110deg,#1f242d,45%,#2a3a4a,55%,#1f242d)] bg-[length:400%_100%] bg-[position:50%_50%] px-10 pt-10 text-sm transition-colors lg:max-h-[450px] lg:max-w-[500px]">
+        <section className="mb-16 items-center justify-center rounded-xl border-[1px] border-solid border-white/10 bg-[linear-gradient(110deg,#1f242d,45%,#2a3a4a,55%,#1f242d)] bg-[length:400%_100%] bg-[position:50%_50%] px-10 pt-10 text-sm transition-colors lg:max-h-[415px] lg:min-w-[550px]">
           <header className="flex flex-col gap-2">
             <h1 className="bg-gradient-to-b from-[#0ef] to-white bg-clip-text text-5xl font-semibold text-transparent">
               Quem é Israel Kilday
@@ -86,12 +86,12 @@ const About = () => {
                 sólida para minha carreira. Atuo como desenvolvedor Web Full
                 Stack e um solucionador de problemas com ampla experiência no
                 uso das principais tecnologias do mercado, utilizo testes
-                unitários com Jest/Vitest e TDD garantindo a qualidade e
+                unitários e de integração com TDD garantindo a qualidade e
                 confiabilidade do meu código. Proficiente no padrão MVC e outras
                 abordagens para desenvolvimento estruturado. Entusiasta de boas
-                práticas para garantir a eficiência, escalabilidade e manutenção
-                dos projetos. Atuei por mais de dez anos na área de vendas, o
-                que me proporcionou habilidades interpessoais excepcionais para
+                práticas para garantir a escalabilidade e manutenção dos
+                projetos. Atuei por mais de dez anos na área de vendas, o que me
+                proporcionou habilidades interpessoais excepcionais para
                 colaboração e trabalho em equipe.
               </p>
             </motion.div>
@@ -99,7 +99,7 @@ const About = () => {
         </section>
 
         <section className="flex w-full flex-col items-center justify-between lg:min-w-[700px] lg:flex-row lg:pl-[6%]">
-          <div className="mb-16 inline-flex items-center justify-center rounded-xl border-[1px] border-solid border-white/10 bg-[linear-gradient(110deg,#1f242d,45%,#2a3a4a,55%,#1f242d)] bg-[length:400%_100%] bg-[position:50%_50%] px-7 pb-11 pt-10 text-sm transition-colors lg:min-w-[500px]">
+          <div className="mb-16 inline-flex items-center justify-center rounded-xl border-[1px] border-solid border-white/10 bg-[linear-gradient(110deg,#1f242d,45%,#2a3a4a,55%,#1f242d)] bg-[length:400%_100%] bg-[position:50%_50%] pb-11 pt-10 text-sm transition-colors md:min-w-full lg:max-h-[415px] lg:min-w-[500px] lg:px-7">
             <header>
               <h2 className="mb-7 border-solid bg-gradient-to-b from-[#0ef] to-white bg-clip-text text-3xl font-semibold text-transparent">
                 Skills do Lado do Cliente:
