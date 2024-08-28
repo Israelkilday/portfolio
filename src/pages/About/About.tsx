@@ -18,26 +18,26 @@ import {
 } from "react-icons/bi";
 
 const iconsBack = [
-  { id: 0, img: BiLogoNodejs, name: "NodeJs" },
+  { id: 0, img: SiVitest, name: "Vitest" },
   { id: 1, img: SiNestjs, name: "NestJs" },
   { id: 2, img: SiPostman, name: "Postman" },
-  { id: 3, img: TbBrandPrisma, name: "Prisma" },
-  { id: 4, img: BiLogoFirebase, name: "Firebase" },
-  { id: 5, img: FaGitAlt, name: "Git" },
-  { id: 6, img: BiLogoPostgresql, name: "PostgreSQL" },
-  { id: 7, img: SiJest, name: "Jest" },
-  { id: 7, img: SiVitest, name: "Vitest" },
+  { id: 3, img: BiLogoNodejs, name: "NodeJs" },
+  { id: 4, img: TbBrandPrisma, name: "Prisma" },
+  { id: 5, img: SiJest, name: "Jest" },
+  { id: 6, img: BiLogoFirebase, name: "Firebase" },
+  { id: 7, img: FaGitAlt, name: "Git" },
+  { id: 8, img: BiLogoPostgresql, name: "PostgreSQL" },
 ];
 
 const iconsFront = [
-  { id: 0, img: TbBrandNextjs, name: "NextJs" },
-  { id: 1, img: BiLogoReact, name: "React" },
+  { id: 0, img: BiLogoReact, name: "React" },
+  { id: 1, img: TbBrandNextjs, name: "NextJs" },
   { id: 2, img: BiLogoRedux, name: "Redux" },
   { id: 3, img: BiLogoTypescript, name: "Typescript" },
   { id: 4, img: BiLogoCss3, name: "CSS" },
-  { id: 5, img: BiLogoTailwindCss, name: "Tailwind" },
-  { id: 6, img: BiLogoFigma, name: "Figma" },
-  { id: 7, img: BiLogoHtml5, name: "HTML" },
+  { id: 5, img: BiLogoHtml5, name: "HTML" },
+  { id: 6, img: BiLogoTailwindCss, name: "Tailwind" },
+  { id: 7, img: BiLogoFigma, name: "Figma" },
   { id: 8, img: BiLogoJavascript, name: "Javascript" },
 ];
 
@@ -99,7 +99,7 @@ const About = () => {
         </section>
 
         <section className="flex w-full flex-col items-center justify-between lg:min-w-[700px] lg:flex-row lg:pl-[6%]">
-          <div className="mb-16 inline-flex items-center justify-center rounded-xl border-[1px] border-solid border-white/10 bg-[linear-gradient(110deg,#1f242d,45%,#2a3a4a,55%,#1f242d)] bg-[length:400%_100%] bg-[position:50%_50%] pb-11 pt-10 text-sm transition-colors md:min-w-full lg:max-h-[415px] lg:min-w-[500px] lg:px-7">
+          <div className="mb-16 inline-flex items-center justify-center rounded-xl border-[1px] border-solid border-white/10 bg-[linear-gradient(110deg,#1f242d,45%,#2a3a4a,55%,#1f242d)] bg-[length:400%_100%] bg-[position:50%_50%] px-4 pb-11 pt-10 text-sm transition-colors md:min-w-full lg:max-h-[415px] lg:min-w-[500px] lg:px-7">
             <header>
               <h2 className="mb-7 border-solid bg-gradient-to-b from-[#0ef] to-white bg-clip-text text-3xl font-semibold text-transparent">
                 Skills do Lado do Cliente:
@@ -118,7 +118,7 @@ const About = () => {
                       variants={item}
                       className="flex flex-col items-center"
                     >
-                      <span className="text-center text-xl text-neutral-100">
+                      <span className="text-center text-xl text-white">
                         {icon.name}
                       </span>
                       <icon.img className="mt-2 text-left text-7xl text-[#0ef] lg:text-6xl" />
