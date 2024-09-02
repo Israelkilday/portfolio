@@ -94,11 +94,11 @@ const data = [
     image: Portfolio_img5,
     name: "DEVTUBE PLAYLISTS",
     description:
-      "Plataforma de exibição de playlists sobre programação selecionadas do YouTube. Utilizando React e Redux Toolkit, implementei uma interface dinâmica e intuitiva, proporcionando aos usuários uma experiência fluida na navegação. Os vídeos são gerenciados por uma API personalizada que criei e armazenei no JSONPlaceholder.",
+      "Plataforma de exibição de playlists sobre programação selecionadas do YouTube. Utilizando React e Zustand, implementei uma interface dinâmica e intuitiva, proporcionando aos usuários uma experiência fluida na navegação. Os vídeos são gerenciados por uma API personalizada que criei e armazenei no JSONPlaceholder.",
     technologies: [
       "React",
       "Typescript",
-      "Redux Toolkit",
+      "Zustand",
       "React Player",
       "React Icons",
       "Radix-ui",
