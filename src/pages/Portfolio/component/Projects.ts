@@ -102,6 +102,7 @@ const data = [
       "React Player",
       "React Icons",
       "Radix-ui",
+      "Axios",
       "TailwindCSS",
       "Vitest",
       "Vercel",
