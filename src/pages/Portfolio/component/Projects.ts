@@ -115,20 +115,21 @@ const data = [
   {
     id: 5,
     image: Portfolio_img0,
-    name: "Secret World",
+    name: "TEST TÉCNICO - TO DO LIST",
     description:
-      "Jogo de adivinhação de palavras secretas desenvolvido utilizando React, Typescript, Vite e CSS Modules. Foi adotada uma abordagem de componentização para organizar e reutilizar o código de forma eficiente. Foram utilizados hooks como useState, useEffect e useRef para gerenciar o estado dos componentes, manipular efeitos colaterais e interagir com elementos do DOM de maneira declarativa.",
+      "Teste técnico que conclui para uma vaga de desenvolvedor front-end jr, uma Aplicação de To-Do List desenvolvida utilizando o Next.js App Router e SCSS para estilização, com layout responsivo e mobile-friendly. Além disso, ao retornar à aplicação, todos os dados de tarefas e o nome do usuário são persistidos no LocalStorage, garantindo que as informações não sejam perdidas ao recarregar a página.",
     technologies: [
+      "Next.js",
+      "App Router",
       "React",
-      "Custom hooks",
       "Typescript",
       "Javascript",
-      "CSS Modules",
+      "SCSS",
       "JSX",
-      "Vite",
+      "Vercel",
     ],
-    linkDeploy: "https://israelkilday.github.io/Secret-Word/",
-    linkRepository: "https://github.com/Israelkilday/Secret-Word",
+    linkDeploy: "https://test-todo-list-ashy.vercel.app/",
+    linkRepository: "https://github.com/Israelkilday/TEST",
   },
 ];
 

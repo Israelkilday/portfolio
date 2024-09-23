@@ -41,7 +41,7 @@
   align-items: center;
   border-radius: 2rem;
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(50px);
+  backdrop-filter: blur(15px);
   position: absolute;
   display: flex;
   display: none;
