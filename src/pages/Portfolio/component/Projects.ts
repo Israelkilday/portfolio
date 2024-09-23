@@ -117,7 +117,7 @@ const data = [
     image: Portfolio_img0,
     name: "TEST TÉCNICO - TO DO LIST",
     description:
-      "Teste técnico que conclui para uma vaga de desenvolvedor front-end jr, uma Aplicação de To-Do List desenvolvida utilizando o Next.js App Router e SCSS para estilização, com layout responsivo e mobile-friendly. Além disso, ao retornar à aplicação, todos os dados de tarefas e o nome do usuário são persistidos no LocalStorage, garantindo que as informações não sejam perdidas ao recarregar a página.",
+      "Teste técnico que conclui para uma vaga de desenvolvedor front-end jr, uma Aplicação de To-Do List desenvolvida utilizando o Next.js App Router e SCSS para estilização, com layout responsivo e mobile-friendly, além disso, ao retornar à aplicação, todos os dados de tarefas e o nome do usuário são persistidos no LocalStorage, garantindo que as informações não sejam perdidas ao recarregar a página.",
     technologies: [
       "Next.js",
       "App Router",
