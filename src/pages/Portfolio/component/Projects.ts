@@ -122,6 +122,7 @@ const data = [
       "Next.js",
       "App Router",
       "React",
+      "React-Rodal",
       "Typescript",
       "Javascript",
       "SCSS",
