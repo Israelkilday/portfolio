@@ -53,7 +53,7 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_7um5d2w",
+        "service_lrao464",
         "template_wpza33d",
         templateParams,
         "SzK4tZv53k8B-JB4j",
