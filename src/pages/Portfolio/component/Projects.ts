@@ -4,6 +4,7 @@ import Portfolio_img2 from "../../../../public/imgs/project_2.jpg";
 import Portfolio_img3 from "../../../../public/imgs/project_3.jpg";
 import Portfolio_img4 from "../../../../public/imgs/project_4.jpg";
 import Portfolio_img5 from "../../../../public/imgs/project_5.jpg";
+import Portfolio_img6 from "../../../../public/imgs/project_5.jpg";
 
 const data = [
   {
@@ -121,12 +122,32 @@ const data = [
     technologies: [
       "Next.js",
       "App Router",
-      "React",
-      "React-Rodal",
       "Typescript",
+      "React",
+      "React-Modal",
       "Javascript",
       "SCSS",
       "JSX",
+      "Vercel",
+    ],
+    linkDeploy: "https://test-todo-list-ashy.vercel.app/",
+    linkRepository: "https://github.com/Israelkilday/TEST",
+  },
+  {
+    id: 6,
+    image: Portfolio_img6,
+    name: "KIMININU'S PIZZARIA",
+    description:
+      "Projeto de delivery de pizzas desenvolvido como freelancer, com foco em facilitar os pedidos de pizza na comunidade. Este sistema permite que os usuários acessem o cardápio, personalizem seus pedidos e enviem as informações diretamente para o WhatsApp do restaurante para finalização do pedido.",
+    technologies: [
+      "Next.js",
+      "Typescript",
+      "React",
+      "React-Modal",
+      "React Icons",
+      "React-Parallax-mouse",
+      "Contex API",
+      "TailwindCSS",
       "Vercel",
     ],
     linkDeploy: "https://test-todo-list-ashy.vercel.app/",
