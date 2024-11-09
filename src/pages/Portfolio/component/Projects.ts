@@ -85,8 +85,9 @@ const data = [
       "TailwindCSS",
       "Vercel",
     ],
-    linkDeploy: "https://test-todo-list-ashy.vercel.app/",
-    linkRepository: "https://github.com/Israelkilday/TEST",
+    linkDeploy:
+      "https://kimininus-pizza-delivery-git-main-isarel-kildays-projects.vercel.app/",
+    linkRepository: "https://github.com/Israelkilday/KIMININUS_PIZZA_DELIVERY",
   },
   {
     id: 3,
@@ -150,10 +151,8 @@ const data = [
       "JSX",
       "Vercel",
     ],
-    linkDeploy:
-      "https://kimininus-pizza-delivery-git-main-isarel-kildays-projects.vercel.app/",
-    linkRepository:
-      "https://github.com/Israelkilday/KIMININUS_PIZZA_DELIVERY/tree/main",
+    linkDeploy: "https://test-todo-list-ashy.vercel.app/",
+    linkRepository: "https://github.com/Israelkilday/TEST",
   },
 ];
 
